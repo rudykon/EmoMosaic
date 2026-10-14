@@ -1,0 +1,60 @@
+feature_version: aligned_50
+text_encoder: google-bert/bert-base-uncased
+text_revision: 86b5e0934494bd15c9632b12f734a8a67f723594
+text_feature_policy: frozen_last_hidden_state_all_splits
+dimensions: [768, 74, 35]
+max_length: 50
+hidden: 128
+heads: 4
+layers: 2
+ff_mult: 2
+dropout: 0.25
+input_dropout: 0.1
+cross_layers: 1
+batch_size: 64
+epochs: 60
+patience: 10
+learning_rate: 0.0001
+weight_decay: 0.001
+warmup_fraction: 0.05
+clip_grad: 1.0
+normalize_clip: 5.0
+lambda_unimodal: 0.3
+lambda_class: 0.3
+lambda_reconstruction: 0.5
+lambda_consistency: 0.5
+lambda_interaction: 0.1
+clean_probability: 0.2
+colocated_probability: 0.3
+two_segment_probability: 0.2
+curriculum_fraction: 0.3
+seeds: [17, 29, 43, 71, 101]
+validation_mask_seed: 20260923
+evaluation_placement_seeds: [201, 202, 203, 204, 205]
+threshold_step: 0.05
+threshold_max: 1.0
+selection_metric: half_clean_plus_half_mean_missing_corr_minus_mae_plus_macro_f1
+variants: [A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, B_T, B_A, B_V, B_LMF, B_ConcatClean]
+all_missing_probability_given_corrupt: 0.01
+missing_modality_counts: [1, 2, 3]
+missing_modality_probabilities: [0.5, 0.35, 0.15]
+missing_rate_probabilities: [0.7, 0.25, 0.05]
+missing_rate_low_range: [0.1, 0.6]
+missing_rate_high_range: [0.6, 0.95]
+curriculum_initial_cap: 0.3
+alignment_distance_scale: 5.0
+reconstruction_residual_clip: 25.0
+branch_output_bound: 2.7
+interaction_output_bound: 0.3
+lmf_rank: 8
+lmf_latent: 16
+precision_train: bfloat16
+precision_text_encoder: float16
+allow_tf32: true
+cpu_threads_per_gpu_worker: 2
+ordinal_temperature_search_range: [0.03, 2.0]
+replay_bootstrap_replicates: 500
+replay_bootstrap_seed: 3301
+fidelity_samples_per_class: 24
+fidelity_seed: 3311
+occlusion_width: 3

@@ -1,0 +1,17 @@
+seed: 2026
+torch_threads: 4
+sample_rate: 16000
+audio_hop: 160
+audio_window: 400
+video_fps: 25
+aligned_positions: 50
+unaligned_positions: 500
+face_detection_threshold: 0.5
+face_presence_threshold: 0.5
+alignment_confidence_warning: 0.5
+bert_revision: 86b5e0934494bd15c9632b12f734a8a67f723594
+ctc_revision: 22aad52d435eb6dbaf354bdad9b0da84ce7d6156
+visual_schema: mediapipe_27_blendshapes_3_pose_5_geometry_v1
+interface_schema: bert_wordpiece_50_with_explicit_masks_v1
+audio_vision_dtype: float32
+text_dtype: float16

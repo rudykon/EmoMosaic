@@ -162,6 +162,9 @@ def check():
         asset = ROOT / figure['file']
         assert asset.is_relative_to(ROOT / 'assets/paper'), 'Figure path escapes paper assets'
         assert hashlib.sha256(asset.read_bytes()).hexdigest() == figure['sha256'], f"Paper figure changed: {asset.name}"
+        original = ROOT / figure['pdf']
+        assert original.is_relative_to(ROOT / 'assets/paper'), 'PDF path escapes paper assets'
+        assert hashlib.sha256(original.read_bytes()).hexdigest() == figure['source_sha256'], f"Original PDF changed: {original.name}"
     assert (ROOT / '.nojekyll').exists()
     check_inference()
     print(f'PASS: {len(PAGES)} pages, {len(figures)} paper figures, local links, 160 subset predictions, intensity/all-class Shapley, LoRA decomposition, evidence and four confusion matrices')

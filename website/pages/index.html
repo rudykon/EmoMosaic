@@ -7,15 +7,7 @@
     <div class="actions"><a class="button primary" href="inference.html">在线推理 →</a><a class="button" href="https://github.com/rudykon/EmoMosaic" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="button" href="explore.html">样本分析 →</a></div>
     <p class="hero-footnote"><a href="https://huggingface.co/config-h/EmoMosaic" target="_blank" rel="noopener noreferrer">模型权重 ↗</a><span aria-hidden="true"> · </span><a href="https://huggingface.co/datasets/config-h/EmoMosaic" target="_blank" rel="noopener noreferrer">数据集 ↗</a></p>
   </div>
-  <div class="fusion-visual" role="img" aria-label="三模态输入进入五种子 RM 核心，文本同时进入五个 BERT LoRA 专家，两条分支经可靠性融合输出类别概率与情感强度">
-    <div class="visual-heading"><img src="assets/favicon.svg" width="38" height="38" alt=""><span>模型结构</span></div>
-    <div class="overview-inputs"><div class="text-block"><span class="input-symbol">Aa</span><strong>文字</strong><small>768 维</small></div><div class="audio-block"><span class="input-symbol">≋</span><strong>语音</strong><small>74 维</small></div><div class="vision-block"><span class="input-symbol">◉</span><strong>视觉</strong><small>35 维</small></div></div>
-    <div class="flow-connector" aria-hidden="true">↓</div>
-    <div class="branch-grid"><div><span class="mini-tag">多模态路径</span><strong>RM-Net × 5</strong><small>时序建模 · 可靠性门控</small></div><div class="expert-branch"><span class="mini-tag">文本路径</span><strong>BERT LoRA × 5</strong><small>共享基座 · 低秩适配</small></div></div>
-    <div class="flow-connector" aria-hidden="true">↓</div>
-    <div class="fusion-node"><strong>文本可用度约束融合</strong><span>分类 <span class="math-inline" data-math="0.8f^2" translate="no">0.8f²</span> · 回归 <span class="math-inline" data-math="0.6f^2" translate="no">0.6f²</span></span></div>
-    <div class="overview-output"><span>三类概率 → 极性</span><span>连续强度 [−3, +3]</span></div>
-  </div>
+  <figure class="paper-figure manuscript-overview"><a href="assets/paper/fig_01_model_overview.pdf" target="_blank" rel="noopener"><img src="assets/paper/fig_01_model_overview.png" alt="融合预测器总览" width="2400" height="1200" fetchpriority="high" decoding="async"></a><figcaption><strong>融合预测器总览</strong><span>论文图 1</span><p>两条分支使用相同观测掩码，按可见文本比例融合，并分别解释类别概率与情感强度。</p><a class="text-link" href="assets/paper/fig_01_model_overview.pdf" target="_blank" rel="noopener">论文原图 PDF ↗</a></figcaption></figure>
 </section>
 <div class="stat-strip" aria-label="项目规模"><div><strong>4,850</strong><span>CMU-MOSEI 子集片段</span></div><div><strong>5 + 5</strong><span>RM 核心与文本专家</span></div><div><strong>85</strong><span>每个划分的评估条件</span></div><div><strong>20 × 8</strong><span>专项样本与模态子集</span></div></div>
 <section id="research" class="section">
@@ -26,6 +18,7 @@
   <div class="section-heading"><h2>实验结果</h2><a class="text-link" href="results.html">实验对照 →</a></div>
   <div class="finding-grid"><div class="finding-feature"><span>两视图平均 Macro-F1</span><strong>@metric:test_mean_f1.new@</strong><p>相对原 RM 辅助头提高 <b>@metric:test_mean_f1.delta@</b></p><small>清洁输入与 40% 混合缺失的指标均值</small></div><div class="table-wrap"><table><caption class="sr-only">最终融合模型在 727 条测试样本上的结果</caption><thead><tr><th scope="col">输入条件</th><th scope="col">Macro-F1 ↑</th><th scope="col">Accuracy ↑</th><th scope="col">MAE ↓</th></tr></thead><tbody><tr><th scope="row">清洁输入</th><td>@metric:metrics.test.clean.macro_f1@</td><td>@metric:metrics.test.clean.accuracy@</td><td>@metric:metrics.test.clean.mae@</td></tr><tr><th scope="row">40% 混合缺失</th><td>@metric:metrics.test.missing.macro_f1@</td><td>@metric:metrics.test.missing.accuracy@</td><td>@metric:metrics.test.missing.mae@</td></tr></tbody></table></div></div>
   <p class="table-note">727 条历史留出样本；测试结果曾被查看，不属于全新盲测。缺失实验采用编码后位置遮挡；附件 3 / 4 无真值标签。</p>
+<figure class="paper-figure"><a href="assets/paper/fig_03_error_diagnostics.pdf" target="_blank" rel="noopener"><img src="assets/paper/fig_03_error_diagnostics.png" alt="错误诊断与解释主导模态" width="2400" height="798" loading="lazy" decoding="async"></a><figcaption><strong>错误诊断与解释主导模态</strong><span>论文图 3</span><p>左：727 条留出话语按真实强度分组的 MAE。中：40% 混合缺失下的验证集混淆矩阵。右：728 条验证话语中，两种解释目标的主导模态计数。</p><a class="text-link" href="assets/paper/fig_03_error_diagnostics.pdf" target="_blank" rel="noopener">论文原图 PDF ↗</a></figcaption></figure>
 </section>
 <section id="application" class="section app-teaser">
   <div class="app-teaser-copy"><span class="version-badge">离线 APP · 2.2.1</span><h2>离线应用</h2><p>Android 应用支持文本、语音和视频输入，在设备本地计算情感极性与强度，并显示融合参数。</p><p class="small muted">纯文字接入最终模型；手机音视频为迁移试验，尚未真机实测。</p><a class="button" href="app.html">应用实现 →</a></div>

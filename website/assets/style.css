@@ -220,6 +220,8 @@ html[lang="en"] .bar-label { overflow-wrap: anywhere; }
 .paper-figure figcaption strong { color: var(--text); margin-right: 12px; }
 .paper-figure figcaption > span { font-size: 12px; }
 .paper-figure figcaption p { margin-top: 4px; font-size: 12px; }
+.hero .manuscript-overview { margin: 0; min-width: 0; padding: 20px; background: var(--soft); border: 1px solid var(--border); border-radius: 22px; box-shadow: var(--shadow); }
+.paper-figure figcaption > .text-link { display: inline-block; margin-top: 6px; font-size: 12px; }
 body[data-page=problem1] td, body[data-page=problem3] td { white-space: normal; }
 @media (min-width:681px) and (max-width:1100px) {
   .nav-inner { height: auto; flex-wrap: wrap; gap: 0 20px; }

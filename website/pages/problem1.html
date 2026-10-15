@@ -3,21 +3,18 @@
 <section id="analysis" class="section"><div class="section-heading"><h2>研究动机</h2></div>
 <p>文本、语音与视觉具有不同的采样粒度，按序列位置直接拼接会产生时间对应误差。本问以候选词区间为对齐单位，分别记录特征的数值可用性与时间对应质量。</p>
 <p>全部 100 条样本及原始标签均予保留。预训练模型参数固定，标签不参与特征提取或质量阈值选择。</p>
-<figure class="paper-figure"><a href="assets/paper/fig_02_01_problem1_route.png" target="_blank" rel="noopener"><img src="assets/paper/fig_02_01_problem1_route.png" alt="特征构建流程" width="1940" height="1468" loading="lazy" decoding="async"></a><figcaption><strong>特征构建流程</strong><span>研究图示 · 原项目</span><p>特征提取与时间质量控制并行进行，最终形成帧级、变长词级和定长接口三层表示。</p>
-</figcaption></figure>
+
 </section>
 <section id="features" class="section"><div class="section-heading"><h2>特征表示</h2></div>
 <div class="table-wrap"><table><thead><tr><th scope="col">模态</th><th scope="col">维数</th><th scope="col">特征定义</th></tr></thead><tbody><tr><th scope="row">文本</th><td>768</td><td>冻结 BERT 上下文特征，按原词对应的 WordPiece 均值池化。</td></tr><tr><th scope="row">语音</th><td>74</td><td>韵律、音质、频谱、共振峰与倒谱特征。</td></tr><tr><th scope="row">视觉</th><td>35</td><td>27 项表情形变系数、3 项姿态及 5 项几何或动态指标。</td></tr></tbody></table></div><p>L0 保留原始帧级特征与来源索引；L1 保存完整的变长词序列；L2 提供定长张量及有效位置掩码。定长接口的截断不影响 L0、L1 的完整记录。</p>
 </section>
 <section id="alignment" class="section"><div class="section-heading"><h2>时序对齐</h2></div>
 <p>采用 wav2vec 2.0 的声学后验进行 CTC 强制对齐，估计候选词区间，并在音视频共同有效时段内汇聚声学帧和有效人脸帧。时间门控同时要求词后验不低于 0.5、样本平均词后验不低于 0.5、转写词错误率不高于 0.5。</p>
-<figure class="paper-figure"><a href="assets/paper/fig_04_01_word_alignment.png" target="_blank" rel="noopener"><img src="assets/paper/fig_04_01_word_alignment.png" alt="词级对齐与区间池化" width="1961" height="1389" loading="lazy" decoding="async"></a><figcaption><strong>词级对齐与区间池化</strong><span>研究图示 · 原项目</span><p>词边界由 CTC 估计。低可信区间保留候选结果及来源索引，其跨模态使用由质量掩码限制。</p>
-</figcaption></figure>
+<figure class="paper-figure"><a href="assets/paper/fig_08_word_alignment_example.pdf" target="_blank" rel="noopener"><img src="assets/paper/fig_08_word_alignment_example.png" alt="典型片段的词级对齐" width="2400" height="2053" loading="lazy" decoding="async"></a><figcaption><strong>典型片段的词级对齐</strong><span>论文图 8</span><p>4.9 秒正向片段的 CTC 候选词区间，以及对应的声学、视觉和 BERT 特征。阴影标记词边界，各子图纵轴采用各自单位。</p><a class="text-link" href="assets/paper/fig_08_word_alignment_example.pdf" target="_blank" rel="noopener">论文原图 PDF ↗</a></figcaption></figure>
 </section>
 <section id="findings" class="section"><div class="section-heading"><h2>结果分析</h2></div>
 <div class="table-wrap"><table><thead><tr><th scope="col">核验项目</th><th scope="col">结果</th></tr></thead><tbody><tr><th scope="row">样本覆盖</th><td>100 / 100</td></tr><tr><th scope="row">完整词数</th><td>1,926</td></tr><tr><th scope="row">声学帧 / 视觉帧</th><td>77,509 / 19,474</td></tr><tr><th scope="row">时间门控通过词数</th><td>1,316 / 1,926</td></tr><tr><th scope="row">帧加权人脸检出率</th><td>81.97%</td></tr><tr><th scope="row">独立重复提取一致性</th><td>500 / 500</td></tr></tbody></table></div><p>通过时间门控的 1,316 个词来自 65 条样本；其余 610 个词保留特征，但屏蔽低可信时间对应。两次独立提取的 500 份特征与映射记录完全一致，最大数值差为 0。</p>
-<figure class="paper-figure"><a href="assets/paper/fig_04_02_qc_summary.png" target="_blank" rel="noopener"><img src="assets/paper/fig_04_02_qc_summary.png" alt="样本质量统计" width="2966" height="1616" loading="lazy" decoding="async"></a><figcaption><strong>样本质量统计</strong><span>研究图示 · 原项目</span><p>统计共同有效时长、词数、人脸检出、CTC 后验及不同时间粒度的信息保留率。</p>
-</figcaption></figure>
+<figure class="paper-figure"><a href="assets/paper/fig_09_alignment_quality_summary.pdf" target="_blank" rel="noopener"><img src="assets/paper/fig_09_alignment_quality_summary.png" alt="原始片段的对齐质量" width="2400" height="1308" loading="lazy" decoding="async"></a><figcaption><strong>原始片段的对齐质量</strong><span>论文图 9</span><p>100 个片段的共同时间轴长度、词数、人脸检出率与 CTC 后验；声学方差统计基于至少一个词通过门控的 65 个片段。右下的声画时滞仅为探索性分析，不用于调整时间轴。</p><a class="text-link" href="assets/paper/fig_09_alignment_quality_summary.pdf" target="_blank" rel="noopener">论文原图 PDF ↗</a></figcaption></figure>
 <p>在相同可信声学帧上，词级平均信息保留率为 0.2489，0.25 秒固定窗为 0.3120。词级组织提供语义对应，但不保证最高的数值信息保留率。门控覆盖率和数值一致性均不能替代人工词边界准确率。</p>
 <p class="table-note">自提取特征与预测模型使用的预提取特征分布不同。预测与解释使用后者，本流程用于独立的特征构建与质量核验。</p>
 </section>

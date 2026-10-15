@@ -7,6 +7,7 @@ on:
       - 'scripts/build_pages.py'
       - 'scripts/check_pages.py'
       - 'scripts/sync_site_i18n.py'
+      - 'scripts/export_site_figures.py'
       - '.github/workflows/pages.yml'
   push:
     branches: [main]
@@ -15,6 +16,7 @@ on:
       - 'scripts/build_pages.py'
       - 'scripts/check_pages.py'
       - 'scripts/sync_site_i18n.py'
+      - 'scripts/export_site_figures.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 

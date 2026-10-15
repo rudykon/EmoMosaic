@@ -38,10 +38,11 @@ python3 -m http.server 8000 --directory _site --bind 127.0.0.1
 
 - `template.html`：共享页眉、主导航、侧栏、页脚、搜索和元信息。
 - `pages/`：九个页面的中文源内容。
-- `assets/style.css`：直接复用原站样式，包括移动端和深色主题。
+- `assets/style.css`：沿用原站样式，包括移动端和深色主题，并补充论文原图的首页展示样式。
 - `i18n/en.json`：英文词典；构建自动生成 `assets/i18n-en.js`。
 - `data/results.json`：冻结的实验与样本快照。样本页回放 20 × 8 组真实保存结果；在线推理页执行实际模型计算，两者分别标注。
-- `assets/paper/`、`assets/app/`：原站图件和历史应用截图；原始图件哈希保留在 `assets/paper/sources.json`。
+- `assets/paper/`：当前论文图 1–12 的原始 PDF 与高清 PNG 预览；来源路径、图号、PDF 和预览哈希记录在 `sources.json`。
+- `assets/app/`：历史应用截图，用于应用界面展示。
 - `assets/inference/`：浏览器推理代码、ONNX Runtime、模型清单、许可证。
 - `data/browser-inference-validation.json`、`data/app-verification.json`：原站历史核验记录；它们不是本次迁移测试的结果。
 
@@ -56,6 +57,14 @@ python3 -m http.server 8000 --directory _site --bind 127.0.0.1
 Android 页面保留历史应用展示；APK 需要原仓库访问权限，因此提供原项目应用页入口，不将私有下载链接伪装为当前公共发布。
 
 ## 维护与核验
+
+论文配图来自本地 `paper/figures/`。更新图件时，使用 Poppler 的 `pdftoppm` 导出网页预览并同步原始 PDF：
+
+```bash
+python3 scripts/export_site_figures.py --source /path/to/paper/figures
+```
+
+脚本只导出论文图 1–12，保持完整图面与原始 PDF；不上传整篇稿件。公共仓库不需要保留本地论文目录，日常网站构建直接使用已提交的图件，因此不依赖 Poppler。修改图面内容或尺寸后，也应同步对应页面的图注与图片宽高。
 
 修改后运行构建、`check_pages.py` 以及 JS 语法检查。静态检查覆盖站内链接/锚点、公式字体、图件哈希、混淆矩阵、160 组子集预测、强度与类别 Shapley、分解一致性、推理运行时及案例输入协议。
 

@@ -1,53 +1,126 @@
 {
+  "source": "Current EmoMosaic manuscript, paper/figures (Figures 1–12).",
+  "preview": "Complete PDF page rendered by pdftoppm, longest edge 2400 px; no cropping or redrawing.",
   "figures": [
     {
-      "file": "assets/paper/fig_02_01_problem1_route.png",
-      "source": "paper/figures/ch02_analysis/fig_02_01_problem1_route.png",
-      "sha256": "b9726edd888e4839c7aff8eb3b9b41a3a0846da0146e323de0a7138d7081e67d",
-      "paper_figure": "2.1"
+      "file": "assets/paper/fig_01_model_overview.png",
+      "pdf": "assets/paper/fig_01_model_overview.pdf",
+      "source": "paper/figures/fig_01_model_overview.pdf",
+      "sha256": "c3d903cb0339efff48c16bc3d63542f3c72025f222cd002a63dca6dbba53a819",
+      "source_sha256": "81421b7a9fb8d723ffcff8391e33653064ed496230a7da8c100e447feaffc74e",
+      "paper_figure": "1",
+      "width": 2400,
+      "height": 1200
     },
     {
-      "file": "assets/paper/fig_04_01_word_alignment.png",
-      "source": "paper/figures/ch04_problem1/fig_04_01_word_alignment.png",
-      "sha256": "8bf078c9f636e9fb84f5fd8d308f8b96bf0c430ae0b6b02cde87d817a7e856a8",
-      "paper_figure": "4.1"
+      "file": "assets/paper/fig_02_explanation_fidelity.png",
+      "pdf": "assets/paper/fig_02_explanation_fidelity.pdf",
+      "source": "paper/figures/fig_02_explanation_fidelity.pdf",
+      "sha256": "58a52c7135ec519bc037588f3377b2f151d9e20379181b96d13072810dd8e4cb",
+      "source_sha256": "bc62b67eccc1cc2371dd22d066140dfdc0347931ad155f6bce3693ae14a30f81",
+      "paper_figure": "2",
+      "width": 2400,
+      "height": 1793
     },
     {
-      "file": "assets/paper/fig_04_02_qc_summary.png",
-      "source": "paper/figures/ch04_problem1/fig_04_02_qc_summary.png",
-      "sha256": "c2bf047bdd717fb50ca58670ffa22a6b1c9d49b20a96f804e1c6add7f83beaee",
-      "paper_figure": "4.2"
+      "file": "assets/paper/fig_03_error_diagnostics.png",
+      "pdf": "assets/paper/fig_03_error_diagnostics.pdf",
+      "source": "paper/figures/fig_03_error_diagnostics.pdf",
+      "sha256": "8918e3f409d08ba5cfde906a15ac043ce0e1c24d690c46a3ef9ca9215fc00f14",
+      "source_sha256": "5e4e019e97ca5521f1a65deb41f9f9d6ba5d15787505792e5b80bee3388ea9a1",
+      "paper_figure": "3",
+      "width": 2400,
+      "height": 798
     },
     {
-      "file": "assets/paper/fig_05_01_full_method.png",
-      "source": "paper/figures/ch05_problem2/fig_05_01_full_method.png",
-      "sha256": "cd03196e532fd28a93b25a2ded0a9777b84469dbf2efecaf53dfeed473dddcbb",
-      "paper_figure": "5.1"
+      "file": "assets/paper/fig_04_core_missingness_rate.png",
+      "pdf": "assets/paper/fig_04_core_missingness_rate.pdf",
+      "source": "paper/figures/fig_04_core_missingness_rate.pdf",
+      "sha256": "8381aec3844678061515e8cf6c8ed29bc56aacf693fd884d9585e0edc2d5c612",
+      "source_sha256": "0f753997e5e89aede8925af28af9892c565a99cb17641e46413c4a900057e468",
+      "paper_figure": "4",
+      "width": 2400,
+      "height": 1173
     },
     {
-      "file": "assets/paper/fig_05_02_dual_view_training.png",
-      "source": "paper/figures/ch05_problem2/fig_05_02_dual_view_training.png",
-      "sha256": "1092f0749ee35d889069fb5c67e9e29be22fad903ffc4db469b7a795c47988d3",
-      "paper_figure": "5.2"
+      "file": "assets/paper/fig_05_core_span_position.png",
+      "pdf": "assets/paper/fig_05_core_span_position.pdf",
+      "source": "paper/figures/fig_05_core_span_position.pdf",
+      "sha256": "7d6fdcc854285d6d7debc57215dcc1ea5679681c139a5c88371043a163dd4a73",
+      "source_sha256": "778289278a63e73efe6102a18974e3be916bbb56c3ebbd3a599f7a48cf05bd3b",
+      "paper_figure": "5",
+      "width": 2400,
+      "height": 811
     },
     {
-      "file": "assets/paper/fig_05_07_final_missing_grid_gains.png",
-      "source": "paper/figures/ch05_problem2/fig_05_07_final_missing_grid_gains.png",
-      "sha256": "96ba4897b1fec0969e6ed6d9fc80227d9b6e09715d8f43fbf701f2091be0e70f",
-      "paper_figure": "5.7"
+      "file": "assets/paper/fig_06_core_span_length_reconstruction.png",
+      "pdf": "assets/paper/fig_06_core_span_length_reconstruction.pdf",
+      "source": "paper/figures/fig_06_core_span_length_reconstruction.pdf",
+      "sha256": "825b70f85df59325e147794d6b4ac5563a4a72af7f6df280d68e55182717a5f4",
+      "source_sha256": "5c7134c5c75464f5e6e52540423ebd905867f150f05c2b807fbd43a89e32ee40",
+      "paper_figure": "6",
+      "width": 2400,
+      "height": 724
     },
     {
-      "file": "assets/paper/fig_06_01_fidelity_curves.png",
-      "source": "paper/figures/ch06_problem3/fig_06_01_fidelity_curves.png",
-      "sha256": "d538859e0bb4b953a1714fde83e913845d1ae79e98cc55ef55a72f7eca0d1702",
-      "paper_figure": "6.1"
+      "file": "assets/paper/fig_07_missingness_pattern_replay.png",
+      "pdf": "assets/paper/fig_07_missingness_pattern_replay.pdf",
+      "source": "paper/figures/fig_07_missingness_pattern_replay.pdf",
+      "sha256": "453c672a335e9bfea3da2c2f862b9ec074b3c0f976f72bf024f43ef95a3345eb",
+      "source_sha256": "5806bb9167190a4c176821e7184e3cb67ce20b3d47eab721e30b62d971544f55",
+      "paper_figure": "7",
+      "width": 2400,
+      "height": 781
     },
     {
-      "file": "assets/paper/fig_06_13_attachment4_19_modality_card.png",
-      "source": "paper/figures/ch06_problem3/fig_06_13_attachment4_19_modality_card.png",
-      "sha256": "2f4a24c06e4d7b17573277ed26f021cbda69840ed7e12b5f86031abdf39ffacd",
-      "paper_figure": "6.13"
+      "file": "assets/paper/fig_08_word_alignment_example.png",
+      "pdf": "assets/paper/fig_08_word_alignment_example.pdf",
+      "source": "paper/figures/fig_08_word_alignment_example.pdf",
+      "sha256": "01bb6615058b6e448442914b0cd97dbcdf9deb7b7cae7dafed1b40f7bc6e6cca",
+      "source_sha256": "b750515ee5995393e789d136397521fa4e782de2952ff1814de0a95a97ca58ad",
+      "paper_figure": "8",
+      "width": 2400,
+      "height": 2053
+    },
+    {
+      "file": "assets/paper/fig_09_alignment_quality_summary.png",
+      "pdf": "assets/paper/fig_09_alignment_quality_summary.pdf",
+      "source": "paper/figures/fig_09_alignment_quality_summary.pdf",
+      "sha256": "482d279bba443de21974833a435f1e8cedff09bb96b345f5cdd3be1a03f13b0a",
+      "source_sha256": "a041cb6dda487ee836b6ad78d81a70c82b035204848bce3919f3476087eae732",
+      "paper_figure": "9",
+      "width": 2400,
+      "height": 1308
+    },
+    {
+      "file": "assets/paper/fig_10_sample_b19_class_attribution.png",
+      "pdf": "assets/paper/fig_10_sample_b19_class_attribution.pdf",
+      "source": "paper/figures/fig_10_sample_b19_class_attribution.pdf",
+      "sha256": "ae8b3d0c96be10386adcf4948d6bbd623c279c68d4bc4918f275f6fa005390d1",
+      "source_sha256": "d1a7e86a4f269ca9f558c1f40a346084d3bde402a53e8a589d97a0e03627e1db",
+      "paper_figure": "10",
+      "width": 2400,
+      "height": 1463
+    },
+    {
+      "file": "assets/paper/fig_11_sample_b19_intensity_attribution.png",
+      "pdf": "assets/paper/fig_11_sample_b19_intensity_attribution.pdf",
+      "source": "paper/figures/fig_11_sample_b19_intensity_attribution.pdf",
+      "sha256": "095bce3a1265947e252d2cce6a9c2c06ae59956118286f5b426c9067fa297977",
+      "source_sha256": "cab32bea5384f03c0bb524daefdb11b520f87f5431c17b61f73e3c4a1574e84a",
+      "paper_figure": "11",
+      "width": 2400,
+      "height": 1463
+    },
+    {
+      "file": "assets/paper/fig_12_unlabeled_set_a_predictions.png",
+      "pdf": "assets/paper/fig_12_unlabeled_set_a_predictions.pdf",
+      "source": "paper/figures/fig_12_unlabeled_set_a_predictions.pdf",
+      "sha256": "466e8514761f2544ff0ee846b4e183a805f19b3f8d7fcf8534af11bc89cea4b2",
+      "source_sha256": "f49cabe23b7320315d2298f9ab468d33167a82c4449d042d8a1d73a67d67a98b",
+      "paper_figure": "12",
+      "width": 2400,
+      "height": 1231
     }
-  ],
-  "note": "Unmodified PNG exports from the frozen paper; captions and translations are maintained in page HTML."
+  ]
 }

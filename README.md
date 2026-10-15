@@ -48,15 +48,15 @@ RM-Net processes the available multimodal features. BERT LoRA experts provide a 
 
 <p align="center">
   <a href="assets/readme/method.png">
-    <img src="assets/readme/method.png" alt="Architecture: text, audio and visual features enter a five-seed RM-Net ensemble; token sequences enter five BERT LoRA experts; text availability gates their class and intensity predictions." width="900">
+    <img src="assets/readme/method.png" alt="Current manuscript overview: parallel RM-Net and BERT LoRA predictors, text-availability-gated class and intensity fusion, and post-hoc Shapley and position-occlusion explanations." width="1000">
   </a>
   <br>
-  <sub><strong>Overall architecture</strong> · Original paper Figure 5.1 · Click to enlarge</sub>
+  <sub><strong>Overall architecture and explanations</strong> · Current manuscript Figure 1 · Click to enlarge</sub>
 </p>
 
 For an available-text fraction `f_T`, the frozen expert weights are `0.80 × f_T²` for classification and `0.60 × f_T²` for regression. When no text is available, both expert weights are zero. Outputs are **negative / neutral / positive** sentiment and a continuous intensity score in **[−3, 3]**.
 
-Figures reproduced here retain their original Chinese labels; captions and descriptions are provided in English. See [figure sources](assets/readme/README.md) for the pinned originals.
+The architecture figure is exported from the current English manuscript. The historical results and explanation figures retain their original Chinese labels, with English captions and descriptions. See [figure sources](assets/readme/README.md) for the source files and export details.
 
 <a id="results"></a>
 ## 📊 Reported results
@@ -233,7 +233,7 @@ make test
 make check-weights
 ```
 
-Original code is released under the [MIT License](LICENSE). Data, third-party models and dependencies retain their respective terms; see the [dataset usage conditions](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md). Selected research figures and branding originate from the [EmoMosaic competition project](https://github.com/rudykon/EmoMosaic_GMCM2026); their sources are recorded in the [asset index](assets/readme/README.md).
+Original code is released under the [MIT License](LICENSE). Data, third-party models and dependencies retain their respective terms; see the [dataset usage conditions](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md). The method figure comes from the current manuscript; branding and historical figures originate from the [EmoMosaic competition project](https://github.com/rudykon/EmoMosaic_GMCM2026). Sources are recorded in the [asset index](assets/readme/README.md).
 
 <p align="center">
   <a href="#overview">Back to overview ↑</a>

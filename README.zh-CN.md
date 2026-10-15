@@ -48,15 +48,15 @@ RM-Net 处理可用的三模态特征，BERT LoRA 专家提供补充文本预测
 
 <p align="center">
   <a href="assets/readme/method.png">
-    <img src="assets/readme/method.png" alt="总体框架：三模态特征进入五种子 RM-Net，词元序列进入五个 BERT LoRA 专家，按文本可用度融合类别与强度预测。" width="900">
+    <img src="assets/readme/method.png" alt="当前论文方法总览：RM-Net 与 BERT LoRA 并行预测，按文本可用度融合类别与强度，并通过 Shapley 与位置遮挡进行双目标解释。" width="1000">
   </a>
   <br>
-  <sub><strong>模型总体框架</strong> · 原论文图 5.1 · 点击查看原图</sub>
+  <sub><strong>模型总体框架与解释流程</strong> · 当前论文图 1 · 点击查看原图</sub>
 </p>
 
 设可用文本比例为 `f_T`，冻结的文本专家权重分别为：分类 `0.80 × f_T²`，回归 `0.60 × f_T²`。文本完全不可用时，两个专家权重均为零。模型输出**负向／中性／正向**类别及 **[−3, 3]** 范围内的连续情感强度。
 
-插图保留论文原始中文标签，固定版本的来源记录见[素材索引](assets/readme/README.md)。
+方法图由当前英文论文的定稿 PDF 导出；其余历史结果与解释图保留原始中文标签。源文件与导出说明见[素材索引](assets/readme/README.md)。
 
 <a id="results"></a>
 ## 📊 实验结果
@@ -233,7 +233,7 @@ make test
 make check-weights
 ```
 
-原创代码采用 [MIT 许可证](LICENSE)。数据、第三方模型及依赖分别遵循其原有条款；数据使用条件见[数据仓库 TERMS.md](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md)。精选论文插图与品牌素材来自 [EmoMosaic 竞赛项目](https://github.com/rudykon/EmoMosaic_GMCM2026)，来源详见[素材索引](assets/readme/README.md)。
+原创代码采用 [MIT 许可证](LICENSE)。数据、第三方模型及依赖分别遵循其原有条款；数据使用条件见[数据仓库 TERMS.md](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md)。方法图来自当前论文，品牌素材与历史插图来自 [EmoMosaic 竞赛项目](https://github.com/rudykon/EmoMosaic_GMCM2026)，来源详见[素材索引](assets/readme/README.md)。
 
 <p align="center">
   <a href="#overview">返回项目概览 ↑</a>

@@ -93,7 +93,8 @@
       }
       if (id !== requestId) return;
       input.enabled = checkboxes.map(box => box.checked && !box.disabled);
-      worker ||= new Worker("assets/inference/worker.js");
+      // Refresh workers cached before model assets moved to this site.
+      worker ||= new Worker("assets/inference/worker.js?v=2");
       worker.onmessage = ({data}) => {
         if (data.id !== requestId) return;
         if (data.error) error(data.error);

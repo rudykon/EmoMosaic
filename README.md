@@ -28,7 +28,9 @@
 
 **EmoMosaic** combines a five-seed **RM-Net** ensemble with five **BERT LoRA** text experts to predict sentiment class and continuous intensity from text, audio and visual features. Fusion weights adapt to the fraction of available text, reducing the text expert's influence when its evidence is missing.
 
-This repository contains source code, configuration, tests and selected figures for the README. **Model weights and data are hosted on Hugging Face**; the manuscript, experiment outputs and generated caches are maintained separately.
+This repository contains source code, configuration, tests, project website assets and selected figures for the README. **Model weights and data are hosted on Hugging Face**; the manuscript, experiment outputs and generated caches are maintained separately.
+
+**Project website:** [Build, preview and GitHub Pages setup](website/README.md). The site reuses the original EmoMosaic layout, with bilingual navigation, results and browser inference.
 
 <a id="overview"></a>
 ## 🧩 Overview

@@ -79,3 +79,9 @@ __pycache__/
 *.tar
 *.gz
 *.xz
+
+# GitHub Pages source assets and generated output
+/_site/
+!/website/
+!/website/**
+/website/assets/inference/models/

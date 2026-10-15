@@ -1,0 +1,57 @@
+name: Deploy EmoMosaic website
+
+on:
+  pull_request:
+    paths:
+      - 'website/**'
+      - 'scripts/build_pages.py'
+      - 'scripts/check_pages.py'
+      - 'scripts/sync_site_i18n.py'
+      - '.github/workflows/pages.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'scripts/build_pages.py'
+      - 'scripts/check_pages.py'
+      - 'scripts/sync_site_i18n.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build and verify website
+        run: |
+          python3 scripts/build_pages.py
+          python3 scripts/check_pages.py
+          python3 scripts/sync_site_i18n.py --check
+          for script in website/assets/{app,theme,math,i18n,i18n-en}.js website/assets/inference/{worker,page,fusion,tokenizer}.js; do
+            node --check "$script"
+          done
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

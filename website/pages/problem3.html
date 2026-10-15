@@ -1,0 +1,27 @@
+<div class="page-heading"><div class="eyebrow">MODEL EXPLANATIONS</div><h1>预测解释</h1><p>沿用冻结的融合预测器，分别解释情感强度与完整输入时的原预测类别概率。</p>
+</div>
+<section id="analysis" class="section"><div class="section-heading"><h2>研究动机</h2></div>
+<p>预测类别和连续强度由不同输出确定，二者的主要参考模态可能不同。本问固定两个解释目标，通过模态子集干预量化整体作用，再以逐位置遮挡定位局部证据。</p>
+<p>模型内部的门控权重用于描述 RM 路径，不能代替完整融合模型的类别归因。解释结果描述模型的输入依赖，不构成真实情感成因的证明。</p>
+</section>
+<section id="attribution" class="section"><div class="section-heading"><h2>模态归因</h2></div>
+<p>枚举文本、语音、视觉的全部 8 个子集，重新计算 RM 输出、LoRA 池化及文本可用度权重，并求取精确 Shapley 值。强度归因以空输入强度为基准；分类归因固定完整输入时的预测类别。</p>
+<div class="formula-box"><div class="math-display" data-math="\phi_{\mathrm{T}}+\phi_{\mathrm{A}}+\phi_{\mathrm{V}} = F(\mathrm{T},\mathrm{A},\mathrm{V})-F(\varnothing)" translate="no">\phi_{\mathrm{T}}+\phi_{\mathrm{A}}+\phi_{\mathrm{V}} = F(\mathrm{T},\mathrm{A},\mathrm{V})-F(\varnothing)</div></div><p class="table-note"><span class="math-inline" data-math="F" translate="no">F</span> 分别表示融合强度或原预测类别概率。内部强度分解另行报告缩放后的三模态贡献、RM 交互项及 LoRA 贡献。</p>
+</section>
+<section id="evidence" class="section"><div class="section-heading"><h2>局部证据</h2></div>
+<p>对有效内容位置逐一遮挡。强度证据按输出绝对变化排序，分类证据按原预测类概率下降排序；PAD、CLS、SEP 不进入证据排序。局部效应包含上下文和融合权重变化，不能直接相加。</p>
+<p>证据通过字符偏移、CTC 候选词时间及原始帧号映射回文本、语音时段和视频帧。时间映射单独核验，低可信对应保留标记。</p>
+</section>
+<section id="findings" class="section"><div class="section-heading"><h2>结果分析</h2></div>
+<p>在 728 条验证样本上计算删除与保留曲线，并与五次随机排序比较。分类证据的归一化删除 AUC 提高 0.1126，表明删除所选位置对原预测类概率的影响更大。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">目标 / 操作</th><th scope="col">所选 AUC</th><th scope="col">随机 AUC</th></tr></thead><tbody><tr><th scope="row">强度 / 删除</th><td>@metric:fidelity.intensity.delete.selected.mean@</td><td>@metric:fidelity.intensity.delete.random.mean@</td></tr><tr><th scope="row">强度 / 保留</th><td>@metric:fidelity.intensity.retain.selected.mean@</td><td>@metric:fidelity.intensity.retain.random.mean@</td></tr><tr><th scope="row">类别概率 / 删除</th><td>@metric:fidelity.classification.delete.selected.mean@</td><td>@metric:fidelity.classification.delete.random.mean@</td></tr><tr><th scope="row">类别概率 / 保留</th><td>@metric:fidelity.classification.retain.selected.mean@</td><td>@metric:fidelity.classification.retain.random.mean@</td></tr></tbody></table></div><figure class="paper-figure"><a href="assets/paper/fig_06_01_fidelity_curves.png" target="_blank" rel="noopener"><img src="assets/paper/fig_06_01_fidelity_curves.png" alt="删除与保留曲线" width="2390" height="1784" loading="lazy" decoding="async"></a><figcaption><strong>删除与保留曲线</strong><span>研究图示 · 原项目</span><p>三模态同位干预。强度报告绝对变化，分类报告原预测类概率下降；随机曲线取五次排列的平均。</p>
+</figcaption></figure>
+<p>强度保留 AUC 高于随机，说明所选排序的删除影响并不等同于少量证据的充分性。分类保留 AUC 为负表示原预测类概率上升，不能解释为准确率提高。</p>
+<p>另对 728 组样本实施整词删除与重新编码：与编码后遮挡相比，有符号效应的 Spearman 相关系数为强度 0.6680、类别概率 0.2903。两种干预同时涉及上下文、位置及融合权重差异，不能互相替代。</p>
+</section>
+<section id="case" class="section"><div class="section-heading"><h2>样本分析</h2></div>
+<p>附件 4 的 20 条样本均给出极性、强度、主要参考模态及证据定位。下图展示 19 号样本的词片段、语音候选时段和视觉关键帧；原始素材用于复核证据对应关系。</p>
+<figure class="paper-figure"><a href="assets/paper/fig_06_13_attachment4_19_modality_card.png" target="_blank" rel="noopener"><img src="assets/paper/fig_06_13_attachment4_19_modality_card.png" alt="三模态证据定位" width="2589" height="1652" loading="lazy" decoding="async"></a><figcaption><strong>三模态证据定位</strong><span>研究图示 · 原项目</span><p>附件 4 的 19 号样本。橙色表示支持原预测类别，蓝色表示抵消；候选时间轴不等同于人工标注真值。</p>
+</figcaption></figure>
+<p class="table-note">附件 4 没有真值标签，解释用于检查模型行为，不用于评估预测准确率。</p>
+<div class="resource-links"><a href="explore.html">样本预测与模态组合 →</a><a href="explore.html">交互解释卡 →</a><a href="https://github.com/rudykon/EmoMosaic/tree/main/code/src/p2p3">解释实现 ↗</a></div></section><a class="next-page" href="results.html"><span>下一页</span><strong>实验结果 →</strong></a>

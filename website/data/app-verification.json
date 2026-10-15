@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "apk": "app_demo/EmoMosaic-offline-2.2.2-debug.apk",
+  "version": "2.2.2",
+  "bytes": 249329156,
+  "sha256": "d3d61f331647a6cdbc68630a7907b39d046adfb38aa20e6e12dd18324846f67b",
+  "original_seeds": [
+    17,
+    29,
+    43,
+    71,
+    101
+  ],
+  "lora_experts": 5,
+  "shared_bert_count": 1,
+  "source_weights_and_rules_unchanged": true,
+  "exact_fp32_export_max_abs_error": 1.3709068298339844e-06,
+  "numerical_cases": 478,
+  "fp16_source_class_agreement": 1.0,
+  "max_probability_storage_error": 0.0008108110822567793,
+  "max_intensity_storage_error": 0.0028202652931213212,
+  "public_final_interface_cases": 5,
+  "public_final_interface_max_abs_error": 1.4305114781620887e-07,
+  "browser_parity": {
+    "cases": 13,
+    "maxAbsError": 1.1920928955078125e-06
+  },
+  "apk_assets_match_browser_and_source": true,
+  "same_signing_certificate": true,
+  "permissions": [
+    "android.permission.CAMERA",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.RECORD_AUDIO"
+  ],
+  "no_duplicate_legacy_bert": true,
+  "mobile_profile": "experimental mobile RM + frozen LoRA/rules",
+  "independent_mobile_fusion_test": false,
+  "mobile_test_overlap_with_lora_training": {
+    "exact_samples": 2,
+    "samples_from_seen_videos": 11
+  },
+  "physical_android_test": false,
+  "github_release_published": false,
+  "verification_files": {
+    "fusion-numerical-verification.json": "dd3f4da7e678b00cb2ad9883c66f4d5395575d5907855d640eda262d5f8e89fb",
+    "fusion-interface-verification.json": "c88a9962008258abed78adeb222207e8ede9b162e773213a28310d3fbea66fc7",
+    "fusion-mobile-evaluation.json": "b848122b4e567e6cbcd0ff6f102add46398a4ae85bcd287845ffa9347463d09a",
+    "outputs/app_demo/releases/2.2.2/fusion-browser-verification.json": "f0d1383a3c7caf3f190e4c2e33c935865951009c4ac235806d1e37280faaf85c",
+    "outputs/app_demo/releases/2.2.2/i18n-verification.json": "0ab8269b2dde74768f51a27117954b2b46f92379432d407ef2a85fadd2f4d626"
+  },
+  "ui_languages": [
+    "zh-CN",
+    "en"
+  ],
+  "default_ui_language": "zh-CN",
+  "bilingual_browser_checks": 13
+}

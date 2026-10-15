@@ -1,0 +1,8 @@
+# Preserve verified model/runtime bytes across checkout platforms.
+models/* -text
+models/*.bin binary
+models/*.onnx binary
+vendor/ort/* -text
+vendor/ort/*.wasm binary
+# Preserve upstream JavaScript verbatim, including its whitespace.
+vendor/ort/*.mjs -whitespace

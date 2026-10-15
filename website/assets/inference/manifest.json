@@ -1,0 +1,686 @@
+{
+  "schema": "emomosaic_browser_inference_v1",
+  "model": "original_rm_lora_fusion_bias",
+  "runtime": "onnxruntime-web 1.20.1 / WASM / CPU / 1 thread",
+  "encoder": {
+    "sha256": "23b4bab5a51a17d649a75ee5444e43e3a9e2ddfdcdc91b7637564ab6b43fabd2",
+    "bytes": 217983480,
+    "parts": [
+      "bert-lora.part00.bin",
+      "bert-lora.part01.bin",
+      "bert-lora.part02.bin",
+      "bert-lora.part03.bin",
+      "bert-lora.part04.bin",
+      "bert-lora.part05.bin",
+      "bert-lora.part06.bin",
+      "bert-lora.part07.bin",
+      "bert-lora.part08.bin",
+      "bert-lora.part09.bin",
+      "bert-lora.part10.bin",
+      "bert-lora.part11.bin",
+      "bert-lora.part12.bin",
+      "bert-lora.part13.bin",
+      "bert-lora.part14.bin",
+      "bert-lora.part15.bin",
+      "bert-lora.part16.bin",
+      "bert-lora.part17.bin",
+      "bert-lora.part18.bin",
+      "bert-lora.part19.bin",
+      "bert-lora.part20.bin",
+      "bert-lora.part21.bin",
+      "bert-lora.part22.bin",
+      "bert-lora.part23.bin",
+      "bert-lora.part24.bin",
+      "bert-lora.part25.bin"
+    ],
+    "precision": "FP16 base storage; FP32 arithmetic and lossless FP32 adapters",
+    "source_sha256": "68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3",
+    "shared_base_count": 1
+  },
+  "adapters": [
+    {
+      "file": "lora-00.bin",
+      "bytes": 1581584,
+      "sha256": "028b76d429b0b30a7b53d2d2f000df58335028ea973b37003ef661b15d4218f1",
+      "source": "models/rmnet_bert_lora/adapter_00.pt",
+      "source_sha256": "d128b6e929eca09623719d17a1dea58ce20e4bdff76848677771a7a5ddf1cc0a",
+      "seed": 17,
+      "fields": {
+        "lora_a": {
+          "shape": [
+            24,
+            8,
+            768
+          ],
+          "offset": 0,
+          "length": 147456
+        },
+        "lora_b": {
+          "shape": [
+            24,
+            768,
+            8
+          ],
+          "offset": 589824,
+          "length": 147456
+        },
+        "norm_weight": {
+          "shape": [
+            768
+          ],
+          "offset": 1179648,
+          "length": 768
+        },
+        "norm_bias": {
+          "shape": [
+            768
+          ],
+          "offset": 1182720,
+          "length": 768
+        },
+        "dense_weight": {
+          "shape": [
+            128,
+            768
+          ],
+          "offset": 1185792,
+          "length": 98304
+        },
+        "dense_bias": {
+          "shape": [
+            128
+          ],
+          "offset": 1579008,
+          "length": 128
+        },
+        "class_weight": {
+          "shape": [
+            3,
+            128
+          ],
+          "offset": 1579520,
+          "length": 384
+        },
+        "class_bias": {
+          "shape": [
+            3
+          ],
+          "offset": 1581056,
+          "length": 3
+        },
+        "reg_weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "offset": 1581068,
+          "length": 128
+        },
+        "reg_bias": {
+          "shape": [
+            1
+          ],
+          "offset": 1581580,
+          "length": 1
+        }
+      }
+    },
+    {
+      "file": "lora-01.bin",
+      "bytes": 1581584,
+      "sha256": "aee21d82255405a49c73b0d28d7a65f7ada24c79df941ba8b99b499e97098d8d",
+      "source": "models/rmnet_bert_lora/adapter_01.pt",
+      "source_sha256": "8f5e966915c2f7ac08e3225c93aba722b68aee6fc336ea01087c8daeb34f4f6b",
+      "seed": 29,
+      "fields": {
+        "lora_a": {
+          "shape": [
+            24,
+            8,
+            768
+          ],
+          "offset": 0,
+          "length": 147456
+        },
+        "lora_b": {
+          "shape": [
+            24,
+            768,
+            8
+          ],
+          "offset": 589824,
+          "length": 147456
+        },
+        "norm_weight": {
+          "shape": [
+            768
+          ],
+          "offset": 1179648,
+          "length": 768
+        },
+        "norm_bias": {
+          "shape": [
+            768
+          ],
+          "offset": 1182720,
+          "length": 768
+        },
+        "dense_weight": {
+          "shape": [
+            128,
+            768
+          ],
+          "offset": 1185792,
+          "length": 98304
+        },
+        "dense_bias": {
+          "shape": [
+            128
+          ],
+          "offset": 1579008,
+          "length": 128
+        },
+        "class_weight": {
+          "shape": [
+            3,
+            128
+          ],
+          "offset": 1579520,
+          "length": 384
+        },
+        "class_bias": {
+          "shape": [
+            3
+          ],
+          "offset": 1581056,
+          "length": 3
+        },
+        "reg_weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "offset": 1581068,
+          "length": 128
+        },
+        "reg_bias": {
+          "shape": [
+            1
+          ],
+          "offset": 1581580,
+          "length": 1
+        }
+      }
+    },
+    {
+      "file": "lora-02.bin",
+      "bytes": 1581584,
+      "sha256": "a09aa10d55e9487ccd0e81faee6e1fe2360851fc3804836ef3a7b957c7c36e29",
+      "source": "models/rmnet_bert_lora/adapter_02.pt",
+      "source_sha256": "ed05ebbad6a66eaa02210e9a72d18a554f8c4a98cd2124e6b143d54791596f98",
+      "seed": 43,
+      "fields": {
+        "lora_a": {
+          "shape": [
+            24,
+            8,
+            768
+          ],
+          "offset": 0,
+          "length": 147456
+        },
+        "lora_b": {
+          "shape": [
+            24,
+            768,
+            8
+          ],
+          "offset": 589824,
+          "length": 147456
+        },
+        "norm_weight": {
+          "shape": [
+            768
+          ],
+          "offset": 1179648,
+          "length": 768
+        },
+        "norm_bias": {
+          "shape": [
+            768
+          ],
+          "offset": 1182720,
+          "length": 768
+        },
+        "dense_weight": {
+          "shape": [
+            128,
+            768
+          ],
+          "offset": 1185792,
+          "length": 98304
+        },
+        "dense_bias": {
+          "shape": [
+            128
+          ],
+          "offset": 1579008,
+          "length": 128
+        },
+        "class_weight": {
+          "shape": [
+            3,
+            128
+          ],
+          "offset": 1579520,
+          "length": 384
+        },
+        "class_bias": {
+          "shape": [
+            3
+          ],
+          "offset": 1581056,
+          "length": 3
+        },
+        "reg_weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "offset": 1581068,
+          "length": 128
+        },
+        "reg_bias": {
+          "shape": [
+            1
+          ],
+          "offset": 1581580,
+          "length": 1
+        }
+      }
+    },
+    {
+      "file": "lora-03.bin",
+      "bytes": 1581584,
+      "sha256": "8134d237b9ae479032751b79d089a41fe8aa2dcefabd243c4e8ca0d86ab01bfa",
+      "source": "models/rmnet_bert_lora/adapter_03.pt",
+      "source_sha256": "ac3bc450cfa6c0fe6bc3a53c3551c94925e3f411b227ecd21be9502c9a2dac63",
+      "seed": 71,
+      "fields": {
+        "lora_a": {
+          "shape": [
+            24,
+            8,
+            768
+          ],
+          "offset": 0,
+          "length": 147456
+        },
+        "lora_b": {
+          "shape": [
+            24,
+            768,
+            8
+          ],
+          "offset": 589824,
+          "length": 147456
+        },
+        "norm_weight": {
+          "shape": [
+            768
+          ],
+          "offset": 1179648,
+          "length": 768
+        },
+        "norm_bias": {
+          "shape": [
+            768
+          ],
+          "offset": 1182720,
+          "length": 768
+        },
+        "dense_weight": {
+          "shape": [
+            128,
+            768
+          ],
+          "offset": 1185792,
+          "length": 98304
+        },
+        "dense_bias": {
+          "shape": [
+            128
+          ],
+          "offset": 1579008,
+          "length": 128
+        },
+        "class_weight": {
+          "shape": [
+            3,
+            128
+          ],
+          "offset": 1579520,
+          "length": 384
+        },
+        "class_bias": {
+          "shape": [
+            3
+          ],
+          "offset": 1581056,
+          "length": 3
+        },
+        "reg_weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "offset": 1581068,
+          "length": 128
+        },
+        "reg_bias": {
+          "shape": [
+            1
+          ],
+          "offset": 1581580,
+          "length": 1
+        }
+      }
+    },
+    {
+      "file": "lora-04.bin",
+      "bytes": 1581584,
+      "sha256": "09fd3c7f2526fdf482b589708ed9aa847f8025d71ee45c277aa9dfc6167a8c08",
+      "source": "models/rmnet_bert_lora/adapter_04.pt",
+      "source_sha256": "b79d510e8623f3aaa4d78088fbe3229f2e93f5344e1e53bb69ab391677b40cbe",
+      "seed": 101,
+      "fields": {
+        "lora_a": {
+          "shape": [
+            24,
+            8,
+            768
+          ],
+          "offset": 0,
+          "length": 147456
+        },
+        "lora_b": {
+          "shape": [
+            24,
+            768,
+            8
+          ],
+          "offset": 589824,
+          "length": 147456
+        },
+        "norm_weight": {
+          "shape": [
+            768
+          ],
+          "offset": 1179648,
+          "length": 768
+        },
+        "norm_bias": {
+          "shape": [
+            768
+          ],
+          "offset": 1182720,
+          "length": 768
+        },
+        "dense_weight": {
+          "shape": [
+            128,
+            768
+          ],
+          "offset": 1185792,
+          "length": 98304
+        },
+        "dense_bias": {
+          "shape": [
+            128
+          ],
+          "offset": 1579008,
+          "length": 128
+        },
+        "class_weight": {
+          "shape": [
+            3,
+            128
+          ],
+          "offset": 1579520,
+          "length": 384
+        },
+        "class_bias": {
+          "shape": [
+            3
+          ],
+          "offset": 1581056,
+          "length": 3
+        },
+        "reg_weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "offset": 1581068,
+          "length": 128
+        },
+        "reg_bias": {
+          "shape": [
+            1
+          ],
+          "offset": 1581580,
+          "length": 1
+        }
+      }
+    }
+  ],
+  "fusionRules": {
+    "schema_version": 1,
+    "base_dir": "../..",
+    "raw_input_model_dir": "models/rmnet",
+    "raw_input_cache_dir": "outputs/problem2/cache",
+    "bert_model_dir": "models/pretrained/bert",
+    "core_checkpoints": [
+      "models/rmnet/weights_seed17_fp16.pt",
+      "models/rmnet/weights_seed29_fp16.pt",
+      "models/rmnet/weights_seed43_fp16.pt",
+      "models/rmnet/weights_seed71_fp16.pt",
+      "models/rmnet/weights_seed101_fp16.pt"
+    ],
+    "expert": {
+      "kind": "bert_lora",
+      "adapters": [
+        "models/rmnet_bert_lora/adapter_00.pt",
+        "models/rmnet_bert_lora/adapter_01.pt",
+        "models/rmnet_bert_lora/adapter_02.pt",
+        "models/rmnet_bert_lora/adapter_03.pt",
+        "models/rmnet_bert_lora/adapter_04.pt"
+      ]
+    },
+    "fusion": {
+      "score": 0.6366517534351568,
+      "bias": [
+        0.2499999999999997,
+        0.0,
+        0.024999999999999745
+      ],
+      "w0": 0.8,
+      "k": 2.0
+    },
+    "regression_w0": 0.6000000000000001,
+    "regression_k": 2.0,
+    "scope": "final_validation_frozen",
+    "selection_metric": "mean(valid_clean_macro_f1, valid_mixed40_macro_f1)",
+    "selected_name": "original_rm_lora_fusion_bias"
+  },
+  "fusionRulesSha256": "45928a02712b006410b3ca5f3904964081b7e55c5f621c7bf15d1b074dc2cacd",
+  "assets": {
+    "models/bert-lora.part00.bin": {
+      "sha256": "c6ae25a5657b2cf81b39acdfe37ca5e9d52d16b5cf76bcaec5dd2ae9a0205267",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part01.bin": {
+      "sha256": "281c0a6ca512bff27f834c308bf78933da00cbbca1a6e2dd00eeedc4fdc61a49",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part02.bin": {
+      "sha256": "6da72338da765601737113a8d50fa5b31fa15524db28246718c4c4f76eba3233",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part03.bin": {
+      "sha256": "c04381d1cbccdc0b11a2b7df2d5778ce8cb3658154885a08e13a02605e1f655d",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part04.bin": {
+      "sha256": "50df4e29e7e210a26a665a912d58312ad733afdb08d73739d62f06f7b66effe0",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part05.bin": {
+      "sha256": "7d7ba14cc438fb3fd6dd96b922912c8c46c0b2b1c17bf7a2e2ea5d760b4fb73b",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part06.bin": {
+      "sha256": "4ff6ddabc7aba326d3e230d776c2806a5f4a002ac3ebc57be8a5cbb18582e8f8",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part07.bin": {
+      "sha256": "ac0a35fcbee863d3bbb24f2c5d5729c7a8aa6f8fd726f4de964ff6a5734ade00",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part08.bin": {
+      "sha256": "86ae81d1d16d5abce5c6fe33f7a07aae73e108abd93994d27d03027b4279d9ac",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part09.bin": {
+      "sha256": "6b844537182c4a3110037633a07f3dba29d090bd0561164043466946648bbae6",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part10.bin": {
+      "sha256": "928250496cc0f6f725d1c688ab679624594308d5c7437960905d4e1aaaaa21fd",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part11.bin": {
+      "sha256": "b738d388e784c7084591a9f8edcec0dcfbc6cf853fe4f671604c5be418d70aef",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part12.bin": {
+      "sha256": "a16cc721a6db2c788d9e94a1ceb910408223e3dffc8b88c5366d2fcddba4225a",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part13.bin": {
+      "sha256": "5e29fcd0f15207c2bdea8f491f6c57075f765a9c7acf9af4794066084a4971cd",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part14.bin": {
+      "sha256": "490f853a81a53f17e0a1b495e70093acd1d5bd7978ff704313361f5337bd431a",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part15.bin": {
+      "sha256": "892780c397136ebf0f41e6e21d57ef85b6e4694ee1dfca6529c3fae49c371cc8",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part16.bin": {
+      "sha256": "6ef3868b7eb2d7d238d66f14edb320e4f7f6a78e6fdf9a7a82bb68e80ee72802",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part17.bin": {
+      "sha256": "21bdc53e62633c4d6169bf1df255a8a6ec7179198d421fe980912fca1d8eb919",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part18.bin": {
+      "sha256": "dad87afe28dc1c58f21d31c98e0f7b3cbb188b6c2ec752cc0486bf4368f71031",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part19.bin": {
+      "sha256": "db4be2a90497afaa39116d9806cacc3141b86cdfbf3ef838293380bee030fa9b",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part20.bin": {
+      "sha256": "4f54043287d0c58aba50e65edd3f12d534286606e88edcce324b962f19d27b8c",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part21.bin": {
+      "sha256": "c06101e299c78f83332dd4b3105dc38ae050a5cad59f013f0a6acef9b2723b6c",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part22.bin": {
+      "sha256": "7290aa4570f9e5a375a25f231b02b808addb392fd8565dc36bf6690d78b9042b",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part23.bin": {
+      "sha256": "24436519c185c8901042a090a3624ece3d42822c847568cd7019988ca567daaf",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part24.bin": {
+      "sha256": "bd467afa457b44220cab76d14b0ee9b963f22c5aec69f99b372aae22bd472791",
+      "bytes": 8388608
+    },
+    "models/bert-lora.part25.bin": {
+      "sha256": "844670841a6d1c4deb45823029ccee1f80937a721d196a653c3e80871b2b8fba",
+      "bytes": 8268280
+    },
+    "models/lora-00.bin": {
+      "sha256": "028b76d429b0b30a7b53d2d2f000df58335028ea973b37003ef661b15d4218f1",
+      "bytes": 1581584
+    },
+    "models/lora-01.bin": {
+      "sha256": "aee21d82255405a49c73b0d28d7a65f7ada24c79df941ba8b99b499e97098d8d",
+      "bytes": 1581584
+    },
+    "models/lora-02.bin": {
+      "sha256": "a09aa10d55e9487ccd0e81faee6e1fe2360851fc3804836ef3a7b957c7c36e29",
+      "bytes": 1581584
+    },
+    "models/lora-03.bin": {
+      "sha256": "8134d237b9ae479032751b79d089a41fe8aa2dcefabd243c4e8ca0d86ab01bfa",
+      "bytes": 1581584
+    },
+    "models/lora-04.bin": {
+      "sha256": "09fd3c7f2526fdf482b589708ed9aa847f8025d71ee45c277aa9dfc6167a8c08",
+      "bytes": 1581584
+    },
+    "models/original.onnx": {
+      "sha256": "0259db9a8924f3db1c7599ca9ad530ebbea8756bf17b2701b4b2196dd8fb7940",
+      "bytes": 16873862
+    },
+    "models/vocab.txt": {
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "bytes": 231508
+    },
+    "vendor/ort/ort.wasm.min.js": {
+      "sha256": "e66568724f8848e57cc2a56e4bea3a5b86ce3ff81b2da11eac8ed7ab02b27bd4",
+      "bytes": 49026
+    },
+    "vendor/ort/ort-wasm-simd-threaded.mjs": {
+      "sha256": "745eb7c0ce6f18a6aa521971b2877babc7ffb27eecb58ab3bc6e5ef4692672e8",
+      "bytes": 24618
+    },
+    "vendor/ort/ort-wasm-simd-threaded.wasm": {
+      "sha256": "207d02be4591c156b0a98f024f3d58005b5b04c92274d759fb390338c63559ea",
+      "bytes": 11246032
+    }
+  },
+  "downloadBytes": 254316446,
+  "source_sha256": {
+    "models/rmnet_bert_lora/decision_rules.json": "45928a02712b006410b3ca5f3904964081b7e55c5f621c7bf15d1b074dc2cacd",
+    "models/rmnet_bert_lora/adapter_00.pt": "d128b6e929eca09623719d17a1dea58ce20e4bdff76848677771a7a5ddf1cc0a",
+    "models/rmnet_bert_lora/adapter_01.pt": "8f5e966915c2f7ac08e3225c93aba722b68aee6fc336ea01087c8daeb34f4f6b",
+    "models/rmnet_bert_lora/adapter_02.pt": "ed05ebbad6a66eaa02210e9a72d18a554f8c4a98cd2124e6b143d54791596f98",
+    "models/rmnet_bert_lora/adapter_03.pt": "ac3bc450cfa6c0fe6bc3a53c3551c94925e3f411b227ecd21be9502c9a2dac63",
+    "models/rmnet_bert_lora/adapter_04.pt": "b79d510e8623f3aaa4d78088fbe3229f2e93f5344e1e53bb69ab391677b40cbe",
+    "models/rmnet/weights_seed17_fp16.pt": "c30d51a80c918f247a1d68ccc7c930cec053400476b4a8d35cf68b36c7d60709",
+    "models/rmnet/weights_seed29_fp16.pt": "3c8763f48dfe0185a0b57dd3d14847ab53f0a7bea697ec494068c770fee84244",
+    "models/rmnet/weights_seed43_fp16.pt": "759ca6b45cff49f0aaa71236ba91c95f2b7748718ef38410f08d03303216d66b",
+    "models/rmnet/weights_seed71_fp16.pt": "98c035ae00237059dfc55fa14aa05a096c96e2f6c11d0c5bfa4784fe4d77b1be",
+    "models/rmnet/weights_seed101_fp16.pt": "78c2d2ab3babf3d01970586e4053c4b9d9a5beb46c3b479838e631a7b1b3c439",
+    "models/rmnet/norm_stats.json": "9fa35dfc8affdab5d2d46afec66d7af11482dd81bad1aa47d06f373646034edb",
+    "data/原始数据/附件4-可解释专项视频样本与特征文件/附件4-可解释专项视频样本与特征文件/对齐版本/19.pkl": "ef099682c44a9e6ba5135a74d4babf12a91ba5ee2895b32d191679244dd1c221",
+    "outputs/problem2/cache/attachment4_text_cache.npz": "1d362fa00a94038dcf46951069e4ec51b3af3e5a958c0ef950e7efd86196e2f5"
+  },
+  "sample": {
+    "path": "data/inference/attachment4-19.json",
+    "sha256": "555eabf4dced4069345f474efa9464220d6d35c22c13fb54b090bc40cc081c02",
+    "text_features": "Inverse normalization of the frozen official BERT cache; audio/vision from the original aligned PKL; no prediction fields."
+  },
+  "assetBaseUrl": "https://rudykon.github.io/EmoMosaic_GMCM2026/assets/inference/"
+}

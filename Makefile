@@ -23,3 +23,12 @@ explain:
 	$(PYTHON) code/src/p2p3/run_p3_fusion.py --stage all --device cpu --skip-figures
 align-smoke:
 	HF_HUB_OFFLINE=1 TOKENIZERS_PARALLELISM=false $(ALIGN_PYTHON) code/src/problem1/run.py --limit 1 --output "$(CURDIR)/validation/alignment_smoke"
+
+.PHONY: website website-check website-serve
+website:
+	python3 scripts/build_pages.py
+website-check: website
+	python3 scripts/check_pages.py
+	python3 scripts/sync_site_i18n.py --check
+website-serve: website
+	python3 -m http.server 8000 --directory _site --bind 127.0.0.1

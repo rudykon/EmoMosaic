@@ -18,7 +18,12 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-EA8A77?style=flat-square&amp;labelColor=263445" alt="原创代码采用 MIT 许可证"></a>
   </p>
   <p>
+    <a href="https://rudykon.github.io/EmoMosaic/app.html"><strong>Demo 应用 ↗</strong></a> ·
+    <a href="https://rudykon.github.io/EmoMosaic/inference.html"><strong>在线推理 ↗</strong></a>
+  </p>
+  <p>
     <a href="#overview">项目概览</a> ·
+    <a href="#try-it">在线体验</a> ·
     <a href="#method">模型方法</a> ·
     <a href="#results">实验结果</a> ·
     <a href="#quick-start">快速开始</a> ·
@@ -42,6 +47,16 @@
 | **双目标解释** | 分析类别概率与情感强度的模态贡献及局部遮挡效应 | [解释引擎](code/src/p2p3/p3_fusion.py) |
 | **特征与对齐** | 提取音视频特征，构建词级时间对齐 | [独立对齐流程](code/src/problem1/README.md) |
 | **可复现资源** | 下载固定版本的模型与数据，并校验文件完整性 | [模型清单](scripts/model_release.json) · [数据下载器](scripts/download_data.py) |
+
+<a id="try-it"></a>
+## 🌐 在线体验
+
+| 入口 | 可以体验什么 |
+| --- | --- |
+| [**Demo 应用 →**](https://rudykon.github.io/EmoMosaic/app.html) | 查看 Android 应用界面、支持的输入模态和端侧部署说明。 |
+| [**在线推理 →**](https://rudykon.github.io/EmoMosaic/inference.html) | 在浏览器运行 RM-Net + BERT LoRA，支持内置案例、英文文本或对齐特征 JSON。 |
+
+在线推理在模型文件下载后使用本机计算，输入保留在浏览器内。首次完整运行约需下载 **254 MB**，建议使用桌面浏览器。
 
 <a id="method"></a>
 ## 🧠 模型方法

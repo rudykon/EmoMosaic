@@ -18,7 +18,12 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-EA8A77?style=flat-square&amp;labelColor=263445" alt="Code license: MIT"></a>
   </p>
   <p>
+    <a href="https://rudykon.github.io/EmoMosaic/app.html"><strong>Demo App ↗</strong></a> ·
+    <a href="https://rudykon.github.io/EmoMosaic/inference.html"><strong>Online Inference ↗</strong></a>
+  </p>
+  <p>
     <a href="#overview">Overview</a> ·
+    <a href="#try-it">Try it</a> ·
     <a href="#method">Method</a> ·
     <a href="#results">Results</a> ·
     <a href="#quick-start">Quick start</a> ·
@@ -42,6 +47,16 @@ This repository contains source code, configuration, tests, project website asse
 | **Dual-target explanations** | Measures modality contributions and local masking effects for class probability and intensity | [Explanation engine](code/src/p2p3/p3_fusion.py) |
 | **Features & alignment** | Extracts audio/video features and builds word-level time alignment | [Alignment pipeline](code/src/problem1/README.md) |
 | **Reproducible assets** | Restores pinned model and data releases with checksum verification | [Model manifest](scripts/model_release.json) · [Data downloader](scripts/download_data.py) |
+
+<a id="try-it"></a>
+## 🌐 Try EmoMosaic
+
+| Experience | What you can do |
+| --- | --- |
+| [**Demo App →**](https://rudykon.github.io/EmoMosaic/app.html) | Explore the Android app interface, supported input modalities and deployment notes. |
+| [**Online Inference →**](https://rudykon.github.io/EmoMosaic/inference.html) | Run RM-Net + BERT LoRA in your browser with the built-in example, English text or aligned feature JSON. |
+
+Online inference runs on your computer after the model files download; your inputs stay in the browser. The first complete run downloads about **254 MB**, so a desktop browser is recommended.
 
 <a id="method"></a>
 ## 🧠 Method

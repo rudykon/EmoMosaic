@@ -8,6 +8,7 @@ on:
       - 'scripts/check_pages.py'
       - 'scripts/sync_site_i18n.py'
       - 'scripts/export_site_figures.py'
+      - 'scripts/prepare_site_models.py'
       - '.github/workflows/pages.yml'
   push:
     branches: [main]
@@ -17,6 +18,7 @@ on:
       - 'scripts/check_pages.py'
       - 'scripts/sync_site_i18n.py'
       - 'scripts/export_site_figures.py'
+      - 'scripts/prepare_site_models.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -32,6 +34,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Restore pinned browser models from this repository's release
+        run: python3 scripts/prepare_site_models.py
       - name: Build and verify website
         run: |
           python3 scripts/build_pages.py

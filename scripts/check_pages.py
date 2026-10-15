@@ -45,18 +45,17 @@ def check_inference():
     assert manifest['schema'] == 'emomosaic_browser_inference_v1'
     assert manifest['model'] == 'original_rm_lora_fusion_bias'
     assert len(manifest['adapters']) == 5
-    assert manifest['assetBaseUrl'] == 'https://rudykon.github.io/EmoMosaic_GMCM2026/assets/inference/'
-    remote_count = 0
+    assert manifest['assetBaseUrl'] == './', 'Browser models must be served by this site'
+    model_count = 0
     for name, meta in manifest['assets'].items():
         assert len(meta['sha256']) == 64 and meta['bytes'] > 0
         if name.startswith('models/'):
-            remote_count += 1
-            continue
+            model_count += 1
         path = (folder / name).resolve()
         assert path.is_relative_to(folder) and path.is_file()
         assert path.stat().st_size == meta['bytes']
         assert hashlib.sha256(path.read_bytes()).hexdigest() == meta['sha256'], name
-    assert remote_count == 33
+    assert model_count == 33
     assert sum(m['bytes'] for m in manifest['assets'].values()) == manifest['downloadBytes']
     sample_path = ROOT / manifest['sample']['path']
     assert sample_path.resolve().is_relative_to(ROOT / 'data/inference')
@@ -71,10 +70,27 @@ def check_inference():
     assert all(not any(row[sample['length']:]) for row in sample['observed'])
     for name, dim in [('text', 768), ('audio', 74), ('vision', 35)]:
         assert len(sample[name]) == 50 * dim and all(math.isfinite(v) for v in sample[name])
-    print('PASS: local inference runtime hashes, 33 remote model entries and input schema')
+    print('PASS: local inference runtime and all 33 model hashes, input schema')
+
+
+def check_project_links():
+    documents = list(PROJECT.glob('README*.md')) + list((PROJECT / 'assets/readme').glob('*.md'))
+    for directory in (PROJECT / 'website', ROOT):
+        documents.extend(path for path in directory.rglob('*')
+                         if path.suffix in {'.md', '.html', '.json', '.js', '.css', '.svg', '.txt'})
+    for path in documents:
+        assert 'EmoMosaic_GMCM2026' not in path.read_text(encoding='utf-8'), f'Legacy project reference: {path}'
+    release = json.loads((ROOT / 'data/app-release.json').read_text())
+    assert release['release_url'].startswith('https://github.com/rudykon/EmoMosaic/releases/tag/')
+    assert release['apk']['url'].startswith('https://github.com/rudykon/EmoMosaic/releases/download/')
+    for path in (PROJECT / 'README.md', PROJECT / 'README.zh-CN.md', ROOT / 'app.html'):
+        content = path.read_text(encoding='utf-8')
+        assert release['apk']['url'] in content and release['release_url'] in content, f'Missing release link: {path}'
+    print('PASS: README and website contain no legacy project links; APK links use this repository')
 
 
 def check():
+    check_project_links()
     math_folder = ROOT / 'assets/vendor/katex'
     math_assets = json.loads((math_folder / 'sources.json').read_text())
     for name, metadata in math_assets['files'].items():
@@ -86,7 +102,6 @@ def check():
     pages = {}
     for path in ROOT.glob('*.html'):
         text = path.read_text(encoding='utf-8')
-        assert 'https://github.com/rudykon/EmoMosaic_GMCM2026' not in text, 'Old private repository link'
         if path.name != '404.html':
             assert f'https://rudykon.github.io/EmoMosaic/{path.name}' in text
         assert '@metric:' not in text, f'Unrendered metric: {path.name}'

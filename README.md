@@ -19,6 +19,7 @@
   </p>
   <p>
     <a href="https://rudykon.github.io/EmoMosaic/app.html"><strong>Demo App ↗</strong></a> ·
+    <a href="https://github.com/rudykon/EmoMosaic/releases/tag/app-v2.2.2"><strong>Android APK ↓</strong></a> ·
     <a href="https://rudykon.github.io/EmoMosaic/inference.html"><strong>Online Inference ↗</strong></a>
   </p>
   <p>
@@ -33,9 +34,9 @@
 
 **EmoMosaic** combines a five-seed **RM-Net** ensemble with five **BERT LoRA** text experts to predict sentiment class and continuous intensity from text, audio and visual features. Fusion weights adapt to the fraction of available text, reducing the text expert's influence when its evidence is missing.
 
-This repository contains source code, configuration, tests, project website assets and selected figures for the README. **Model weights and data are hosted on Hugging Face**; the manuscript, experiment outputs and generated caches are maintained separately.
+This repository contains source code, configuration, tests, project website assets and selected figures for the README. **Python model weights and data are hosted on Hugging Face**; the offline Android APK is available in this repository's Release. The manuscript, experiment outputs and generated caches are maintained separately.
 
-**Project website:** [Build, preview and GitHub Pages setup](website/README.md). The site reuses the original EmoMosaic layout, with bilingual navigation, results and browser inference.
+**Project website:** [Build, preview and GitHub Pages setup](website/README.md), with bilingual navigation, results and browser inference.
 
 <a id="overview"></a>
 ## 🧩 Overview
@@ -54,9 +55,12 @@ This repository contains source code, configuration, tests, project website asse
 | Experience | What you can do |
 | --- | --- |
 | [**Demo App →**](https://rudykon.github.io/EmoMosaic/app.html) | Explore the Android app interface, supported input modalities and deployment notes. |
+| [**Download Android APK ↓**](https://github.com/rudykon/EmoMosaic/releases/download/app-v2.2.2/EmoMosaic-offline-2.2.2-debug.apk) | Install the bilingual offline app, version 2.2.2, from this repository's [Release](https://github.com/rudykon/EmoMosaic/releases/tag/app-v2.2.2). Android 8.0+ and a recent System WebView are required. |
 | [**Online Inference →**](https://rudykon.github.io/EmoMosaic/inference.html) | Run RM-Net + BERT LoRA in your browser with the built-in example, English text or aligned feature JSON. |
 
 Online inference runs on your computer after the model files download; your inputs stay in the browser. The first complete run downloads about **254 MB**, so a desktop browser is recommended.
+
+The Android download is the original **debug-signed APK** (249.33 MB), with models bundled for offline use. The Release includes its SHA-256 checksum and archived verification reports; physical Android testing has not been completed.
 
 <a id="method"></a>
 ## 🧠 Method
@@ -87,7 +91,7 @@ The following results come from the historical frozen evaluation of **RM-Net + B
 | Test | Full input | **0.6809** | **0.6550** | 0.6099 | 0.6942 |
 | Test | 40% mixed missingness | **0.6630** | **0.6341** | 0.6210 | 0.6861 |
 
-Across the two test views, mean Macro-F1 is **0.6446**, compared with **0.6208** for the original RM auxiliary head: a gain of **2.38 percentage points**. Values are rounded from the [original evaluation table](https://github.com/rudykon/EmoMosaic_GMCM2026/blob/50202237f5f38f1e44ee916c596d9ab57a92d94e/outputs/problem2/improvement/final_evaluation/headline_metrics.csv).
+Across the two test views, mean Macro-F1 is **0.6446**, compared with **0.6208** for the original RM auxiliary head: a gain of **2.38 percentage points**. Values are rounded from the [frozen evaluation snapshot](website/data/results.json), which retains source checksums.
 
 > **Evaluation scope:** The historical test split was inspected during development and is not an independent blind test. These are reported results, not a new evaluation run. Attachment 3 is unlabeled, so its predictions cannot be used to calculate accuracy.
 
@@ -250,7 +254,7 @@ make test
 make check-weights
 ```
 
-Original code is released under the [MIT License](LICENSE). Data, third-party models and dependencies retain their respective terms; see the [dataset usage conditions](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md). The method figure comes from the current manuscript; branding and historical figures originate from the [EmoMosaic competition project](https://github.com/rudykon/EmoMosaic_GMCM2026). Sources are recorded in the [asset index](assets/readme/README.md).
+Original code is released under the [MIT License](LICENSE). Data, third-party models and dependencies retain their respective terms; see the [dataset usage conditions](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md). The method figure comes from the current manuscript; branding and historical figure provenance are recorded in the [asset index](assets/readme/README.md).
 
 <p align="center">
   <a href="#overview">Back to overview ↑</a>

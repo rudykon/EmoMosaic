@@ -682,5 +682,5 @@
     "sha256": "555eabf4dced4069345f474efa9464220d6d35c22c13fb54b090bc40cc081c02",
     "text_features": "Inverse normalization of the frozen official BERT cache; audio/vision from the original aligned PKL; no prediction fields."
   },
-  "assetBaseUrl": "https://rudykon.github.io/EmoMosaic_GMCM2026/assets/inference/"
+  "assetBaseUrl": "./"
 }

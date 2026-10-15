@@ -19,6 +19,7 @@
   </p>
   <p>
     <a href="https://rudykon.github.io/EmoMosaic/app.html"><strong>Demo 应用 ↗</strong></a> ·
+    <a href="https://github.com/rudykon/EmoMosaic/releases/tag/app-v2.2.2"><strong>Android APK ↓</strong></a> ·
     <a href="https://rudykon.github.io/EmoMosaic/inference.html"><strong>在线推理 ↗</strong></a>
   </p>
   <p>
@@ -33,9 +34,9 @@
 
 **EmoMosaic** 将五种子 **RM-Net** 集成与五个 **BERT LoRA** 文本专家结合，利用文本、语音和视觉特征预测情感类别与连续强度。融合权重随可用文本比例调整，在文本证据缺失时降低文本专家的影响。
 
-本仓库保存源码、配置、测试、项目网页及 README 使用的精选插图。**模型权重和数据托管于 Hugging Face**；论文正文、实验输出及生成缓存另行维护。默认 `README.md` 为英文，可通过顶部链接切换语言。
+本仓库保存源码、配置、测试、项目网页及 README 使用的精选插图。**Python 模型权重和数据托管于 Hugging Face**，离线 Android APK 由本仓库 Release 提供；论文正文、实验输出及生成缓存另行维护。默认 `README.md` 为英文，可通过顶部链接切换语言。
 
-**项目网页：** [构建、预览与 GitHub Pages 部署说明](website/README.md)。沿用原 EmoMosaic 网页的布局，支持双语导航、实验结果和浏览器推理。
+**项目网页：** [构建、预览与 GitHub Pages 部署说明](website/README.md)。支持双语导航、实验结果和浏览器推理。
 
 <a id="overview"></a>
 ## 🧩 项目概览
@@ -54,9 +55,12 @@
 | 入口 | 可以体验什么 |
 | --- | --- |
 | [**Demo 应用 →**](https://rudykon.github.io/EmoMosaic/app.html) | 查看 Android 应用界面、支持的输入模态和端侧部署说明。 |
+| [**下载 Android APK ↓**](https://github.com/rudykon/EmoMosaic/releases/download/app-v2.2.2/EmoMosaic-offline-2.2.2-debug.apk) | 从本仓库的 [Release](https://github.com/rudykon/EmoMosaic/releases/tag/app-v2.2.2) 安装 2.2.2 中英双语离线应用，要求 Android 8.0+ 和较新的 System WebView。 |
 | [**在线推理 →**](https://rudykon.github.io/EmoMosaic/inference.html) | 在浏览器运行 RM-Net + BERT LoRA，支持内置案例、英文文本或对齐特征 JSON。 |
 
 在线推理在模型文件下载后使用本机计算，输入保留在浏览器内。首次完整运行约需下载 **254 MB**，建议使用桌面浏览器。
+
+Android 下载保留原始 **debug 签名 APK**（249.33 MB），内置离线模型。Release 同时提供 SHA-256 校验文件和历史核验报告；尚未完成 Android 真机测试。
 
 <a id="method"></a>
 ## 🧠 模型方法
@@ -87,7 +91,7 @@ RM-Net 处理可用的三模态特征，BERT LoRA 专家提供补充文本预测
 | 测试集 | 完整输入 | **0.6809** | **0.6550** | 0.6099 | 0.6942 |
 | 测试集 | 40% 混合缺失 | **0.6630** | **0.6341** | 0.6210 | 0.6861 |
 
-测试集两视图平均 Macro-F1 为 **0.6446**，原 RM 辅助头为 **0.6208**，提升 **2.38 个百分点**。数值由[原始评估表](https://github.com/rudykon/EmoMosaic_GMCM2026/blob/50202237f5f38f1e44ee916c596d9ab57a92d94e/outputs/problem2/improvement/final_evaluation/headline_metrics.csv)四舍五入得到。
+测试集两视图平均 Macro-F1 为 **0.6446**，原 RM 辅助头为 **0.6208**，提升 **2.38 个百分点**。数值由保留来源校验信息的[冻结评估快照](website/data/results.json)四舍五入得到。
 
 > **评估口径：** 历史测试集在开发阶段曾被查看，不能视为独立盲测。此处展示已有结果，并非本次重新运行评估。附件 3 没有真实标签，不能据其预测计算准确率。
 
@@ -250,7 +254,7 @@ make test
 make check-weights
 ```
 
-原创代码采用 [MIT 许可证](LICENSE)。数据、第三方模型及依赖分别遵循其原有条款；数据使用条件见[数据仓库 TERMS.md](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md)。方法图来自当前论文，品牌素材与历史插图来自 [EmoMosaic 竞赛项目](https://github.com/rudykon/EmoMosaic_GMCM2026)，来源详见[素材索引](assets/readme/README.md)。
+原创代码采用 [MIT 许可证](LICENSE)。数据、第三方模型及依赖分别遵循其原有条款；数据使用条件见[数据仓库 TERMS.md](https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md)。方法图来自当前论文，品牌素材与历史插图的来源记录详见[素材索引](assets/readme/README.md)。
 
 <p align="center">
   <a href="#overview">返回项目概览 ↑</a>

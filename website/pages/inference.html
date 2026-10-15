@@ -29,7 +29,7 @@
     <details><summary>计算记录</summary><pre id="inference-json" translate="no"></pre></details>
   </div>
 </section>
-<aside class="callout"><strong>浏览器本地计算</strong><p>仅在点击运行后加载模型。浏览器演示复用原项目托管的模型资源，下载时逐项校验 SHA-256；输入不上传。Python 权重与数据可在复现说明中单独获取。</p></aside>
+<aside class="callout"><strong>浏览器本地计算</strong><p>仅在点击运行后从本站加载模型，下载时逐项校验 SHA-256；输入不上传。Python 权重与数据可在复现说明中单独获取。</p></aside>
 <section id="model" class="section"><div class="section-heading"><h2>模型与算法</h2></div>
   <p>RM 分支集成种子 17、29、43、71、101 的五个模型；文本分支使用同一 BERT 基座上的五组 LoRA。各分支先对类别概率取均值，再按文本可用度融合，并应用验证集冻结的类别偏置。</p>
   <div class="formula-box"><div class="math-display" data-math="w_{\mathrm{c}} = 0.8f^2,\qquad w_{\mathrm{r}} = 0.6f^2" translate="no">w_{\mathrm{c}} = 0.8f^2,\qquad w_{\mathrm{r}} = 0.6f^2</div><div class="math-display" data-math="p = \operatorname{softmax}\!\left(\log\!\left((1-w_{\mathrm{c}})p_{\mathrm{RM}}+w_{\mathrm{c}}p_{\mathrm{LoRA}}\right)+b\right)" translate="no">p = \operatorname{softmax}\!\left(\log\!\left((1-w_{\mathrm{c}})p_{\mathrm{RM}}+w_{\mathrm{c}}p_{\mathrm{LoRA}}\right)+b\right)</div><div class="math-display" data-math="\hat{y} = (1-w_{\mathrm{r}})\hat{y}_{\mathrm{RM}} + w_{\mathrm{r}}\hat{y}_{\mathrm{LoRA}}" translate="no">\hat{y} = (1-w_{\mathrm{r}})\hat{y}_{\mathrm{RM}} + w_{\mathrm{r}}\hat{y}_{\mathrm{LoRA}}</div></div>

@@ -16,7 +16,7 @@ const sha = async buffer => [...new Uint8Array(await crypto.subtle.digest("SHA-2
 async function asset(path) {
   const meta = manifest.assets[path];
   if (!meta) fail("模型资源清单不完整");
-  const base = path.startsWith("models/") ? manifest.assetBaseUrl : self.location.href;
+  const base = path.startsWith("models/") ? new URL(manifest.assetBaseUrl, self.location.href) : self.location.href;
   const url = new URL(path, base);
   url.searchParams.set("sha256", meta.sha256);
   let cache, response;

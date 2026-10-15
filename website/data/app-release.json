@@ -1,0 +1,13 @@
+{
+  "version": "2.2.2",
+  "tag": "app-v2.2.2",
+  "release_url": "https://github.com/rudykon/EmoMosaic/releases/tag/app-v2.2.2",
+  "apk": {
+    "filename": "EmoMosaic-offline-2.2.2-debug.apk",
+    "url": "https://github.com/rudykon/EmoMosaic/releases/download/app-v2.2.2/EmoMosaic-offline-2.2.2-debug.apk",
+    "bytes": 249329156,
+    "sha256": "d3d61f331647a6cdbc68630a7907b39d046adfb38aa20e6e12dd18324846f67b"
+  },
+  "signing": "original debug signature; APK bytes unchanged",
+  "physical_android_test": false
+}

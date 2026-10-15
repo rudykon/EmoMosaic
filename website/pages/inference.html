@@ -1,0 +1,53 @@
+<div class="page-heading"><div class="eyebrow">INFERENCE</div><h1>在线推理</h1><p>在本机浏览器运行论文的 RM + BERT LoRA 模型，计算三类情感概率与情感强度。</p></div>
+<div class="replay-notice"><strong>本机计算</strong><span>模型按需下载，输入与预测留在阅读者的电脑。首次完整运行约下载 254 MB；建议使用桌面浏览器，低内存设备可能无法完成加载。</span></div>
+<section id="input" class="section">
+  <div class="section-heading"><h2>输入数据</h2><span class="mini-tag">CMU-MOSEI · aligned_50</span></div>
+  <div class="sample-quote"><span class="mini-tag">附件 4 · 样本 19</span><blockquote translate="no">People are surprisingly forgiving brands when they own up to mistakes, and unfortunately some haters out there love to point fingers and jump all over imperfections, but for the most part, people understand</blockquote><p class="small muted">案例包含原始对齐语音与视觉特征，以及论文推理入口使用的 BERT 文本特征和词元编号。该样本没有真值标签。</p></div>
+  <fieldset id="inference-controls" class="inference-controls">
+    <legend class="sr-only">推理输入与模态选择</legend>
+    <div class="actions"><button id="run-example" class="button primary" type="button">一键运行案例</button><a class="button" href="data/inference/attachment4-19.json" download>下载案例输入 ↓</a></div>
+    <div class="filter-bar inference-source"><label for="inference-source">输入来源</label><select id="inference-source"><option value="example">附件 4 · 样本 19</option><option value="text">英文文本</option><option value="file">对齐特征文件</option></select></div>
+    <div id="text-input-panel" hidden><label for="inference-text">英文文本</label><textarea id="inference-text" rows="4" maxlength="10000" translate="no" spellcheck="false" placeholder="I enjoyed the thoughtful story and the performances."></textarea><p class="small muted">使用同一 BERT 编码器与论文模型；语音、视觉按缺失处理。最多保留 48 个内容词元，另含 CLS 与 SEP。</p></div>
+    <div id="file-input-panel" hidden><label for="inference-file">对齐特征 JSON</label><input id="inference-file" type="file" accept=".json,application/json"><p class="small muted">采用下方输入协议；文件在本机解析，不上传至服务器。</p></div>
+    <div class="inference-modalities"><label><input type="checkbox" id="inference-text-enabled" checked> <span>文本</span></label><label><input type="checkbox" id="inference-audio-enabled" checked> <span>语音</span></label><label><input type="checkbox" id="inference-vision-enabled" checked> <span>视觉</span></label></div>
+    <p class="small muted">模态选择作用于观测掩码。更改后点击重新计算；全部关闭时仅观察模型先验。</p>
+    <div class="actions"><button id="run-inference" class="button" type="button">运行当前输入</button><button id="clear-inference" class="button" type="button">清空并释放模型</button><button id="clear-model-cache" class="text-button" type="button">清除模型缓存</button></div>
+  </fieldset>
+  <div class="inference-status"><p id="inference-status" role="status" aria-live="polite">等待运行</p><progress id="inference-progress" aria-label="模型运行进度" hidden></progress><button id="cancel-inference" class="button small-button" type="button" hidden>停止计算</button></div>
+  <p id="inference-error" role="alert" hidden></p>
+</section>
+<section id="prediction" class="section">
+  <div class="section-heading"><h2>预测结果</h2><span class="mini-tag">CPU · WebAssembly</span></div>
+  <p id="inference-empty" class="muted">运行模型后显示本次计算结果。</p>
+  <div id="inference-result" hidden>
+    <p id="inference-context" class="small muted"></p>
+    <div class="inference-result-grid"><div class="prediction-card"><div class="prediction-heading"><span>融合情感强度</span><strong id="inference-label" class="polarity"></strong></div><div id="inference-intensity" class="prediction-value"></div><div class="scale-labels"><span>−3 负向</span><span>0</span><span>+3 正向</span></div><div id="inference-probabilities" class="probability-list"></div></div>
+    <div class="inference-summary"><h3>融合参数</h3><dl><div><dt>文本可用度</dt><dd id="inference-coverage"></dd></div><div><dt>分类专家权重</dt><dd id="inference-class-weight"></dd></div><div><dt>回归专家权重</dt><dd id="inference-reg-weight"></dd></div><div><dt>RM 情感强度</dt><dd id="inference-core"></dd></div><div><dt>LoRA 情感强度</dt><dd id="inference-expert"></dd></div><div><dt>本次用时</dt><dd id="inference-time"></dd></div></dl></div></div>
+    <p class="table-note">类别取融合概率最大项，强度由独立回归分支计算。概率未经独立校准；单个无标签案例用于检查推理过程，不能衡量准确率。</p>
+    <p id="inference-truncation" class="table-note" hidden>输入超过 48 个内容词元，已按训练长度截断。</p>
+    <div class="actions"><a id="download-inference" class="button" download="emomosaic-local-prediction.json">下载本次结果 ↓</a></div>
+    <details><summary>计算记录</summary><pre id="inference-json" translate="no"></pre></details>
+  </div>
+</section>
+<aside class="callout"><strong>浏览器本地计算</strong><p>仅在点击运行后加载模型。浏览器演示复用原项目托管的模型资源，下载时逐项校验 SHA-256；输入不上传。Python 权重与数据可在复现说明中单独获取。</p></aside>
+<section id="model" class="section"><div class="section-heading"><h2>模型与算法</h2></div>
+  <p>RM 分支集成种子 17、29、43、71、101 的五个模型；文本分支使用同一 BERT 基座上的五组 LoRA。各分支先对类别概率取均值，再按文本可用度融合，并应用验证集冻结的类别偏置。</p>
+  <div class="formula-box"><div class="math-display" data-math="w_{\mathrm{c}} = 0.8f^2,\qquad w_{\mathrm{r}} = 0.6f^2" translate="no">w_{\mathrm{c}} = 0.8f^2,\qquad w_{\mathrm{r}} = 0.6f^2</div><div class="math-display" data-math="p = \operatorname{softmax}\!\left(\log\!\left((1-w_{\mathrm{c}})p_{\mathrm{RM}}+w_{\mathrm{c}}p_{\mathrm{LoRA}}\right)+b\right)" translate="no">p = \operatorname{softmax}\!\left(\log\!\left((1-w_{\mathrm{c}})p_{\mathrm{RM}}+w_{\mathrm{c}}p_{\mathrm{LoRA}}\right)+b\right)</div><div class="math-display" data-math="\hat{y} = (1-w_{\mathrm{r}})\hat{y}_{\mathrm{RM}} + w_{\mathrm{r}}\hat{y}_{\mathrm{LoRA}}" translate="no">\hat{y} = (1-w_{\mathrm{r}})\hat{y}_{\mathrm{RM}} + w_{\mathrm{r}}\hat{y}_{\mathrm{LoRA}}</div></div>
+  <p class="table-note"><span class="math-inline" data-math="f" translate="no">f</span> 为可见内容词元比例；UNK 不计入可用内容，PAD、CLS、SEP 不计入分母。<span class="math-inline" data-math="b = (0.25,\,0,\,0.025)" translate="no">b = (0.25, 0, 0.025)</span>，依次对应负向、中性、正向。BERT 基座以 FP16 存储、FP32 运算，LoRA 保留 FP32；导出精度与论文 Python 入口的差异见验证记录。</p>
+  <p>推理通过 Web Worker 中的 ONNX Runtime Web 执行，使用本机 CPU。模型首次加载后尝试存入浏览器缓存；缓存不可用时仍可在线下载运行。停止计算会终止工作线程；清空会释放模型和当前输入。</p>
+  <div class="actions"><a class="button" href="assets/inference/manifest.json">模型来源与 SHA-256</a><a class="button" href="data/browser-inference-validation.json">验证记录 ↗</a><a class="button" href="method.html#fusion">论文方法 →</a></div>
+</section>
+<section id="protocol" class="section"><div class="section-heading"><h2>输入协议</h2></div>
+  <p>完整三模态输入采用论文的 50 位置对齐特征。当前页面接受英文文本或已提取的对齐特征；原始音视频不能直接输入；独立词级对齐流程的特征也不能替代此协议的预提取特征。</p>
+  <div class="table-wrap"><table><thead><tr><th>字段</th><th>格式</th><th>含义</th></tr></thead><tbody>
+    <tr><td><code>schema</code></td><td><code>emomosaic_aligned_50_v1</code></td><td>输入协议版本</td></tr>
+    <tr><td><code>text / audio / vision</code></td><td><code>38400 / 3700 / 1750</code></td><td>按位置展平的未标准化特征，维度为 768 / 74 / 35；缺失值与填充用零表示。</td></tr>
+    <tr><td><code>token_ids</code></td><td><code>50</code></td><td>BERT uncased 词元编号</td></tr>
+    <tr><td><code>observed</code></td><td><code>3 × 50 boolean</code></td><td>文本、语音、视觉的观测掩码；填充位置必须为 false。</td></tr>
+    <tr><td><code>length</code></td><td><code>1 … 50</code></td><td>含特殊词元的有效长度</td></tr>
+  </tbody></table></div>
+  <p class="table-note">JSON 文件上限为 3 MB。可下载案例输入查看完整结构；模型内部使用训练集统计量进行标准化和截断。样本转写只作说明，推理使用数值特征及词元编号。</p>
+  <p class="small"><a href="assets/inference/licenses/BERT-LICENSE.txt">BERT 许可证</a> · <a href="assets/inference/licenses/ORT-LICENSE.txt">ONNX Runtime 许可证</a> · <a href="assets/inference/licenses/ORT-ThirdPartyNotices.txt">第三方声明</a></p>
+</section>
+<a class="next-page" href="app.html"><span>下一页</span><strong>离线应用 →</strong></a>
+<script src="assets/inference/page.js" defer></script>

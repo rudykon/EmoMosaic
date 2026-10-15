@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "reference": "src/P2P3_model/improved_predict.py:ImprovedPredictor.predict / CPU",
+  "custom_text": "I enjoyed the thoughtful story and the performances.",
+  "tolerances": {
+    "probability": 0.005,
+    "intensity": 0.01
+  },
+  "cases": [
+    {
+      "case": "0",
+      "probability_max_abs_error": 1.895208318059005e-08,
+      "intensity_abs_error": 4.656612873077393e-10,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.3917623299528728,
+        0.2978456248767462,
+        0.31039204517038094
+      ],
+      "browser_probabilities": [
+        0.391762319378685,
+        0.2978456438288294,
+        0.3103920367924856
+      ],
+      "reference_intensity": 0.006908210925757885,
+      "browser_intensity": 0.006908210460096598
+    },
+    {
+      "case": "1",
+      "probability_max_abs_error": 0.00011832715259585402,
+      "intensity_abs_error": 0.0002185094356536854,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.5948665415076446,
+        0.13316194576215648,
+        0.27197151273019887
+      ],
+      "browser_probabilities": [
+        0.5947482143550488,
+        0.13320320966883312,
+        0.27204857597611815
+      ],
+      "reference_intensity": -0.12836428657174107,
+      "browser_intensity": -0.12814577713608738
+    },
+    {
+      "case": "2",
+      "probability_max_abs_error": 1.7443825328644635e-08,
+      "intensity_abs_error": 1.4901161193847656e-08,
+      "label": "Positive",
+      "reference_probabilities": [
+        0.30198073432412376,
+        0.3159936715820224,
+        0.38202559409385384
+      ],
+      "browser_probabilities": [
+        0.30198074284826193,
+        0.3159936805017096,
+        0.3820255766500285
+      ],
+      "reference_intensity": -0.1528586447238922,
+      "browser_intensity": -0.15285862982273102
+    },
+    {
+      "case": "3",
+      "probability_max_abs_error": 0.00011960929889553995,
+      "intensity_abs_error": 0.00021846771240234542,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.5722810725909067,
+        0.1433401226495608,
+        0.28437880475953253
+      ],
+      "browser_probabilities": [
+        0.5721614632920111,
+        0.14338189802421977,
+        0.284456638683769
+      ],
+      "reference_intensity": -0.054817954450845696,
+      "browser_intensity": -0.05459948673844335
+    },
+    {
+      "case": "4",
+      "probability_max_abs_error": 2.1230097790869706e-08,
+      "intensity_abs_error": 1.7881393432617188e-07,
+      "label": "Positive",
+      "reference_probabilities": [
+        0.3352938237628073,
+        0.196132654676836,
+        0.4685735215603567
+      ],
+      "browser_probabilities": [
+        0.3352938189636249,
+        0.1961326382459206,
+        0.4685735427904545
+      ],
+      "reference_intensity": 0.27817001938819885,
+      "browser_intensity": 0.2781698405742645
+    },
+    {
+      "case": "5",
+      "probability_max_abs_error": 0.00011892529397805607,
+      "intensity_abs_error": 0.0002184826135635358,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.5841762772033635,
+        0.13423579337469563,
+        0.2815879294219409
+      ],
+      "browser_probabilities": [
+        0.5840573519093855,
+        0.13427719162349225,
+        0.28166545646712227
+      ],
+      "reference_intensity": 0.005559002608060845,
+      "browser_intensity": 0.005777485221624381
+    },
+    {
+      "case": "6",
+      "probability_max_abs_error": 3.271633020052178e-08,
+      "intensity_abs_error": 5.960464477539063e-08,
+      "label": "Positive",
+      "reference_probabilities": [
+        0.26466753450304825,
+        0.21778685959156427,
+        0.5175456059053875
+      ],
+      "browser_probabilities": [
+        0.26466755330989633,
+        0.21778687350104642,
+        0.5175455731890573
+      ],
+      "reference_intensity": 0.5818399786949158,
+      "browser_intensity": 0.581839919090271
+    },
+    {
+      "case": "7",
+      "probability_max_abs_error": 0.00012008575815991573,
+      "intensity_abs_error": 0.00021848261356353232,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.5637955969587168,
+        0.14285234174162453,
+        0.2933520612996587
+      ],
+      "browser_probabilities": [
+        0.5636755112005569,
+        0.14289418543639493,
+        0.2934303033630481
+      ],
+      "reference_intensity": 0.03354222550988198,
+      "browser_intensity": 0.03376070812344551
+    },
+    {
+      "case": "custom_text",
+      "probability_max_abs_error": 7.716546647662526e-06,
+      "intensity_abs_error": 7.932662963883175e-05,
+      "label": "Positive",
+      "reference_probabilities": [
+        0.020526264585029944,
+        0.033963354401787126,
+        0.9455103810131829
+      ],
+      "browser_probabilities": [
+        0.020528642681766674,
+        0.03396869285169805,
+        0.9455026644665352
+      ],
+      "reference_intensity": 2.0936523914337157,
+      "browser_intensity": 2.093573064804077
+    },
+    {
+      "case": "upload",
+      "probability_max_abs_error": 0.00012008575815991573,
+      "intensity_abs_error": 0.00021848261356353232,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.5637955969587168,
+        0.14285234174162453,
+        0.2933520612996587
+      ],
+      "browser_probabilities": [
+        0.5636755112005569,
+        0.14289418543639493,
+        0.2934303033630481
+      ],
+      "reference_intensity": 0.03354222550988198,
+      "browser_intensity": 0.03376070812344551
+    },
+    {
+      "case": "cached_retry",
+      "probability_max_abs_error": 0.00012008575815991573,
+      "intensity_abs_error": 0.00021848261356353232,
+      "label": "Negative",
+      "reference_probabilities": [
+        0.5637955969587168,
+        0.14285234174162453,
+        0.2933520612996587
+      ],
+      "browser_probabilities": [
+        0.5636755112005569,
+        0.14289418543639493,
+        0.2934303033630481
+      ],
+      "reference_intensity": 0.03354222550988198,
+      "browser_intensity": 0.03376070812344551
+    }
+  ],
+  "max_probability_error": 0.00012008575815991573,
+  "max_intensity_error": 0.0002185094356536854,
+  "browser_checks": {
+    "cancelled": true,
+    "cachedRetry": true,
+    "dynamicEnglish": true,
+    "integrityFailure": true,
+    "invalidInput": "输入文件的格式标识不正确"
+  },
+  "artifact_sha256": {
+    "website/assets/inference/manifest.json": "483cd2dbb6aecfbb6d986a5e3649bf1b5939036657f26f697d3d2ea7cd67cd71",
+    "website/assets/inference/worker.js": "07b7d366a2f68a8c8829275085fa8f62559bf386f8b7a4e54f42caaf28740880",
+    "website/assets/inference/fusion.js": "f0c44dbc1a1b086ed9a6efd1a35706f15e0f705000f4d626941ed4ede8ccec8f",
+    "website/assets/inference/tokenizer.js": "3d8abbc181e61fa846cdfcc1a7c19ae5896600c855bbdfc4ef23cde256e34658",
+    "website/data/inference/attachment4-19.json": "555eabf4dced4069345f474efa9464220d6d35c22c13fb54b090bc40cc081c02",
+    "src/P2P3_model/improved_predict.py": "4b957ce2741dc9a075220e8cea423cee0007cfb4761e5e9089876f503f3e04e0"
+  }
+}

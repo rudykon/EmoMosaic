@@ -1,0 +1,48 @@
+<div class="page-heading"><div class="eyebrow">REPRODUCTION & RESOURCES</div><h1>复现说明</h1><p>从公开源码、固定版本权重与数据开始，运行冻结的 RM-Net + BERT LoRA 模型。</p></div>
+<section id="start" class="section">
+  <div class="section-heading"><h2>运行环境</h2><span class="mini-tag">Python 3.11 · CPU / CUDA</span></div>
+  <p class="section-intro">以下命令对应当前 GitHub 代码仓库。模型权重与数据分别从 Hugging Face 下载，下载脚本固定版本并校验 SHA-256。</p>
+  <h3 class="step-heading">代码与依赖</h3>
+  <div class="code-block"><div class="code-header"><span>BASH</span><button class="copy-code" type="button">复制代码</button></div><pre><code>git clone https://github.com/rudykon/EmoMosaic.git
+cd EmoMosaic
+python3.11 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+.venv/bin/python -m pip install -r requirements.txt</code></pre></div>
+  <h3 class="step-heading">下载资源与预测</h3>
+  <div class="code-block"><div class="code-header"><span>BASH</span><button class="copy-code" type="button">复制代码</button></div><pre><code>make download-weights
+make download-models
+make download-data
+make predict</code></pre></div>
+  <p class="table-note">数据约 3.80 GiB，公开下载无需令牌。输出文件为 <code>validation/attachment3_predictions.csv</code>，包含 30 条无标签样本的预测，不用于计算准确率。</p>
+  <h3 class="step-heading">重建特征与评估</h3>
+  <div class="code-block"><div class="code-header"><span>BASH</span><button class="copy-code" type="button">复制代码</button></div><pre><code>.venv/bin/python code/src/p2p3/prepare.py --device cpu
+make evaluate
+make test
+make check-weights</code></pre></div>
+  <p class="table-note">历史留出集曾在开发阶段被查看，不属于独立盲测。训练、评估及历史分析需要各自的输入文件；完整说明以仓库 README 为准。</p>
+</section>
+<section id="resources" class="section">
+  <div class="section-heading"><h2>研究资料</h2></div>
+  <div class="task-grid resource-cards">
+    <a class="task-card" href="https://github.com/rudykon/EmoMosaic" target="_blank" rel="noopener noreferrer"><span class="number-label purple">01</span><h3>源码</h3><p>训练、推理、评估、解释和独立对齐流程。</p><span class="card-link">GitHub ↗</span></a>
+    <a class="task-card" href="https://huggingface.co/config-h/EmoMosaic" target="_blank" rel="noopener noreferrer"><span class="number-label coral">02</span><h3>模型权重</h3><p>五个 RM-Net 检查点、五个 LoRA 适配器与冻结融合规则。</p><span class="card-link">Hugging Face ↗</span></a>
+    <a class="task-card" href="https://huggingface.co/datasets/config-h/EmoMosaic" target="_blank" rel="noopener noreferrer"><span class="number-label teal">03</span><h3>数据集</h3><p>CMU-MOSEI 衍生集合的原始数据、标签与对齐特征。</p><span class="card-link">Hugging Face Datasets ↗</span></a>
+  </div>
+  <div class="resource-links"><a href="data/results.json" download="emomosaic-results.json">网站数据快照 ↓</a><a href="https://huggingface.co/config-h/EmoMosaic/blob/main/rmnet_bert_lora/decision_rules.json" target="_blank" rel="noopener noreferrer">冻结融合规则 ↗</a><a href="https://github.com/rudykon/EmoMosaic/blob/main/README.md" target="_blank" rel="noopener noreferrer">完整运行说明 ↗</a><a href="https://huggingface.co/datasets/config-h/EmoMosaic/blob/main/TERMS.md" target="_blank" rel="noopener noreferrer">数据使用条款 ↗</a></div>
+  <p class="table-note">网页结果和交互样本复用原项目的冻结记录，保留原始来源与校验信息。浏览器演示按需读取原站模型；完整训练数据与 Android APK 不随网页分发。</p>
+  <div class="scope-box"><h3>研究项目</h3><p translate="no">Reliability-Aware Multimodal Sentiment Prediction Under Local Modality Missingness</p><p class="small" translate="no">Minghao Kong · Deng Yao · Xi Zhang · Ying Gao · Jiurun Chen · Zirong Liu · Rongjie Wang</p><p class="small muted" translate="no">Sun Yat-sen University · Pengcheng Laboratory</p></div>
+</section>
+<section id="structure" class="section">
+  <div class="section-heading"><h2>项目结构</h2></div>
+  <div class="directory-grid">
+    <div><code>code/src/p2p3/</code><span>模型、训练、预测与解释</span></div>
+    <div><code>code/src/problem1/</code><span>独立特征提取与词级对齐</span></div>
+    <div><code>scripts/download_weights.py</code><span>下载并校验模型权重</span></div>
+    <div><code>scripts/download_data.py</code><span>下载并校验既有数据</span></div>
+    <div><code>website/</code><span>项目网页、图件与交互快照</span></div>
+    <div><code>scripts/build_pages.py</code><span>静态网页构建</span></div>
+  </div>
+  <p class="table-note">词级对齐流程输出与预测模型使用的预提取特征不可互换。原创代码采用 MIT 许可证，数据和第三方组件遵循各自条款。</p>
+</section>
+<a class="next-page" href="index.html"><span>首页</span><strong>研究概述 →</strong></a>

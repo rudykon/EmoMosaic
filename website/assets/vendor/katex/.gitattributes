@@ -1,0 +1,3 @@
+# Preserve the upstream distribution and its recorded hashes on all platforms.
+* -text
+fonts/* binary

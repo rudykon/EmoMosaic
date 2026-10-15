@@ -1,0 +1,53 @@
+{
+  "figures": [
+    {
+      "file": "assets/paper/fig_02_01_problem1_route.png",
+      "source": "paper/figures/ch02_analysis/fig_02_01_problem1_route.png",
+      "sha256": "b9726edd888e4839c7aff8eb3b9b41a3a0846da0146e323de0a7138d7081e67d",
+      "paper_figure": "2.1"
+    },
+    {
+      "file": "assets/paper/fig_04_01_word_alignment.png",
+      "source": "paper/figures/ch04_problem1/fig_04_01_word_alignment.png",
+      "sha256": "8bf078c9f636e9fb84f5fd8d308f8b96bf0c430ae0b6b02cde87d817a7e856a8",
+      "paper_figure": "4.1"
+    },
+    {
+      "file": "assets/paper/fig_04_02_qc_summary.png",
+      "source": "paper/figures/ch04_problem1/fig_04_02_qc_summary.png",
+      "sha256": "c2bf047bdd717fb50ca58670ffa22a6b1c9d49b20a96f804e1c6add7f83beaee",
+      "paper_figure": "4.2"
+    },
+    {
+      "file": "assets/paper/fig_05_01_full_method.png",
+      "source": "paper/figures/ch05_problem2/fig_05_01_full_method.png",
+      "sha256": "cd03196e532fd28a93b25a2ded0a9777b84469dbf2efecaf53dfeed473dddcbb",
+      "paper_figure": "5.1"
+    },
+    {
+      "file": "assets/paper/fig_05_02_dual_view_training.png",
+      "source": "paper/figures/ch05_problem2/fig_05_02_dual_view_training.png",
+      "sha256": "1092f0749ee35d889069fb5c67e9e29be22fad903ffc4db469b7a795c47988d3",
+      "paper_figure": "5.2"
+    },
+    {
+      "file": "assets/paper/fig_05_07_final_missing_grid_gains.png",
+      "source": "paper/figures/ch05_problem2/fig_05_07_final_missing_grid_gains.png",
+      "sha256": "96ba4897b1fec0969e6ed6d9fc80227d9b6e09715d8f43fbf701f2091be0e70f",
+      "paper_figure": "5.7"
+    },
+    {
+      "file": "assets/paper/fig_06_01_fidelity_curves.png",
+      "source": "paper/figures/ch06_problem3/fig_06_01_fidelity_curves.png",
+      "sha256": "d538859e0bb4b953a1714fde83e913845d1ae79e98cc55ef55a72f7eca0d1702",
+      "paper_figure": "6.1"
+    },
+    {
+      "file": "assets/paper/fig_06_13_attachment4_19_modality_card.png",
+      "source": "paper/figures/ch06_problem3/fig_06_13_attachment4_19_modality_card.png",
+      "sha256": "2f4a24c06e4d7b17573277ed26f021cbda69840ed7e12b5f86031abdf39ffacd",
+      "paper_figure": "6.13"
+    }
+  ],
+  "note": "Unmodified PNG exports from the frozen paper; captions and translations are maintained in page HTML."
+}

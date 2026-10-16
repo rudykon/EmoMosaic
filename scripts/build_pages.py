@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "website"
 DEST = ROOT / "_site"
 PAGES = [
-    ('index', '研究概述', 'OVERVIEW', [('research', '研究任务'), ('findings', '实验结果'), ('application', '离线应用'), ('citation', '论文引用')]),
+    ('index', '研究概述', 'OVERVIEW', [('research', '研究任务'), ('findings', '实验结果'), ('application', '离线应用')]),
     ('problem1', '特征对齐', 'ALIGNMENT', [('analysis', '研究动机'), ('features', '特征表示'), ('alignment', '时序对齐'), ('findings', '结果分析'), ('sources', '结果文件')]),
     ('method', '模型方法', 'METHOD', [('pipeline', '研究动机'), ('architecture', '模型结构'), ('training', '双视图训练'), ('fusion', '可用度约束融合'), ('findings', '结果分析'), ('explanation', '预测解释')]),
     ('problem3', '预测解释', 'EXPLANATIONS', [('analysis', '研究动机'), ('attribution', '模态归因'), ('evidence', '局部证据'), ('findings', '结果分析'), ('case', '样本分析')]),

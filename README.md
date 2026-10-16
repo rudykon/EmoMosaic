@@ -11,7 +11,6 @@
   <p><strong>Multimodal sentiment prediction with partially missing modalities</strong></p>
   <p>Text · Audio · Vision<br>RM-Net · BERT LoRA text experts · Availability-gated fusion</p>
   <p>
-    <a href="https://arxiv.org/abs/2610.20543"><img src="https://img.shields.io/badge/arXiv-2610.20543-B31B1B?style=flat-square&amp;logo=arxiv&amp;labelColor=263445" alt="Paper on arXiv: 2610.20543"></a>
     <a href="https://huggingface.co/config-h/EmoMosaic"><img src="https://img.shields.io/badge/Hugging_Face-Models-7B68D8?style=flat-square&amp;logo=huggingface&amp;labelColor=263445" alt="Model weights on Hugging Face"></a>
     <a href="https://huggingface.co/datasets/config-h/EmoMosaic"><img src="https://img.shields.io/badge/Hugging_Face-Dataset-249D9C?style=flat-square&amp;logo=huggingface&amp;labelColor=263445" alt="Dataset on Hugging Face"></a>
     <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white&amp;labelColor=263445" alt="Python 3.11"></a>
@@ -29,16 +28,13 @@
     <a href="#method">Method</a> ·
     <a href="#results">Results</a> ·
     <a href="#quick-start">Quick start</a> ·
-    <a href="#reproduction">Reproduction</a> ·
-    <a href="#citation">Citation</a>
+    <a href="#reproduction">Reproduction</a>
   </p>
 </div>
 
 **EmoMosaic** combines a five-seed **RM-Net** ensemble with five **BERT LoRA** text experts to predict sentiment class and continuous intensity from text, audio and visual features. Fusion weights adapt to the fraction of available text, reducing the text expert's influence when its evidence is missing.
 
 This repository contains source code, configuration, tests, project website assets and selected figures for the README. **Python model weights and data are hosted on Hugging Face**; the offline Android APK is available in this repository's Release. The manuscript, experiment outputs and generated caches are maintained separately.
-
-**Paper:** [Reliability-Aware Multimodal Sentiment Prediction Under Local Modality Missingness](https://arxiv.org/abs/2610.20543) · [PDF](https://arxiv.org/pdf/2610.20543)
 
 **Project website:** [Build, preview and GitHub Pages setup](website/README.md), with bilingual navigation, results and browser inference.
 
@@ -249,23 +245,6 @@ EmoMosaic/
 ```
 
 Downloaded and generated directories such as `code/models/`, `data/source_data/`, `code/outputs/` and `validation/` are created locally.
-
-<a id="citation"></a>
-## 📄 Citation
-
-If you find this work useful in your research, please cite our paper:
-
-```bibtex
-@misc{kong2026reliabilityaware,
-  title         = {Reliability-Aware Multimodal Sentiment Prediction Under Local Modality Missingness},
-  author        = {Kong, Minghao and Yao, Deng and Zhang, Xi and Gao, Ying and Chen, Jiurun and Liu, Zirong and Wang, Rongjie},
-  year          = {2026},
-  eprint        = {2610.20543},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV},
-  url           = {https://arxiv.org/abs/2610.20543}
-}
-```
 
 <a id="checks-and-license"></a>
 ## ✅ Checks & license

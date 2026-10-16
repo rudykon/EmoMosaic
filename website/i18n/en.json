@@ -1008,5 +1008,10 @@
   "版本说明与核验记录 ↗": "Release notes and verification ↗",
   "仅在点击运行后从本站加载模型，下载时逐项校验 SHA-256；输入不上传。Python 权重与数据可在复现说明中单独获取。": "Models load from this site only after you click Run, with each SHA-256 hash verified. Inputs stay in your browser. Python weights and data are linked in Reproduction.",
   "网页结果和交互样本使用保留来源与校验信息的冻结记录。浏览器模型从本站按需加载；Android APK 由本项目 Release 提供，完整训练数据由上述数据集入口获取。": "Results and interactive samples use frozen records with provenance and checksums. Browser models load from this site on demand; the Android APK is available in this project’s Release, and full training data is linked above.",
-  "arXiv 论文 ↗": "arXiv paper ↗"
+  "arXiv 论文 ↗": "arXiv paper ↗",
+  "论文引用": "Citation",
+  "论文引用 ↓": "Citation ↓",
+  "论文引用 →": "Citation →",
+  "如果本项目对您的研究有帮助，请引用以下论文。": "If you find this work useful in your research, please cite the following paper.",
+  "复制 BibTeX 引用": "Copy BibTeX citation"
 }

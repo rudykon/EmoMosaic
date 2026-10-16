@@ -11,6 +11,7 @@
   <p><strong>局部模态缺失下的多模态情感预测</strong></p>
   <p>文本 · 语音 · 视觉<br>RM-Net · BERT LoRA 文本专家 · 文本可用性门控融合</p>
   <p>
+    <a href="https://arxiv.org/abs/2610.20543"><img src="https://img.shields.io/badge/arXiv-2610.20543-B31B1B?style=flat-square&amp;logo=arxiv&amp;labelColor=263445" alt="arXiv 论文：2610.20543"></a>
     <a href="https://huggingface.co/config-h/EmoMosaic"><img src="https://img.shields.io/badge/Hugging_Face-Models-7B68D8?style=flat-square&amp;logo=huggingface&amp;labelColor=263445" alt="Hugging Face 模型权重"></a>
     <a href="https://huggingface.co/datasets/config-h/EmoMosaic"><img src="https://img.shields.io/badge/Hugging_Face-Dataset-249D9C?style=flat-square&amp;logo=huggingface&amp;labelColor=263445" alt="Hugging Face 数据集"></a>
     <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white&amp;labelColor=263445" alt="Python 3.11"></a>
@@ -28,13 +29,16 @@
     <a href="#method">模型方法</a> ·
     <a href="#results">实验结果</a> ·
     <a href="#quick-start">快速开始</a> ·
-    <a href="#reproduction">实验复现</a>
+    <a href="#reproduction">实验复现</a> ·
+    <a href="#citation">论文引用</a>
   </p>
 </div>
 
 **EmoMosaic** 将五种子 **RM-Net** 集成与五个 **BERT LoRA** 文本专家结合，利用文本、语音和视觉特征预测情感类别与连续强度。融合权重随可用文本比例调整，在文本证据缺失时降低文本专家的影响。
 
 本仓库保存源码、配置、测试、项目网页及 README 使用的精选插图。**Python 模型权重和数据托管于 Hugging Face**，离线 Android APK 由本仓库 Release 提供；论文正文、实验输出及生成缓存另行维护。默认 `README.md` 为英文，可通过顶部链接切换语言。
+
+**论文：** [Reliability-Aware Multimodal Sentiment Prediction Under Local Modality Missingness](https://arxiv.org/abs/2610.20543) · [PDF](https://arxiv.org/pdf/2610.20543)
 
 **项目网页：** [构建、预览与 GitHub Pages 部署说明](website/README.md)。支持双语导航、实验结果和浏览器推理。
 
@@ -245,6 +249,23 @@ EmoMosaic/
 ```
 
 `code/models/`、`data/source_data/`、`code/outputs/` 和 `validation/` 等下载及生成目录在本地创建。
+
+<a id="citation"></a>
+## 📄 论文引用
+
+如果本项目对您的研究有帮助，请引用我们的论文：
+
+```bibtex
+@misc{kong2026reliabilityaware,
+  title         = {Reliability-Aware Multimodal Sentiment Prediction Under Local Modality Missingness},
+  author        = {Kong, Minghao and Yao, Deng and Zhang, Xi and Gao, Ying and Chen, Jiurun and Liu, Zirong and Wang, Rongjie},
+  year          = {2026},
+  eprint        = {2610.20543},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2610.20543}
+}
+```
 
 <a id="checks-and-license"></a>
 ## ✅ 检查与许可

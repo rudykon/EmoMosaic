@@ -1,0 +1,3 @@
+# Main predictor, training, evaluation and explanation environment (Python 3.11).
+-r code/src/p2p3/requirements.txt
+openpyxl==3.1.5

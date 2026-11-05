@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "repository": "config-h/EmoMosaic",
+  "files": [
+    {
+      "path": "rmnet/decision_rules.json",
+      "bytes": 4678,
+      "sha256": "0fd3bf1d285d59965bf4edbbd6e12a393c2d7e42b59c626b1a31a69b293203a6"
+    },
+    {
+      "path": "rmnet/norm_stats.json",
+      "bytes": 47317,
+      "sha256": "9fa35dfc8affdab5d2d46afec66d7af11482dd81bad1aa47d06f373646034edb"
+    },
+    {
+      "path": "rmnet/weights_fp16.pt",
+      "bytes": 3082832,
+      "sha256": "c30d51a80c918f247a1d68ccc7c930cec053400476b4a8d35cf68b36c7d60709"
+    },
+    {
+      "path": "rmnet/weights_seed101_fp16.pt",
+      "bytes": 3082832,
+      "sha256": "78c2d2ab3babf3d01970586e4053c4b9d9a5beb46c3b479838e631a7b1b3c439"
+    },
+    {
+      "path": "rmnet/weights_seed17_fp16.pt",
+      "bytes": 3082832,
+      "sha256": "c30d51a80c918f247a1d68ccc7c930cec053400476b4a8d35cf68b36c7d60709"
+    },
+    {
+      "path": "rmnet/weights_seed29_fp16.pt",
+      "bytes": 3082832,
+      "sha256": "3c8763f48dfe0185a0b57dd3d14847ab53f0a7bea697ec494068c770fee84244"
+    },
+    {
+      "path": "rmnet/weights_seed43_fp16.pt",
+      "bytes": 3082832,
+      "sha256": "759ca6b45cff49f0aaa71236ba91c95f2b7748718ef38410f08d03303216d66b"
+    },
+    {
+      "path": "rmnet/weights_seed71_fp16.pt",
+      "bytes": 3082832,
+      "sha256": "98c035ae00237059dfc55fa14aa05a096c96e2f6c11d0c5bfa4784fe4d77b1be"
+    },
+    {
+      "path": "rmnet_bert_lora/adapter_00.pt",
+      "bytes": 1599726,
+      "sha256": "d128b6e929eca09623719d17a1dea58ce20e4bdff76848677771a7a5ddf1cc0a"
+    },
+    {
+      "path": "rmnet_bert_lora/adapter_01.pt",
+      "bytes": 1599726,
+      "sha256": "8f5e966915c2f7ac08e3225c93aba722b68aee6fc336ea01087c8daeb34f4f6b"
+    },
+    {
+      "path": "rmnet_bert_lora/adapter_02.pt",
+      "bytes": 1599726,
+      "sha256": "ed05ebbad6a66eaa02210e9a72d18a554f8c4a98cd2124e6b143d54791596f98"
+    },
+    {
+      "path": "rmnet_bert_lora/adapter_03.pt",
+      "bytes": 1599726,
+      "sha256": "ac3bc450cfa6c0fe6bc3a53c3551c94925e3f411b227ecd21be9502c9a2dac63"
+    },
+    {
+      "path": "rmnet_bert_lora/adapter_04.pt",
+      "bytes": 1599726,
+      "sha256": "b79d510e8623f3aaa4d78088fbe3229f2e93f5344e1e53bb69ab391677b40cbe"
+    },
+    {
+      "path": "rmnet_bert_lora/asset_manifest.json",
+      "bytes": 2174,
+      "sha256": "4d2d057a7f9d44549501f0e4254b23a02f6b8b5520eabd592c0277f988ea7c43"
+    },
+    {
+      "path": "rmnet_bert_lora/decision_rules.json",
+      "bytes": 1119,
+      "sha256": "45928a02712b006410b3ca5f3904964081b7e55c5f621c7bf15d1b074dc2cacd"
+    },
+    {
+      "path": "rmnet_bert_lora/pretrained_manifest.json",
+      "bytes": 254,
+      "sha256": "77539ace692455f00c84f5ced88bb6fd3875fce62c00b9ee01faa0705368a4fd"
+    }
+  ],
+  "revision": "15af38ee327811dcac3eca397746dba69266854c"
+}

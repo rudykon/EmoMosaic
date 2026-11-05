@@ -1,0 +1,4580 @@
+{
+  "schema": "emomosaic_website_fusion_v2",
+  "labels": [
+    "Negative",
+    "Neutral",
+    "Positive"
+  ],
+  "provenance": {
+    "source_commit": "b04ce38f7a545ebcf75aca96dcbe3b0f751de396",
+    "snapshot_date": "2026-09-28",
+    "model": "original_rm_lora_fusion_bias",
+    "source_sha256": {
+      "outputs/problem2/improvement/final_evaluation/headline_metrics.csv": "31c433d9f693f24b6b0fb30d9676e4b23cc964b09a8e1c276f4e127ab9de9e4e",
+      "outputs/problem2/improvement/final_evaluation/statistics.json": "891b6384d730087d5231f90026783a67c694af208d61e7dde20a4b2393022065",
+      "models/rmnet_bert_lora/decision_rules.json": "45928a02712b006410b3ca5f3904964081b7e55c5f621c7bf15d1b074dc2cacd",
+      "outputs/problem2/cache/valid.npz": "4bfe28d383e58ce8bb019209335452cf6d24039f841b3a65a86ee8a0de10bd8e",
+      "outputs/problem2/improvement/final_evaluation/predictions/valid_clean_original_rm_lora_fusion_bias.npz": "3009e5fef7b26c12f8e1e7ee5a0bded67d5a4ddc3596c4209ee3eaa2224c9138",
+      "outputs/problem2/improvement/final_evaluation/predictions/valid_mixed40_original_rm_lora_fusion_bias.npz": "9f21fe76e95f9dc45713a9658c9ada8a062eecf9630243d9788cd38dda09df97",
+      "outputs/problem2/cache/test.npz": "5a0cceb9a6171ad0f17206e9be1b1c95906ff6f0d799124ccf0b4575e86c4ec9",
+      "outputs/problem2/improvement/final_evaluation/predictions/test_clean_original_rm_lora_fusion_bias.npz": "138f4b509c598caed39964b412fe4f27ac8ed4a9ef1269d148d0fe4bbe5ea0a5",
+      "outputs/problem2/improvement/final_evaluation/predictions/test_mixed40_original_rm_lora_fusion_bias.npz": "2cbdb740051710cd970797552ea9c30bd93d16a5b82a6dbbb0de12cf4d5e911e",
+      "outputs/problem3/samples/attachment4/01.json": "98acdbb8f290bd3e12dedc6437e7ba65ebfeed8c0c7cfe3795c010617a7b28ad",
+      "outputs/problem3/samples/attachment4/02.json": "f7089c705b9d89511425d010d951204368b0c09eb7fc0d126b4778e1bb939ad2",
+      "outputs/problem3/samples/attachment4/03.json": "0fc54c6a1a830a5a6f7cd01223d8e8288d65d54c0bf7b3c286076e9bde6f9d2f",
+      "outputs/problem3/samples/attachment4/04.json": "5ffb2add371072886bdd468b9758c9872ed21859a6f59e629a62059f27292027",
+      "outputs/problem3/samples/attachment4/05.json": "7f13d6cf8c8001b4de6502ea8c7ffc48f81ed368928a15cd974230ec560e5883",
+      "outputs/problem3/samples/attachment4/06.json": "4eb248cfe39a9e880f1bfc770bda93859131c691a2b8e8621ac98cb94f14b960",
+      "outputs/problem3/samples/attachment4/07.json": "9f42e301c7fc5238ca2730d97ea38afdfe5a2efb35c2aca2b81738fa4157eb57",
+      "outputs/problem3/samples/attachment4/08.json": "5a90c08281c04efbee9588c11ee208e1d0c2012a9ac676b26fd6650b4f426146",
+      "outputs/problem3/samples/attachment4/09.json": "065a2bb7dab7d60cdd8b6c22c8796cd5b8c5add7ee060c0984164219ef33178b",
+      "outputs/problem3/samples/attachment4/10.json": "5972aeadd5575d3fb41ea0c2cba08a50a7d21baabb2bfdf1a590d446e43f1b7f",
+      "outputs/problem3/samples/attachment4/11.json": "f59a836acd8b5a7831a039aed632b3509b55bb3e9a72a08badcf92a123d918a6",
+      "outputs/problem3/samples/attachment4/12.json": "952c71a00bc368e41337d58245071182de4ce8e5384a197059fe20fbf356ee2a",
+      "outputs/problem3/samples/attachment4/13.json": "e2999ec2f6829ebbde8e68e4d8323e54d1366add80e2ee2ff8d04c87e1fc5518",
+      "outputs/problem3/samples/attachment4/14.json": "c3c2de3692292fda91ab8e157010eaf30a349df252a86ef71a6c033ebeac1e76",
+      "outputs/problem3/samples/attachment4/15.json": "87a4f7dc9db3479d54d7307fe42fa8a5a97038ec919816429b446d3662a0dbc9",
+      "outputs/problem3/samples/attachment4/16.json": "7629459eba88b5314bf4080f1c5d48e5e0381e5cb310a81147298cbbfddba37e",
+      "outputs/problem3/samples/attachment4/17.json": "75929d5d10729768ded9e1192951a971c04aaed42334b2a8ec0a096d74c6a48e",
+      "outputs/problem3/samples/attachment4/18.json": "27c5cdbbc8034e0bce423909e23c95bdd37189f552317033933a91a0800b7ef3",
+      "outputs/problem3/samples/attachment4/19.json": "89c95940c7f6967c8001bdedad68a1b735d429ef09d3b9b7fedee2e626e5b02b",
+      "outputs/problem3/samples/attachment4/20.json": "0fa3823a110e5f81faa611b4b7b64967f1bdd21286b73ff94abf7f099cef5489",
+      "outputs/problem3/validation/fidelity_summary.json": "1e752f8d967ef247923ee3acb0388ce5d7b9321ee3b78dd7bfb556fceb62cc1c",
+      "outputs/problem3/validation/real_word_deletion.json": "e5544e98706bd2e546d2630e21829ee40be0654a96f0c6c5d0890d52989e6f72",
+      "app_demo/verification-2.2.1.json": "aafd5ea59a85985c29b30ed41cdf7e6e9a8b1f827e98b9be81c297e9fbd9374d"
+    },
+    "intervention": "post_encoding_mask_with_recomputed_fusion_weights",
+    "description": "Frozen RM + BERT LoRA results; no training, inference or parameter selection during export."
+  },
+  "rules": {
+    "classification_w0": 0.8,
+    "classification_k": 2.0,
+    "regression_w0": 0.6000000000000001,
+    "regression_k": 2.0,
+    "bias": [
+      0.2499999999999997,
+      0.0,
+      0.024999999999999745
+    ],
+    "valid_selection_score": 0.6366517534351568
+  },
+  "metrics": {
+    "valid": {
+      "clean": {
+        "accuracy": 0.6442307692307693,
+        "macro_f1": 0.6339283310671282,
+        "mae": 0.5652485396536636,
+        "corr": 0.6834857323247094,
+        "confusion": [
+          [
+            149,
+            40,
+            17
+          ],
+          [
+            37,
+            105,
+            42
+          ],
+          [
+            41,
+            82,
+            215
+          ]
+        ],
+        "n": 728,
+        "weighted_f1": 0.650098805942709,
+        "f1_ci95": [
+          0.5969987654840531,
+          0.6698485213368542
+        ]
+      },
+      "missing": {
+        "accuracy": 0.6497252747252747,
+        "macro_f1": 0.6393751758031853,
+        "mae": 0.5722452828039515,
+        "corr": 0.6637603705557553,
+        "confusion": [
+          [
+            149,
+            37,
+            20
+          ],
+          [
+            37,
+            107,
+            40
+          ],
+          [
+            42,
+            79,
+            217
+          ]
+        ],
+        "n": 728,
+        "weighted_f1": 0.6548317453173023,
+        "f1_ci95": [
+          0.6011691815444086,
+          0.6762841755776268
+        ]
+      }
+    },
+    "test": {
+      "clean": {
+        "accuracy": 0.6808803301237965,
+        "macro_f1": 0.6550154697931933,
+        "mae": 0.6098809134943713,
+        "corr": 0.6941717750150181,
+        "confusion": [
+          [
+            162,
+            27,
+            18
+          ],
+          [
+            39,
+            84,
+            35
+          ],
+          [
+            37,
+            76,
+            249
+          ]
+        ],
+        "n": 727,
+        "weighted_f1": 0.6865938613154824,
+        "f1_ci95": [
+          0.6170135746281725,
+          0.6902775519463686
+        ]
+      },
+      "missing": {
+        "accuracy": 0.6629986244841816,
+        "macro_f1": 0.6341121341121342,
+        "mae": 0.6210114730294477,
+        "corr": 0.6860563359852883,
+        "confusion": [
+          [
+            156,
+            29,
+            22
+          ],
+          [
+            40,
+            78,
+            40
+          ],
+          [
+            41,
+            73,
+            248
+          ]
+        ],
+        "n": 727,
+        "weighted_f1": 0.6679133597978165,
+        "f1_ci95": [
+          0.598311139081794,
+          0.6672717515974816
+        ]
+      }
+    }
+  },
+  "test_mean_f1": {
+    "new": 0.6445638019526637,
+    "baseline": 0.6207726616099596,
+    "delta": 0.02379114034270413,
+    "delta_ci95": [
+      0.002676418818657822,
+      0.0451880407599009
+    ],
+    "new_ci95": [
+      0.6090847048209782,
+      0.6776145159041865
+    ],
+    "baseline_ci95": [
+      0.583117558251342,
+      0.6560506808760973
+    ],
+    "cluster_permutation_p_two_sided": 0.02979404119176165
+  },
+  "comparison": [
+    {
+      "model": "original_rm",
+      "name": "RM 辅助头",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.6236263736263736,
+            "macro_f1": 0.6144217772916029,
+            "mae": 0.5776873230934143,
+            "corr": 0.6624655309781281
+          },
+          "missing": {
+            "accuracy": 0.6167582417582418,
+            "macro_f1": 0.6057260200117343,
+            "mae": 0.5771685838699341,
+            "corr": 0.6545236104752817
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6478679504814305,
+            "macro_f1": 0.6237202267053014,
+            "mae": 0.6344181895256042,
+            "corr": 0.6643522712849321
+          },
+          "missing": {
+            "accuracy": 0.6423658872077029,
+            "macro_f1": 0.6178250965146179,
+            "mae": 0.6378772258758545,
+            "corr": 0.6676702063549755
+          }
+        }
+      }
+    },
+    {
+      "model": "original_rm_bias",
+      "name": "RM 辅助头 + 类别偏置",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.6263736263736264,
+            "macro_f1": 0.6169073160834252,
+            "mae": 0.5776873230934143,
+            "corr": 0.6624655309781281
+          },
+          "missing": {
+            "accuracy": 0.6277472527472527,
+            "macro_f1": 0.617675321132768,
+            "mae": 0.5771685838699341,
+            "corr": 0.6545236104752817
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6423658872077029,
+            "macro_f1": 0.6184774185320112,
+            "mae": 0.6344181895256042,
+            "corr": 0.6643522712849321
+          },
+          "missing": {
+            "accuracy": 0.6437414030261348,
+            "macro_f1": 0.6188837058454051,
+            "mae": 0.6378772258758545,
+            "corr": 0.6676702063549755
+          }
+        }
+      }
+    },
+    {
+      "model": "svd_all_bias",
+      "name": "SVD 三模态分类器",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.625,
+            "macro_f1": 0.6206510078316502,
+            "mae": 0.5776873230934143,
+            "corr": 0.6624655309781281
+          },
+          "missing": {
+            "accuracy": 0.6181318681318682,
+            "macro_f1": 0.6146263910065608,
+            "mae": 0.5771685838699341,
+            "corr": 0.6545236104752817
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.640990371389271,
+            "macro_f1": 0.6213462034352019,
+            "mae": 0.6344181895256042,
+            "corr": 0.6643522712849321
+          },
+          "missing": {
+            "accuracy": 0.6327372764786795,
+            "macro_f1": 0.6136455165326556,
+            "mae": 0.6378772258758545,
+            "corr": 0.6676702063549755
+          }
+        }
+      }
+    },
+    {
+      "model": "bert_probe",
+      "name": "BERT 多层文本探针",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.6236263736263736,
+            "macro_f1": 0.6118063474298445,
+            "mae": 0.6435953378677368,
+            "corr": 0.5851213088509638
+          },
+          "missing": {
+            "accuracy": 0.6112637362637363,
+            "macro_f1": 0.6007416356253565,
+            "mae": 0.646917462348938,
+            "corr": 0.5685126167616453
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6629986244841816,
+            "macro_f1": 0.631464127519812,
+            "mae": 0.6949992775917053,
+            "corr": 0.6225970116829915
+          },
+          "missing": {
+            "accuracy": 0.6629986244841816,
+            "macro_f1": 0.6371344213970512,
+            "mae": 0.7018641829490662,
+            "corr": 0.6197296718009832
+          }
+        }
+      }
+    },
+    {
+      "model": "qwen35_4_probe",
+      "name": "Qwen3.5-4B 文本探针",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.6277472527472527,
+            "macro_f1": 0.602796358522555,
+            "mae": 0.6875991225242615,
+            "corr": 0.6080513684702832
+          },
+          "missing": {
+            "accuracy": 0.6112637362637363,
+            "macro_f1": 0.5931762135771371,
+            "mae": 0.7085864543914795,
+            "corr": 0.5847718176234833
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6464924346629987,
+            "macro_f1": 0.6027374827144728,
+            "mae": 0.7046036124229431,
+            "corr": 0.651570624494337
+          },
+          "missing": {
+            "accuracy": 0.6189821182943603,
+            "macro_f1": 0.5867161672946597,
+            "mae": 0.7479296922683716,
+            "corr": 0.6253415670805609
+          }
+        }
+      }
+    },
+    {
+      "model": "lora_probe",
+      "name": "BERT LoRA 文本专家",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.625,
+            "macro_f1": 0.6174825001419464,
+            "mae": 0.5743938088417053,
+            "corr": 0.6755579299646371
+          },
+          "missing": {
+            "accuracy": 0.6332417582417582,
+            "macro_f1": 0.6268990478148194,
+            "mae": 0.5750853419303894,
+            "corr": 0.6680022593797342
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6795048143053645,
+            "macro_f1": 0.6577912692683068,
+            "mae": 0.6170583963394165,
+            "corr": 0.6956002495139529
+          },
+          "missing": {
+            "accuracy": 0.672627235213205,
+            "macro_f1": 0.652355628665877,
+            "mae": 0.6223181486129761,
+            "corr": 0.6930992016196753
+          }
+        }
+      }
+    },
+    {
+      "model": "original_rm_lora_fusion",
+      "name": "RM + LoRA（无偏置候选）",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.6428571428571429,
+            "macro_f1": 0.6351389385445113,
+            "mae": 0.5652485396536636,
+            "corr": 0.6834857323247094
+          },
+          "missing": {
+            "accuracy": 0.6373626373626373,
+            "macro_f1": 0.6304303910701309,
+            "mae": 0.569201579112386,
+            "corr": 0.6697330909966367
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6808803301237965,
+            "macro_f1": 0.6600217243561429,
+            "mae": 0.6098809134943713,
+            "corr": 0.6941717750150181
+          },
+          "missing": {
+            "accuracy": 0.671251719394773,
+            "macro_f1": 0.6495859213250518,
+            "mae": 0.6184922695522385,
+            "corr": 0.6902678685652208
+          }
+        }
+      }
+    },
+    {
+      "model": "original_rm_lora_fusion_bias",
+      "name": "RM + LoRA（最终方案）",
+      "metrics": {
+        "valid": {
+          "clean": {
+            "accuracy": 0.6442307692307693,
+            "macro_f1": 0.6339283310671282,
+            "mae": 0.5652485396536636,
+            "corr": 0.6834857323247094
+          },
+          "missing": {
+            "accuracy": 0.6497252747252747,
+            "macro_f1": 0.6393751758031853,
+            "mae": 0.5722452828039515,
+            "corr": 0.6637603705557553
+          }
+        },
+        "test": {
+          "clean": {
+            "accuracy": 0.6808803301237965,
+            "macro_f1": 0.6550154697931933,
+            "mae": 0.6098809134943713,
+            "corr": 0.6941717750150181
+          },
+          "missing": {
+            "accuracy": 0.6629986244841816,
+            "macro_f1": 0.6341121341121342,
+            "mae": 0.6210114730294477,
+            "corr": 0.6860563359852883
+          }
+        }
+      }
+    }
+  ],
+  "samples": [
+    {
+      "id": "01",
+      "text": "Replacing these wear components when replacing the timing belt is essential to ensuring the new belt performs to its mileage requirements",
+      "prediction": 0.3693016111850738,
+      "polarity": "Neutral",
+      "probabilities": [
+        0.14565556768161084,
+        0.5259053360745083,
+        0.32843909624388107
+      ],
+      "target_class": 1,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.3922047853469849,
+          "probabilities": [
+            0.13543606755055812,
+            0.5290829438299041,
+            0.3354809886195378
+          ]
+        },
+        "2": {
+          "intensity": 0.0005083799478597939,
+          "probabilities": [
+            0.3101465881356784,
+            0.4133238449059201,
+            0.27652956695840136
+          ]
+        },
+        "3": {
+          "intensity": 0.38049472570419307,
+          "probabilities": [
+            0.14024623924013693,
+            0.5291388198330712,
+            0.3306149409267918
+          ]
+        },
+        "4": {
+          "intensity": 0.06120622903108597,
+          "probabilities": [
+            0.2565353730300114,
+            0.39792578268586704,
+            0.3455388442841215
+          ]
+        },
+        "5": {
+          "intensity": 0.40609247684478755,
+          "probabilities": [
+            0.14033320122022616,
+            0.5252192772487073,
+            0.33444752153106644
+          ]
+        },
+        "6": {
+          "intensity": 0.005770182702690363,
+          "probabilities": [
+            0.25495820282160636,
+            0.43122945136400476,
+            0.31381234581438905
+          ]
+        },
+        "7": {
+          "intensity": 0.369301575422287,
+          "probabilities": [
+            0.14565556768161084,
+            0.5259053360745083,
+            0.32843909624388107
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.4692252278327942,
+          "contribution": 0.0496514469385147,
+          "shapley": 0.37042142130861366,
+          "class_shapley": 0.14915580648552462,
+          "all_class_shapley": [
+            -0.16956004910692857,
+            0.14915580648552462,
+            0.020404242621403952
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.25428563356399536,
+          "contribution": 0.02530003190040588,
+          "shapley": -0.025587928461997457,
+          "class_shapley": 0.044281344081181374,
+          "all_class_shapley": [
+            -0.024892288013678338,
+            0.044281344081181374,
+            -0.019389056067502953
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.27648916840553284,
+          "contribution": 0.04314059615135192,
+          "shapley": 0.017559871649912868,
+          "class_shapley": 0.03462254167897289,
+          "all_class_shapley": [
+            -0.05165441457646723,
+            0.03462254167897289,
+            0.01703187289749445
+          ]
+        }
+      ],
+      "interaction": -0.003895521163940429,
+      "expert_contribution": 0.255105060338974,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "low_face_rate",
+      "evidence": {
+        "classification": [
+          {
+            "position": 5,
+            "token": "when",
+            "word": "when",
+            "char_start": 32,
+            "char_end": 36,
+            "intensity_delta": -0.011412859800433384,
+            "class_probability_delta": 0.008230053669756265,
+            "timing_usable": true,
+            "time_start": 1.9825,
+            "time_end": 2.1025
+          },
+          {
+            "position": 9,
+            "token": "belt",
+            "word": "belt",
+            "char_start": 58,
+            "char_end": 62,
+            "intensity_delta": 0.0072017509459463835,
+            "class_probability_delta": 0.008053610719888527,
+            "timing_usable": true,
+            "time_start": 3.0425,
+            "time_end": 3.2225
+          },
+          {
+            "position": 22,
+            "token": "requirements",
+            "word": "requirements",
+            "char_start": 125,
+            "char_end": 137,
+            "intensity_delta": -0.004377465270274994,
+            "class_probability_delta": 0.007323259570377494,
+            "timing_usable": true,
+            "time_start": 7.6825,
+            "time_end": 8.2625
+          }
+        ],
+        "intensity": [
+          {
+            "position": 15,
+            "token": "new",
+            "word": "new",
+            "char_start": 92,
+            "char_end": 95,
+            "intensity_delta": 0.02868837728973256,
+            "class_probability_delta": -0.005503676426240833,
+            "timing_usable": true,
+            "time_start": 5.2425,
+            "time_end": 5.3625
+          },
+          {
+            "position": 8,
+            "token": "timing",
+            "word": "timing",
+            "char_start": 51,
+            "char_end": 57,
+            "intensity_delta": 0.021439569338786657,
+            "class_probability_delta": 0.0015159107169067099,
+            "timing_usable": true,
+            "time_start": 2.7225,
+            "time_end": 3.0025
+          },
+          {
+            "position": 17,
+            "token": "performs",
+            "word": "performs",
+            "char_start": 101,
+            "char_end": 109,
+            "intensity_delta": 0.019939113069664283,
+            "class_probability_delta": -0.00488017615357994,
+            "timing_usable": true,
+            "time_start": 6.1625,
+            "time_end": 6.7025
+          }
+        ]
+      }
+    },
+    {
+      "id": "02",
+      "text": "We want to live by each other’s happiness - not by each other’s misery.",
+      "prediction": 0.2495089799165726,
+      "polarity": "Positive",
+      "probabilities": [
+        0.2681940115774746,
+        0.32368428387871023,
+        0.40812170454381513
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.36946230530738833,
+          "probabilities": [
+            0.24468314007027525,
+            0.30585265461578115,
+            0.44946420531394365
+          ]
+        },
+        "2": {
+          "intensity": -0.07388896495103836,
+          "probabilities": [
+            0.3876576750119694,
+            0.42623942566554723,
+            0.1861028993224833
+          ]
+        },
+        "3": {
+          "intensity": 0.2822747528553009,
+          "probabilities": [
+            0.25746919015314423,
+            0.32422663994628725,
+            0.41830416990056857
+          ]
+        },
+        "4": {
+          "intensity": -0.01591959036886692,
+          "probabilities": [
+            0.49731223560601867,
+            0.27642704994778244,
+            0.22626071444619886
+          ]
+        },
+        "5": {
+          "intensity": 0.3046290516853333,
+          "probabilities": [
+            0.2578263355637159,
+            0.3168084468595086,
+            0.4253652175767755
+          ]
+        },
+        "6": {
+          "intensity": -0.2979866564273834,
+          "probabilities": [
+            0.49379493186379925,
+            0.34072652451616153,
+            0.16547854362003916
+          ]
+        },
+        "7": {
+          "intensity": 0.2495089799165726,
+          "probabilities": [
+            0.2681940115774746,
+            0.32368428387871023,
+            0.40812170454381513
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.47951382398605347,
+          "contribution": 0.028765654563903804,
+          "shapley": 0.41613530355195205,
+          "class_shapley": 0.19912273876652165,
+          "all_class_shapley": [
+            -0.1858390973484328,
+            -0.013283641418088816,
+            0.19912273876652165
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.24448831379413605,
+          "contribution": 6.125539657659827e-05,
+          "shapley": -0.10684818563361961,
+          "class_shapley": -0.06250125120757669,
+          "all_class_shapley": [
+            0.0036324682724559465,
+            0.058868782935120684,
+            -0.06250125120757669
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.27599790692329407,
+          "contribution": 0.01498148143291473,
+          "shapley": -0.06668634892751772,
+          "class_shapley": -0.03889181980761544,
+          "all_class_shapley": [
+            0.05863832127476642,
+            -0.01974650146715103,
+            -0.03889181980761544
+          ]
+        }
+      ],
+      "interaction": -0.0010251628234982488,
+      "expert_contribution": 0.20672575235366825,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 10,
+            "token": "happiness",
+            "word": "happiness",
+            "char_start": 32,
+            "char_end": 41,
+            "intensity_delta": 0.031649196461627366,
+            "class_probability_delta": 0.021394391597920115,
+            "timing_usable": true,
+            "time_start": 1.4425,
+            "time_end": 1.8025
+          },
+          {
+            "position": 7,
+            "token": "other",
+            "word": "other’s",
+            "char_start": 24,
+            "char_end": 29,
+            "intensity_delta": 0.0328092152226995,
+            "class_probability_delta": 0.017512981831052377,
+            "timing_usable": true,
+            "time_start": 1.2425,
+            "time_end": 1.4225
+          },
+          {
+            "position": 3,
+            "token": "to",
+            "word": "to",
+            "char_start": 8,
+            "char_end": 10,
+            "intensity_delta": 0.025531082800550803,
+            "class_probability_delta": 0.01691545909866682,
+            "timing_usable": true,
+            "time_start": 0.7425,
+            "time_end": 0.7825
+          }
+        ],
+        "intensity": [
+          {
+            "position": 8,
+            "token": "’",
+            "word": "other’s",
+            "char_start": 29,
+            "char_end": 30,
+            "intensity_delta": 0.036872716970390906,
+            "class_probability_delta": 0.012788738178164727,
+            "timing_usable": true,
+            "time_start": 1.2425,
+            "time_end": 1.4225
+          },
+          {
+            "position": 7,
+            "token": "other",
+            "word": "other’s",
+            "char_start": 24,
+            "char_end": 29,
+            "intensity_delta": 0.0328092152226995,
+            "class_probability_delta": 0.017512981831052377,
+            "timing_usable": true,
+            "time_start": 1.2425,
+            "time_end": 1.4225
+          },
+          {
+            "position": 10,
+            "token": "happiness",
+            "word": "happiness",
+            "char_start": 32,
+            "char_end": 41,
+            "intensity_delta": 0.031649196461627366,
+            "class_probability_delta": 0.021394391597920115,
+            "timing_usable": true,
+            "time_start": 1.4425,
+            "time_end": 1.8025
+          }
+        ]
+      }
+    },
+    {
+      "id": "03",
+      "text": "There's one lender at the moment which I think is just Bankwest who don't take rental income into account, they take rental yield into account.",
+      "prediction": -0.3503774613142014,
+      "polarity": "Negative",
+      "probabilities": [
+        0.612925839295227,
+        0.31611347006403223,
+        0.07096069064074055
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -0.3534574180841446,
+          "probabilities": [
+            0.6510084912998371,
+            0.2938162848812619,
+            0.05517522381890099
+          ]
+        },
+        "2": {
+          "intensity": 0.2309902161359787,
+          "probabilities": [
+            0.3227981696129609,
+            0.3323014791689991,
+            0.3449003512180401
+          ]
+        },
+        "3": {
+          "intensity": -0.347657522559166,
+          "probabilities": [
+            0.6279722779984148,
+            0.3093652279046801,
+            0.06266249409690501
+          ]
+        },
+        "4": {
+          "intensity": 0.053691260516643524,
+          "probabilities": [
+            0.29852167026758325,
+            0.3364631913033192,
+            0.3650151384290975
+          ]
+        },
+        "5": {
+          "intensity": -0.3972077012062073,
+          "probabilities": [
+            0.6244014057088073,
+            0.3118892354992365,
+            0.0637093587919561
+          ]
+        },
+        "6": {
+          "intensity": 0.14272920787334442,
+          "probabilities": [
+            0.27719284063582744,
+            0.35262927800071786,
+            0.3701778813634547
+          ]
+        },
+        "7": {
+          "intensity": -0.35037749707698823,
+          "probabilities": [
+            0.612925839295227,
+            0.31611347006403223,
+            0.07096069064074055
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.476187139749527,
+          "contribution": 0.0016419386491179464,
+          "shapley": -0.4560818947230776,
+          "class_shapley": 0.3035020308312969,
+          "all_class_shapley": [
+            0.3035020308312969,
+            -0.021433423472818004,
+            -0.28206860735847894
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.23298437893390656,
+          "contribution": -0.01736417859792709,
+          "shapley": 0.10611037692675987,
+          "class_shapley": -0.03420741254863114,
+          "all_class_shapley": [
+            -0.03420741254863114,
+            0.018179194921791302,
+            0.016028217626839838
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.29082849621772766,
+          "contribution": -0.03396138250827788,
+          "shapley": -0.007314190206428363,
+          "class_shapley": -0.048131098366123705,
+          "all_class_shapley": [
+            -0.048131098366123705,
+            0.021522054786229546,
+            0.026609043579894093
+          ]
+        }
+      ],
+      "interaction": 0.0028526449576020234,
+      "expert_contribution": -0.30354648828506475,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 14,
+            "token": "just",
+            "word": "just",
+            "char_start": 50,
+            "char_end": 54,
+            "intensity_delta": -0.031853976205360734,
+            "class_probability_delta": 0.013457864742698056,
+            "timing_usable": true,
+            "time_start": 2.7225,
+            "time_end": 2.8825
+          },
+          {
+            "position": 9,
+            "token": "moment",
+            "word": "moment",
+            "char_start": 26,
+            "char_end": 32,
+            "intensity_delta": -0.028822868471303276,
+            "class_probability_delta": 0.011835334820849863,
+            "timing_usable": true,
+            "time_start": 1.7825,
+            "time_end": 2.0825
+          },
+          {
+            "position": 20,
+            "token": "t",
+            "word": "don't",
+            "char_start": 72,
+            "char_end": 73,
+            "intensity_delta": -0.018116029846602544,
+            "class_probability_delta": 0.011807821835384869,
+            "timing_usable": true,
+            "time_start": 4.5225,
+            "time_end": 4.7425
+          }
+        ],
+        "intensity": [
+          {
+            "position": 14,
+            "token": "just",
+            "word": "just",
+            "char_start": 50,
+            "char_end": 54,
+            "intensity_delta": -0.031853976205360734,
+            "class_probability_delta": 0.013457864742698056,
+            "timing_usable": true,
+            "time_start": 2.7225,
+            "time_end": 2.8825
+          },
+          {
+            "position": 9,
+            "token": "moment",
+            "word": "moment",
+            "char_start": 26,
+            "char_end": 32,
+            "intensity_delta": -0.028822868471303276,
+            "class_probability_delta": 0.011835334820849863,
+            "timing_usable": true,
+            "time_start": 1.7825,
+            "time_end": 2.0825
+          },
+          {
+            "position": 28,
+            "token": "take",
+            "word": "take",
+            "char_start": 112,
+            "char_end": 116,
+            "intensity_delta": -0.026860423804807243,
+            "class_probability_delta": 0.011307680648138474,
+            "timing_usable": true,
+            "time_start": 7.0425,
+            "time_end": 7.2225
+          }
+        ]
+      }
+    },
+    {
+      "id": "04",
+      "text": "If I blow it at the team exercise, should I kiss my chances of cheering \"GO BLUE\" goodbye?] Absolutely not.",
+      "prediction": -0.35788528919219975,
+      "polarity": "Negative",
+      "probabilities": [
+        0.7629156728706663,
+        0.1352164588254162,
+        0.1018678683039175
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -0.8524870872497557,
+          "probabilities": [
+            0.8057020334108115,
+            0.12422185419862096,
+            0.0700761123905675
+          ]
+        },
+        "2": {
+          "intensity": 0.7395161390304565,
+          "probabilities": [
+            0.21856489511069782,
+            0.22678692671156392,
+            0.5546481781777384
+          ]
+        },
+        "3": {
+          "intensity": -0.46385807991027833,
+          "probabilities": [
+            0.7800174798161712,
+            0.1349222143548397,
+            0.08506030582898903
+          ]
+        },
+        "4": {
+          "intensity": 0.7454248070716858,
+          "probabilities": [
+            0.14615600063395415,
+            0.10647823158858721,
+            0.7473657677774586
+          ]
+        },
+        "5": {
+          "intensity": -0.46981500387191777,
+          "probabilities": [
+            0.7826337531730373,
+            0.1288419114872375,
+            0.08852433533972512
+          ]
+        },
+        "6": {
+          "intensity": 1.2849637269973755,
+          "probabilities": [
+            0.1262526289320941,
+            0.12695476620996138,
+            0.7467926048579445
+          ]
+        },
+        "7": {
+          "intensity": -0.35788525342941285,
+          "probabilities": [
+            0.7629156728706663,
+            0.1352164588254162,
+            0.1018678683039175
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.627767026424408,
+          "contribution": -0.12193700075149533,
+          "shapley": -1.2371837645148236,
+          "class_shapley": 0.5498559755309923,
+          "all_class_shapley": [
+            0.5498559755309923,
+            -0.06670420441459685,
+            -0.4831517711163955
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.18099188804626465,
+          "contribution": 0.046548596024513236,
+          "shapley": 0.436207214059929,
+          "class_shapley": -0.0719031557395361,
+          "all_class_shapley": [
+            -0.0719031557395361,
+            -0.016365240796763443,
+            0.08826839653629963
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.1912410706281662,
+          "contribution": 0.05302719473838805,
+          "shapley": 0.43618308609972395,
+          "class_shapley": -0.1067994662994749,
+          "all_class_shapley": [
+            -0.1067994662994749,
+            -0.07955973979205289,
+            0.18635920609152778
+          ]
+        }
+      ],
+      "interaction": -0.0003105214796960353,
+      "expert_contribution": -0.33521354198455816,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 25,
+            "token": "not",
+            "word": "not.",
+            "char_start": 103,
+            "char_end": 106,
+            "intensity_delta": -0.18304596579462817,
+            "class_probability_delta": 0.038148016025281284,
+            "timing_usable": true,
+            "time_start": 6.0225,
+            "time_end": 6.2425
+          },
+          {
+            "position": 4,
+            "token": "it",
+            "word": "it",
+            "char_start": 10,
+            "char_end": 12,
+            "intensity_delta": -0.11119669775462007,
+            "class_probability_delta": 0.02279279504426779,
+            "timing_usable": true,
+            "time_start": 1.0225,
+            "time_end": 1.0625
+          },
+          {
+            "position": 11,
+            "token": "i",
+            "word": "I",
+            "char_start": 42,
+            "char_end": 43,
+            "intensity_delta": -0.09402918271588145,
+            "class_probability_delta": 0.02211329947147489,
+            "timing_usable": true,
+            "time_start": 2.3825,
+            "time_end": 2.4025
+          }
+        ],
+        "intensity": [
+          {
+            "position": 25,
+            "token": "not",
+            "word": "not.",
+            "char_start": 103,
+            "char_end": 106,
+            "intensity_delta": -0.18304596579462817,
+            "class_probability_delta": 0.038148016025281284,
+            "timing_usable": true,
+            "time_start": 6.0225,
+            "time_end": 6.2425
+          },
+          {
+            "position": 4,
+            "token": "it",
+            "word": "it",
+            "char_start": 10,
+            "char_end": 12,
+            "intensity_delta": -0.11119669775462007,
+            "class_probability_delta": 0.02279279504426779,
+            "timing_usable": true,
+            "time_start": 1.0225,
+            "time_end": 1.0625
+          },
+          {
+            "position": 21,
+            "token": "goodbye",
+            "word": "goodbye?]",
+            "char_start": 82,
+            "char_end": 89,
+            "intensity_delta": -0.09631259576720597,
+            "class_probability_delta": 0.02064943725707047,
+            "timing_usable": true,
+            "time_start": 4.4825,
+            "time_end": 4.9625
+          }
+        ]
+      }
+    },
+    {
+      "id": "05",
+      "text": "Hi, my name is Chloe, video marketer for Red Wagon Marketing.",
+      "prediction": 0.400918573141098,
+      "polarity": "Neutral",
+      "probabilities": [
+        0.04185135108841981,
+        0.5281168827392122,
+        0.4300317661723681
+      ],
+      "target_class": 1,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.25176557004451755,
+          "probabilities": [
+            0.0336435562742089,
+            0.5588775469800974,
+            0.4074788967456938
+          ]
+        },
+        "2": {
+          "intensity": -0.2380586564540863,
+          "probabilities": [
+            0.41808190452367366,
+            0.3691097233133386,
+            0.21280837216298779
+          ]
+        },
+        "3": {
+          "intensity": 0.29377682209014894,
+          "probabilities": [
+            0.03940367038006332,
+            0.5634344649635682,
+            0.39716186465636855
+          ]
+        },
+        "4": {
+          "intensity": 0.6242133378982544,
+          "probabilities": [
+            0.15032763515655403,
+            0.16026620507055955,
+            0.6894061597728864
+          ]
+        },
+        "5": {
+          "intensity": 0.46407355666160577,
+          "probabilities": [
+            0.03526672820945812,
+            0.5110808663138825,
+            0.45365240547665925
+          ]
+        },
+        "6": {
+          "intensity": 0.4678378105163574,
+          "probabilities": [
+            0.23375126599682675,
+            0.2704902871172746,
+            0.4957584468858986
+          ]
+        },
+        "7": {
+          "intensity": 0.40091859698295595,
+          "probabilities": [
+            0.04185135108841981,
+            0.5281168827392122,
+            0.4300317661723681
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.42821893095970154,
+          "contribution": 0.04182827472686767,
+          "shapley": 0.12126199807971715,
+          "class_shapley": 0.26374273340666066,
+          "all_class_shapley": [
+            -0.2656294161860787,
+            0.26374273340666066,
+            0.001886682779418166
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.2836069166660309,
+          "contribution": 0.05056146979331969,
+          "shapley": -0.12176798824220894,
+          "class_shapley": 0.048563531974977266,
+          "all_class_shapley": [
+            0.025832026832337974,
+            0.048563531974977266,
+            -0.07439555880731517
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.28817421197891235,
+          "contribution": 0.10577428340911862,
+          "shapley": 0.3945163762196898,
+          "class_shapley": -0.08203502647125509,
+          "all_class_shapley": [
+            -0.11011357893652443,
+            -0.08203502647125509,
+            0.1921486054077795
+          ]
+        }
+      ],
+      "interaction": -0.0034606464207172388,
+      "expert_contribution": 0.20621518492698673,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 11,
+            "token": "for",
+            "word": "for",
+            "char_start": 37,
+            "char_end": 40,
+            "intensity_delta": -0.025122550249099707,
+            "class_probability_delta": 0.0311499602778042,
+            "timing_usable": true,
+            "time_start": 4.1625,
+            "time_end": 4.2625
+          },
+          {
+            "position": 15,
+            "token": ".",
+            "word": "Marketing.",
+            "char_start": 60,
+            "char_end": 61,
+            "intensity_delta": -0.046677709023157765,
+            "class_probability_delta": 0.030492512069403954,
+            "timing_usable": true,
+            "time_start": 4.9825,
+            "time_end": 5.4425
+          },
+          {
+            "position": 10,
+            "token": "##er",
+            "word": "marketer",
+            "char_start": 34,
+            "char_end": 36,
+            "intensity_delta": -0.022528957446416253,
+            "class_probability_delta": 0.027265269227712774,
+            "timing_usable": true,
+            "time_start": 3.6225,
+            "time_end": 4.0225
+          }
+        ],
+        "intensity": [
+          {
+            "position": 6,
+            "token": "chloe",
+            "word": "Chloe,",
+            "char_start": 15,
+            "char_end": 20,
+            "intensity_delta": -0.04727524081865947,
+            "class_probability_delta": 0.025963566572735908,
+            "timing_usable": true,
+            "time_start": 2.4425,
+            "time_end": 2.7625
+          },
+          {
+            "position": 15,
+            "token": ".",
+            "word": "Marketing.",
+            "char_start": 60,
+            "char_end": 61,
+            "intensity_delta": -0.046677709023157765,
+            "class_probability_delta": 0.030492512069403954,
+            "timing_usable": true,
+            "time_start": 4.9825,
+            "time_end": 5.4425
+          },
+          {
+            "position": 13,
+            "token": "wagon",
+            "word": "Wagon",
+            "char_start": 45,
+            "char_end": 50,
+            "intensity_delta": -0.031019672632217388,
+            "class_probability_delta": 0.023540256455270137,
+            "timing_usable": true,
+            "time_start": 4.6425,
+            "time_end": 4.9225
+          }
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "text": "If you're a fan of dancing in that sense, just like to watch people dance, see impressive dance moves then you might want to check out this movie solely for that",
+      "prediction": 0.7550630927085877,
+      "polarity": "Positive",
+      "probabilities": [
+        0.07334259941691096,
+        0.21155196354619307,
+        0.7151054370368959
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.9636147379875184,
+          "probabilities": [
+            0.05836683953735564,
+            0.17376772122424397,
+            0.7678654392384003
+          ]
+        },
+        "2": {
+          "intensity": 0.4714386463165283,
+          "probabilities": [
+            0.3006455498462084,
+            0.3815029831978397,
+            0.3178514669559519
+          ]
+        },
+        "3": {
+          "intensity": 0.8312814354896546,
+          "probabilities": [
+            0.061405787395879506,
+            0.18483289265905756,
+            0.7537613199450629
+          ]
+        },
+        "4": {
+          "intensity": -0.23079201579093933,
+          "probabilities": [
+            0.4784478223636967,
+            0.4532796228666895,
+            0.06827255476961384
+          ]
+        },
+        "5": {
+          "intensity": 0.7991090178489686,
+          "probabilities": [
+            0.06661655186730676,
+            0.20804682664147964,
+            0.7253366214912136
+          ]
+        },
+        "6": {
+          "intensity": 0.007390140555799007,
+          "probabilities": [
+            0.42395883863291994,
+            0.4277210180048875,
+            0.14832014336219249
+          ]
+        },
+        "7": {
+          "intensity": 0.7550630927085877,
+          "probabilities": [
+            0.07334259941691096,
+            0.21155196354619307,
+            0.7151054370368959
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.5247771739959717,
+          "contribution": 0.15588138103485105,
+          "shapley": 0.7997504635403554,
+          "class_shapley": 0.5235818853253245,
+          "all_class_shapley": [
+            -0.3365157451768992,
+            -0.18706614014842526,
+            0.5235818853253245
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.2601403594017029,
+          "contribution": 0.0592476189136505,
+          "shapley": 0.15780297905827562,
+          "class_shapley": 0.01006666011958973,
+          "all_class_shapley": [
+            -0.03670524663966629,
+            0.026638586520076512,
+            0.01006666011958973
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.21508245170116425,
+          "contribution": 0.019179432094097133,
+          "shapley": -0.20939856081580122,
+          "class_shapley": -0.12893514520050395,
+          "all_class_shapley": [
+            0.05480127185479149,
+            0.07413387334571245,
+            -0.12893514520050395
+          ]
+        }
+      ],
+      "interaction": 0.00121987909078598,
+      "expert_contribution": 0.5195347666740419,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 21,
+            "token": "impressive",
+            "word": "impressive",
+            "char_start": 79,
+            "char_end": 89,
+            "intensity_delta": 0.03449475923849621,
+            "class_probability_delta": 0.020105410210356944,
+            "timing_usable": true,
+            "time_start": 3.9625,
+            "time_end": 4.4025
+          },
+          {
+            "position": 6,
+            "token": "fan",
+            "word": "fan",
+            "char_start": 12,
+            "char_end": 15,
+            "intensity_delta": 0.03423092675695627,
+            "class_probability_delta": 0.017068282426910164,
+            "timing_usable": true,
+            "time_start": 0.8225,
+            "time_end": 0.9425
+          },
+          {
+            "position": 14,
+            "token": "like",
+            "word": "like",
+            "char_start": 47,
+            "char_end": 51,
+            "intensity_delta": 0.02272865195177043,
+            "class_probability_delta": 0.015589445523781276,
+            "timing_usable": true,
+            "time_start": 2.3425,
+            "time_end": 2.4625
+          }
+        ],
+        "intensity": [
+          {
+            "position": 21,
+            "token": "impressive",
+            "word": "impressive",
+            "char_start": 79,
+            "char_end": 89,
+            "intensity_delta": 0.03449475923849621,
+            "class_probability_delta": 0.020105410210356944,
+            "timing_usable": true,
+            "time_start": 3.9625,
+            "time_end": 4.4025
+          },
+          {
+            "position": 6,
+            "token": "fan",
+            "word": "fan",
+            "char_start": 12,
+            "char_end": 15,
+            "intensity_delta": 0.03423092675695627,
+            "class_probability_delta": 0.017068282426910164,
+            "timing_usable": true,
+            "time_start": 0.8225,
+            "time_end": 0.9425
+          },
+          {
+            "position": 15,
+            "token": "to",
+            "word": "to",
+            "char_start": 52,
+            "char_end": 54,
+            "intensity_delta": 0.02557297797105762,
+            "class_probability_delta": 0.01209688189519198,
+            "timing_usable": true,
+            "time_start": 2.5225,
+            "time_end": 2.5825
+          }
+        ]
+      }
+    },
+    {
+      "id": "07",
+      "text": "As Linn’s associate editor Michael Baadke reports in our November 28 issue, attendees “enthusiastically discussed the topics of growing the hobby, the future of stamp shows, and dealers and philatelic partnerships, along with ways the leading organizations involved in the stamp hobby can work together to make it succeed and grow",
+      "prediction": 0.7687021970748902,
+      "polarity": "Positive",
+      "probabilities": [
+        0.024618313435087694,
+        0.25626516000104826,
+        0.719116526563864
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.7784562468528748,
+          "probabilities": [
+            0.020623344836214752,
+            0.2342132079264634,
+            0.7451634472373218
+          ]
+        },
+        "2": {
+          "intensity": -0.12090935558080673,
+          "probabilities": [
+            0.29844961161697603,
+            0.440887517492254,
+            0.26066287089077006
+          ]
+        },
+        "3": {
+          "intensity": 0.7754679083824159,
+          "probabilities": [
+            0.022013305417730233,
+            0.2498956505070953,
+            0.7280910440751746
+          ]
+        },
+        "4": {
+          "intensity": 0.5176738500595093,
+          "probabilities": [
+            0.2818082194604825,
+            0.3084888448917731,
+            0.4097029356477444
+          ]
+        },
+        "5": {
+          "intensity": 0.8537301659584045,
+          "probabilities": [
+            0.021875104807602134,
+            0.24158744916899164,
+            0.7365374460234063
+          ]
+        },
+        "6": {
+          "intensity": 0.1866380274295807,
+          "probabilities": [
+            0.2639383798451037,
+            0.3854885921748717,
+            0.3505730279800245
+          ]
+        },
+        "7": {
+          "intensity": 0.7687021970748902,
+          "probabilities": [
+            0.024618313435087694,
+            0.25626516000104826,
+            0.719116526563864
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.4892149567604065,
+          "contribution": 0.13749607801437375,
+          "shapley": 0.6566096651678284,
+          "class_shapley": 0.40014875026956964,
+          "all_class_shapley": [
+            -0.2928812504595164,
+            -0.10726749981005315,
+            0.40014875026956964
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.2687324285507202,
+          "contribution": 0.06772590279579162,
+          "shapley": -0.12661920531342422,
+          "class_shapley": -0.035083746925397126,
+          "all_class_shapley": [
+            -0.03293647955038502,
+            0.06802022647578217,
+            -0.035083746925397126
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.2420525997877121,
+          "contribution": 0.09540712237358091,
+          "shapley": 0.23180352629472809,
+          "class_shapley": 0.04365948642720592,
+          "all_class_shapley": [
+            -0.04132627593369583,
+            -0.0023332104935101334,
+            0.04365948642720592
+          ]
+        }
+      ],
+      "interaction": -0.004248522967100142,
+      "expert_contribution": 0.472321629524231,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 21,
+            "token": "enthusiastically",
+            "word": "“enthusiastically",
+            "char_start": 87,
+            "char_end": 103,
+            "intensity_delta": 0.022136936010792807,
+            "class_probability_delta": 0.014618568457796521,
+            "timing_usable": true,
+            "time_start": 6.0025,
+            "time_end": 7.0225
+          },
+          {
+            "position": 44,
+            "token": "along",
+            "word": "along",
+            "char_start": 215,
+            "char_end": 220,
+            "intensity_delta": 0.014720539841800884,
+            "class_probability_delta": 0.009727909833654236,
+            "timing_usable": true,
+            "time_start": 13.9625,
+            "time_end": 14.2625
+          },
+          {
+            "position": 26,
+            "token": "growing",
+            "word": "growing",
+            "char_start": 128,
+            "char_end": 135,
+            "intensity_delta": 0.01108380172712109,
+            "class_probability_delta": 0.009627298640930704,
+            "timing_usable": true,
+            "time_start": 8.8225,
+            "time_end": 9.1225
+          }
+        ],
+        "intensity": [
+          {
+            "position": 21,
+            "token": "enthusiastically",
+            "word": "“enthusiastically",
+            "char_start": 87,
+            "char_end": 103,
+            "intensity_delta": 0.022136936010792807,
+            "class_probability_delta": 0.014618568457796521,
+            "timing_usable": true,
+            "time_start": 6.0025,
+            "time_end": 7.0225
+          },
+          {
+            "position": 18,
+            "token": ",",
+            "word": "issue,",
+            "char_start": 74,
+            "char_end": 75,
+            "intensity_delta": -0.0169479291886091,
+            "class_probability_delta": -0.002267095224097848,
+            "timing_usable": true,
+            "time_start": 4.0425,
+            "time_end": 4.3025
+          },
+          {
+            "position": 35,
+            "token": ",",
+            "word": "shows,",
+            "char_start": 172,
+            "char_end": 173,
+            "intensity_delta": -0.01585764293558889,
+            "class_probability_delta": -0.001946265547502657,
+            "timing_usable": true,
+            "time_start": 10.8425,
+            "time_end": 11.1825
+          }
+        ]
+      }
+    },
+    {
+      "id": "08",
+      "text": "That brings us to tonight, the Universal Design Grand Challenge",
+      "prediction": 0.5853130102157593,
+      "polarity": "Positive",
+      "probabilities": [
+        0.02906441928608676,
+        0.2640923363635178,
+        0.7068432443503955
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.7316341638565064,
+          "probabilities": [
+            0.020441998142091557,
+            0.22055012616091613,
+            0.7590078756969924
+          ]
+        },
+        "2": {
+          "intensity": -0.17986004054546356,
+          "probabilities": [
+            0.349804410425564,
+            0.4398050427458796,
+            0.2103905468285564
+          ]
+        },
+        "3": {
+          "intensity": 0.6802374839782714,
+          "probabilities": [
+            0.022229599290297608,
+            0.24015030629878442,
+            0.7376200944109179
+          ]
+        },
+        "4": {
+          "intensity": -0.2688172459602356,
+          "probabilities": [
+            0.5015063588280835,
+            0.37772623863884663,
+            0.12076740253306996
+          ]
+        },
+        "5": {
+          "intensity": 0.6749349474906922,
+          "probabilities": [
+            0.023862900313258877,
+            0.24877002577364235,
+            0.7273670739130987
+          ]
+        },
+        "6": {
+          "intensity": -0.3955453932285309,
+          "probabilities": [
+            0.4304939978996586,
+            0.42567852221443264,
+            0.1438274798859088
+          ]
+        },
+        "7": {
+          "intensity": 0.5853130102157593,
+          "probabilities": [
+            0.02906441928608676,
+            0.2640923363635178,
+            0.7068432443503955
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.4575464129447937,
+          "contribution": 0.06844967007637022,
+          "shapley": 0.8691697384541233,
+          "class_shapley": 0.5261820709500629,
+          "all_class_shapley": [
+            -0.3917863448917369,
+            -0.13439572605832595,
+            0.5261820709500629
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.2902197539806366,
+          "contribution": 0.02627455592155456,
+          "shapley": -0.12181753410647311,
+          "class_shapley": -0.039896390497750095,
+          "all_class_shapley": [
+            -0.023789589956800847,
+            0.06368598045455094,
+            -0.039896390497750095
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.2522338628768921,
+          "contribution": 0.018515250086784358,
+          "shapley": -0.16894740505764877,
+          "class_shapley": -0.0898344728944029,
+          "all_class_shapley": [
+            0.05287803475593953,
+            0.03695643813846342,
+            -0.0898344728944029
+          ]
+        }
+      ],
+      "interaction": -0.004213186353445053,
+      "expert_contribution": 0.4762867212295533,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 8,
+            "token": "universal",
+            "word": "Universal",
+            "char_start": 31,
+            "char_end": 40,
+            "intensity_delta": 0.09512347453389286,
+            "class_probability_delta": 0.048088326579800444,
+            "timing_usable": true,
+            "time_start": 2.0425,
+            "time_end": 2.5025
+          },
+          {
+            "position": 2,
+            "token": "brings",
+            "word": "brings",
+            "char_start": 5,
+            "char_end": 11,
+            "intensity_delta": 0.07288396028447752,
+            "class_probability_delta": 0.0422695842581714,
+            "timing_usable": true,
+            "time_start": 0.8625,
+            "time_end": 1.0625
+          },
+          {
+            "position": 10,
+            "token": "grand",
+            "word": "Grand",
+            "char_start": 48,
+            "char_end": 53,
+            "intensity_delta": 0.08442941347429578,
+            "class_probability_delta": 0.037730953161853265,
+            "timing_usable": true,
+            "time_start": 3.3825,
+            "time_end": 3.6825
+          }
+        ],
+        "intensity": [
+          {
+            "position": 8,
+            "token": "universal",
+            "word": "Universal",
+            "char_start": 31,
+            "char_end": 40,
+            "intensity_delta": 0.09512347453389286,
+            "class_probability_delta": 0.048088326579800444,
+            "timing_usable": true,
+            "time_start": 2.0425,
+            "time_end": 2.5025
+          },
+          {
+            "position": 10,
+            "token": "grand",
+            "word": "Grand",
+            "char_start": 48,
+            "char_end": 53,
+            "intensity_delta": 0.08442941347429578,
+            "class_probability_delta": 0.037730953161853265,
+            "timing_usable": true,
+            "time_start": 3.3825,
+            "time_end": 3.6825
+          },
+          {
+            "position": 1,
+            "token": "that",
+            "word": "That",
+            "char_start": 0,
+            "char_end": 4,
+            "intensity_delta": 0.07465209414151097,
+            "class_probability_delta": 0.033901317851203316,
+            "timing_usable": true,
+            "time_start": 0.6425,
+            "time_end": 0.7825
+          }
+        ]
+      }
+    },
+    {
+      "id": "09",
+      "text": "(uhh) I did not like this movie at all, I would not recommend it",
+      "prediction": -2.274650287628174,
+      "polarity": "Negative",
+      "probabilities": [
+        0.9903433341146968,
+        0.006022569774350355,
+        0.0036340961109529437
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -2.3716385841369627,
+          "probabilities": [
+            0.9918015193189095,
+            0.005155533203978982,
+            0.0030429474771115845
+          ]
+        },
+        "2": {
+          "intensity": -0.10332576930522919,
+          "probabilities": [
+            0.29191577027235355,
+            0.24721698964582517,
+            0.4608672400818213
+          ]
+        },
+        "3": {
+          "intensity": -2.3142254829406737,
+          "probabilities": [
+            0.9912082485725013,
+            0.005444116424623371,
+            0.003347635002875386
+          ]
+        },
+        "4": {
+          "intensity": -0.12435035407543182,
+          "probabilities": [
+            0.3480571437903489,
+            0.47135081034361404,
+            0.18059204586603703
+          ]
+        },
+        "5": {
+          "intensity": -2.3004250526428223,
+          "probabilities": [
+            0.9909766329328985,
+            0.00572889442227222,
+            0.003294472644829439
+          ]
+        },
+        "6": {
+          "intensity": -0.13937893509864807,
+          "probabilities": [
+            0.34795576757564173,
+            0.37292309126556344,
+            0.2791211411587949
+          ]
+        },
+        "7": {
+          "intensity": -2.274650287628174,
+          "probabilities": [
+            0.9903433341146968,
+            0.006022569774350355,
+            0.0036340961109529437
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.8230836987495422,
+          "contribution": -0.7339430809020995,
+          "shapley": -2.235768451231221,
+          "class_shapley": 0.6378442500668761,
+          "all_class_shapley": [
+            0.6378442500668761,
+            -0.3377626755624451,
+            -0.30008157450443085
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.07142654806375504,
+          "contribution": -0.04462932050228118,
+          "shapley": -0.021088985043267464,
+          "class_shapley": -0.033609057135030276,
+          "all_class_shapley": [
+            -0.033609057135030276,
+            -0.033134848919876385,
+            0.06674390605490665
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.1054898127913475,
+          "contribution": -0.05935399532318114,
+          "shapley": -0.024701062279443096,
+          "class_shapley": -0.0056541781958340176,
+          "all_class_shapley": [
+            -0.0056541781958340176,
+            0.07907445042784246,
+            -0.07342027223200842
+          ]
+        }
+      ],
+      "interaction": -0.005079083517193793,
+      "expert_contribution": -1.4316447257995608,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 7,
+            "token": "not",
+            "word": "not",
+            "char_start": 12,
+            "char_end": 15,
+            "intensity_delta": -0.03418288937321412,
+            "class_probability_delta": 0.0009885860827619775,
+            "timing_usable": true,
+            "time_start": 1.3625,
+            "time_end": 1.4625
+          },
+          {
+            "position": 18,
+            "token": "it",
+            "word": "it",
+            "char_start": 62,
+            "char_end": 64,
+            "intensity_delta": -0.04643772531438772,
+            "class_probability_delta": 0.0007756595637035124,
+            "timing_usable": false,
+            "time_start": 4.1225,
+            "time_end": 4.3425
+          },
+          {
+            "position": 6,
+            "token": "did",
+            "word": "did",
+            "char_start": 8,
+            "char_end": 11,
+            "intensity_delta": -0.026472870950345673,
+            "class_probability_delta": 0.0006711297643483549,
+            "timing_usable": true,
+            "time_start": 1.2225,
+            "time_end": 1.3225
+          }
+        ],
+        "intensity": [
+          {
+            "position": 18,
+            "token": "it",
+            "word": "it",
+            "char_start": 62,
+            "char_end": 64,
+            "intensity_delta": -0.04643772531438772,
+            "class_probability_delta": 0.0007756595637035124,
+            "timing_usable": false,
+            "time_start": 4.1225,
+            "time_end": 4.3425
+          },
+          {
+            "position": 9,
+            "token": "this",
+            "word": "this",
+            "char_start": 21,
+            "char_end": 25,
+            "intensity_delta": -0.03544224588959333,
+            "class_probability_delta": 0.0005426890467444823,
+            "timing_usable": true,
+            "time_start": 1.6425,
+            "time_end": 1.7425
+          },
+          {
+            "position": 7,
+            "token": "not",
+            "word": "not",
+            "char_start": 12,
+            "char_end": 15,
+            "intensity_delta": -0.03418288937321412,
+            "class_probability_delta": 0.0009885860827619775,
+            "timing_usable": true,
+            "time_start": 1.3625,
+            "time_end": 1.4625
+          }
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "text": "(umm) And you know I really do like to see fluffy chick flicks sometimes so I'm not against that but this one was pretty terrible",
+      "prediction": -1.7050772190093992,
+      "polarity": "Negative",
+      "probabilities": [
+        0.9624176234436117,
+        0.01863263403063303,
+        0.018949742525755424
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -1.8667621850967406,
+          "probabilities": [
+            0.9706994951835296,
+            0.015497870269614359,
+            0.013802634546856077
+          ]
+        },
+        "2": {
+          "intensity": 0.04664535075426102,
+          "probabilities": [
+            0.289742123223319,
+            0.26723427621690365,
+            0.44302360055977724
+          ]
+        },
+        "3": {
+          "intensity": -1.642062783241272,
+          "probabilities": [
+            0.964106525028975,
+            0.017840505235754315,
+            0.018052969735270697
+          ]
+        },
+        "4": {
+          "intensity": 0.1587119847536087,
+          "probabilities": [
+            0.2676929086960676,
+            0.22314470701812456,
+            0.5091623842858077
+          ]
+        },
+        "5": {
+          "intensity": -1.8148774862289427,
+          "probabilities": [
+            0.9678026007157622,
+            0.01674524189513151,
+            0.015452157389106132
+          ]
+        },
+        "6": {
+          "intensity": 0.1778886318206787,
+          "probabilities": [
+            0.24468934975746248,
+            0.22009067414579578,
+            0.5352199760967418
+          ]
+        },
+        "7": {
+          "intensity": -1.7050771713256836,
+          "probabilities": [
+            0.9624176234436117,
+            0.01863263403063303,
+            0.018949742525755424
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.7932289242744446,
+          "contribution": -0.5968437671661375,
+          "shapley": -1.8625950005526342,
+          "class_shapley": 0.6613008321345564,
+          "all_class_shapley": [
+            0.6613008321345564,
+            -0.2372341439088163,
+            -0.42406668822573995
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.09434200078248978,
+          "contribution": -0.02785360217094421,
+          "shapley": 0.0904918263976772,
+          "class_shapley": -0.040734479324698786,
+          "all_class_shapley": [
+            -0.040734479324698786,
+            -0.009693224809839543,
+            0.05042770413453841
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.11242906749248505,
+          "contribution": -0.03415130078792571,
+          "shapley": 0.060117791903515655,
+          "class_shapley": -0.04991104874493088,
+          "all_class_shapley": [
+            -0.04991104874493088,
+            -0.03228564107954049,
+            0.08219668982447138
+          ]
+        }
+      ],
+      "interaction": -0.00014854043256491418,
+      "expert_contribution": -1.046079969406128,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 30,
+            "token": "terrible",
+            "word": "terrible",
+            "char_start": 121,
+            "char_end": 129,
+            "intensity_delta": -0.10985001103083292,
+            "class_probability_delta": 0.009244353874922728,
+            "timing_usable": true,
+            "time_start": 8.6825,
+            "time_end": 9.2025
+          },
+          {
+            "position": 28,
+            "token": "was",
+            "word": "was",
+            "char_start": 110,
+            "char_end": 113,
+            "intensity_delta": -0.05491552408536249,
+            "class_probability_delta": 0.006663620245760948,
+            "timing_usable": true,
+            "time_start": 7.5025,
+            "time_end": 7.6625
+          },
+          {
+            "position": 12,
+            "token": "see",
+            "word": "see",
+            "char_start": 39,
+            "char_end": 42,
+            "intensity_delta": -0.046426882346470855,
+            "class_probability_delta": 0.005230993134599404,
+            "timing_usable": true,
+            "time_start": 2.8825,
+            "time_end": 3.0225
+          }
+        ],
+        "intensity": [
+          {
+            "position": 30,
+            "token": "terrible",
+            "word": "terrible",
+            "char_start": 121,
+            "char_end": 129,
+            "intensity_delta": -0.10985001103083292,
+            "class_probability_delta": 0.009244353874922728,
+            "timing_usable": true,
+            "time_start": 8.6825,
+            "time_end": 9.2025
+          },
+          {
+            "position": 28,
+            "token": "was",
+            "word": "was",
+            "char_start": 110,
+            "char_end": 113,
+            "intensity_delta": -0.05491552408536249,
+            "class_probability_delta": 0.006663620245760948,
+            "timing_usable": true,
+            "time_start": 7.5025,
+            "time_end": 7.6625
+          },
+          {
+            "position": 8,
+            "token": "really",
+            "word": "really",
+            "char_start": 21,
+            "char_end": 27,
+            "intensity_delta": 0.048425102631251216,
+            "class_probability_delta": -0.00014232344456821533,
+            "timing_usable": true,
+            "time_start": 2.0425,
+            "time_end": 2.2825
+          }
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "text": "I would be ashamed to have made this film if I was a director",
+      "prediction": -1.2569888353347778,
+      "polarity": "Negative",
+      "probabilities": [
+        0.8904969664822143,
+        0.07028193589346367,
+        0.03922109762432198
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -1.3522459268569946,
+          "probabilities": [
+            0.9007537047542302,
+            0.06219611928767218,
+            0.03705017595809758
+          ]
+        },
+        "2": {
+          "intensity": -0.23139889538288116,
+          "probabilities": [
+            0.38385826173736914,
+            0.45549576609011055,
+            0.16064597217252044
+          ]
+        },
+        "3": {
+          "intensity": -1.3287230253219606,
+          "probabilities": [
+            0.896609193178989,
+            0.06685942847638074,
+            0.0365313783446302
+          ]
+        },
+        "4": {
+          "intensity": 0.055485136806964874,
+          "probabilities": [
+            0.47546495447133963,
+            0.31716581674671535,
+            0.20736922878194503
+          ]
+        },
+        "5": {
+          "intensity": -1.2461055040359499,
+          "probabilities": [
+            0.8960467268519926,
+            0.06476913377706355,
+            0.03918413937094387
+          ]
+        },
+        "6": {
+          "intensity": -0.2098272293806076,
+          "probabilities": [
+            0.4418563830192394,
+            0.4066121536182664,
+            0.15153146336249423
+          ]
+        },
+        "7": {
+          "intensity": -1.2569888591766358,
+          "probabilities": [
+            0.8904969686646615,
+            0.07028193606571201,
+            0.0392210952696264
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.7050132751464844,
+          "contribution": -0.30731482505798335,
+          "shapley": -1.2019243843232592,
+          "class_shapley": 0.47476610764403454,
+          "all_class_shapley": [
+            0.47476610764403454,
+            -0.29749875079513416,
+            -0.17726735684890055
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.16151514649391174,
+          "contribution": -0.038814574480056756,
+          "shapley": -0.12336173125853139,
+          "class_shapley": -0.010776785780772541,
+          "all_class_shapley": [
+            -0.010776785780772541,
+            0.07007258252668648,
+            -0.0592957967459139
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.1334715634584427,
+          "contribution": -0.03419068157672881,
+          "shapley": 0.06138904547939698,
+          "class_shapley": 0.034745327422714495,
+          "all_class_shapley": [
+            0.034745327422714495,
+            -0.00013753949466972,
+            -0.034607787928044774
+          ]
+        }
+      ],
+      "interaction": -0.0006950841285288332,
+      "expert_contribution": -0.8759737014770509,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 3,
+            "token": "be",
+            "word": "be",
+            "char_start": 8,
+            "char_end": 10,
+            "intensity_delta": -0.11735327128244899,
+            "class_probability_delta": 0.027095471537408433,
+            "timing_usable": true,
+            "time_start": 0.7825,
+            "time_end": 0.8625
+          },
+          {
+            "position": 4,
+            "token": "ashamed",
+            "word": "ashamed",
+            "char_start": 11,
+            "char_end": 18,
+            "intensity_delta": -0.1397142966791074,
+            "class_probability_delta": 0.02251156324881065,
+            "timing_usable": true,
+            "time_start": 0.9225,
+            "time_end": 1.3425
+          },
+          {
+            "position": 2,
+            "token": "would",
+            "word": "would",
+            "char_start": 2,
+            "char_end": 7,
+            "intensity_delta": -0.04723757322953648,
+            "class_probability_delta": 0.018413452776699812,
+            "timing_usable": false,
+            "time_start": 0.6225,
+            "time_end": 0.7425
+          }
+        ],
+        "intensity": [
+          {
+            "position": 4,
+            "token": "ashamed",
+            "word": "ashamed",
+            "char_start": 11,
+            "char_end": 18,
+            "intensity_delta": -0.1397142966791074,
+            "class_probability_delta": 0.02251156324881065,
+            "timing_usable": true,
+            "time_start": 0.9225,
+            "time_end": 1.3425
+          },
+          {
+            "position": 14,
+            "token": "director",
+            "word": "director",
+            "char_start": 53,
+            "char_end": 61,
+            "intensity_delta": -0.13216113545456687,
+            "class_probability_delta": 0.016753974985002307,
+            "timing_usable": true,
+            "time_start": 4.8225,
+            "time_end": 5.2625
+          },
+          {
+            "position": 3,
+            "token": "be",
+            "word": "be",
+            "char_start": 8,
+            "char_end": 10,
+            "intensity_delta": -0.11735327128244899,
+            "class_probability_delta": 0.027095471537408433,
+            "timing_usable": true,
+            "time_start": 0.7825,
+            "time_end": 0.8625
+          }
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "text": "Or worse, an individual previously had good credit, but usually by no fault of their own, or perhaps by fault of their own, they have let their credit sag, and credit scores is very low.",
+      "prediction": -0.823126471042633,
+      "polarity": "Negative",
+      "probabilities": [
+        0.8234510842260175,
+        0.13508347513054234,
+        0.041465440643440175
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -0.8579444169998169,
+          "probabilities": [
+            0.8447018587600045,
+            0.11801736240977706,
+            0.03728077883021853
+          ]
+        },
+        "2": {
+          "intensity": -0.06403002142906189,
+          "probabilities": [
+            0.3746683051009816,
+            0.41539773470579694,
+            0.20993396019322158
+          ]
+        },
+        "3": {
+          "intensity": -0.8093328475952148,
+          "probabilities": [
+            0.8310808055977528,
+            0.1297477235542963,
+            0.03917147084795111
+          ]
+        },
+        "4": {
+          "intensity": -0.16297602653503418,
+          "probabilities": [
+            0.43555685673324757,
+            0.3019464354991769,
+            0.26249670776757544
+          ]
+        },
+        "5": {
+          "intensity": -0.9270055532455443,
+          "probabilities": [
+            0.8383428945604763,
+            0.12320205048900114,
+            0.038455054950522455
+          ]
+        },
+        "6": {
+          "intensity": -0.328302264213562,
+          "probabilities": [
+            0.41966834590967284,
+            0.3702890386844699,
+            0.21004261540585722
+          ]
+        },
+        "7": {
+          "intensity": -0.823126471042633,
+          "probabilities": [
+            0.8234510842260175,
+            0.13508347513054234,
+            0.041465440643440175
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.5439881682395935,
+          "contribution": -0.18646491765975948,
+          "shapley": -0.7047810037309924,
+          "class_shapley": 0.42877384895322135,
+          "all_class_shapley": [
+            0.42877384895322135,
+            -0.21574368101793934,
+            -0.21303016793528196
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.24678488075733185,
+          "contribution": -0.07412340641021727,
+          "shapley": -0.00847216142962378,
+          "class_shapley": -0.015580202201691788,
+          "all_class_shapley": [
+            -0.015580202201691788,
+            0.05648999922780495,
+            -0.04090979702611304
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.20922689139842987,
+          "contribution": -0.0698883533477783,
+          "shapley": -0.11678151680777467,
+          "class_shapley": 0.018495118095802954,
+          "all_class_shapley": [
+            0.018495118095802954,
+            -0.003508486908152658,
+            -0.014986631187650442
+          ]
+        }
+      ],
+      "interaction": -0.0049384750425815575,
+      "expert_contribution": -0.48771132230758674,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 41,
+            "token": "low",
+            "word": "low.",
+            "char_start": 182,
+            "char_end": 185,
+            "intensity_delta": -0.05162146604385509,
+            "class_probability_delta": 0.010507832725351496,
+            "timing_usable": true,
+            "time_start": 12.0225,
+            "time_end": 12.2625
+          },
+          {
+            "position": 23,
+            "token": "fault",
+            "word": "fault",
+            "char_start": 104,
+            "char_end": 109,
+            "intensity_delta": -0.03472559973090683,
+            "class_probability_delta": 0.007641829036689196,
+            "timing_usable": true,
+            "time_start": 7.8025,
+            "time_end": 8.0025
+          },
+          {
+            "position": 15,
+            "token": "fault",
+            "word": "fault",
+            "char_start": 70,
+            "char_end": 75,
+            "intensity_delta": -0.022648439196502168,
+            "class_probability_delta": 0.0046033475263213,
+            "timing_usable": true,
+            "time_start": 5.5825,
+            "time_end": 5.7825
+          }
+        ],
+        "intensity": [
+          {
+            "position": 41,
+            "token": "low",
+            "word": "low.",
+            "char_start": 182,
+            "char_end": 185,
+            "intensity_delta": -0.05162146604385509,
+            "class_probability_delta": 0.010507832725351496,
+            "timing_usable": true,
+            "time_start": 12.0225,
+            "time_end": 12.2625
+          },
+          {
+            "position": 23,
+            "token": "fault",
+            "word": "fault",
+            "char_start": 104,
+            "char_end": 109,
+            "intensity_delta": -0.03472559973090683,
+            "class_probability_delta": 0.007641829036689196,
+            "timing_usable": true,
+            "time_start": 7.8025,
+            "time_end": 8.0025
+          },
+          {
+            "position": 4,
+            "token": "an",
+            "word": "an",
+            "char_start": 10,
+            "char_end": 12,
+            "intensity_delta": 0.024962293898978194,
+            "class_probability_delta": -0.006502576760641032,
+            "timing_usable": true,
+            "time_start": 1.1625,
+            "time_end": 1.2025
+          }
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "text": "For example, I could take a set of data and from that data, I can find a relationship between any two of the given factors or more.",
+      "prediction": 0.30853199362754824,
+      "polarity": "Neutral",
+      "probabilities": [
+        0.08752107311693519,
+        0.6652042819375089,
+        0.24727464494555584
+      ],
+      "target_class": 1,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.3552073836326599,
+          "probabilities": [
+            0.07873414761017433,
+            0.6769380383716747,
+            0.24432781401815123
+          ]
+        },
+        "2": {
+          "intensity": -0.05843978375196457,
+          "probabilities": [
+            0.3603971499729009,
+            0.40354297117744936,
+            0.2360598788496497
+          ]
+        },
+        "3": {
+          "intensity": 0.3085319399833679,
+          "probabilities": [
+            0.08752107320887667,
+            0.6652042891442402,
+            0.24727463764688298
+          ]
+        },
+        "4": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "5": {
+          "intensity": 0.3552073836326599,
+          "probabilities": [
+            0.07873414761017433,
+            0.6769380383716747,
+            0.24432781401815123
+          ]
+        },
+        "6": {
+          "intensity": -0.05843978375196457,
+          "probabilities": [
+            0.3603971499729009,
+            0.40354297117744936,
+            0.2360598788496497
+          ]
+        },
+        "7": {
+          "intensity": 0.30853199362754824,
+          "probabilities": [
+            0.08752107122682737,
+            0.6652043205491218,
+            0.24727460822405084
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.59083092212677,
+          "contribution": 0.06184835433959959,
+          "shapley": 0.3576354661025107,
+          "class_shapley": 0.3203768667231119,
+          "all_class_shapley": [
+            -0.29295212492695055,
+            0.3203768667231119,
+            -0.027424741796161268
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.4091690480709076,
+          "contribution": 0.023056967556476588,
+          "shapley": -0.05601170128211378,
+          "class_shapley": 0.04698179952888664,
+          "all_class_shapley": [
+            -0.011289122564223979,
+            0.04698179952888664,
+            -0.035692676964662794
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.0,
+          "contribution": 0.0,
+          "shapley": 1.7881393440018673e-08,
+          "class_shapley": 1.0468293861383888e-08,
+          "all_class_shapley": [
+            -6.606831008208284e-10,
+            1.0468293861383888e-08,
+            -9.807610714303767e-09
+          ]
+        }
+      ],
+      "interaction": -0.0020497327670454973,
+      "expert_contribution": 0.22567639946937565,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "low_face_rate",
+      "evidence": {
+        "classification": [
+          {
+            "position": 30,
+            "token": ".",
+            "word": "more.",
+            "char_start": 130,
+            "char_end": 131,
+            "intensity_delta": -0.0014111030300458238,
+            "class_probability_delta": 0.006148012147775717,
+            "timing_usable": true,
+            "time_start": 8.4425,
+            "time_end": 8.6025
+          },
+          {
+            "position": 1,
+            "token": "for",
+            "word": "For",
+            "char_start": 0,
+            "char_end": 3,
+            "intensity_delta": 0.004448766390482584,
+            "class_probability_delta": 0.0038559116479712774,
+            "timing_usable": true,
+            "time_start": 0.0025,
+            "time_end": 0.1025
+          },
+          {
+            "position": 20,
+            "token": "relationship",
+            "word": "relationship",
+            "char_start": 73,
+            "char_end": 85,
+            "intensity_delta": 0.00541255318125089,
+            "class_probability_delta": 0.003000416763820457,
+            "timing_usable": true,
+            "time_start": 5.1025,
+            "time_end": 5.6625
+          }
+        ],
+        "intensity": [
+          {
+            "position": 8,
+            "token": "set",
+            "word": "set",
+            "char_start": 28,
+            "char_end": 31,
+            "intensity_delta": 0.01589159892002745,
+            "class_probability_delta": -0.0058547176102802245,
+            "timing_usable": true,
+            "time_start": 1.4025,
+            "time_end": 1.5625
+          },
+          {
+            "position": 29,
+            "token": "more",
+            "word": "more.",
+            "char_start": 126,
+            "char_end": 130,
+            "intensity_delta": 0.014821450908978795,
+            "class_probability_delta": -0.005223848245297202,
+            "timing_usable": true,
+            "time_start": 8.4425,
+            "time_end": 8.6025
+          },
+          {
+            "position": 13,
+            "token": "that",
+            "word": "that",
+            "char_start": 49,
+            "char_end": 53,
+            "intensity_delta": 0.01444387575984002,
+            "class_probability_delta": -0.0026502987921619425,
+            "timing_usable": true,
+            "time_start": 3.9025,
+            "time_end": 4.0225
+          }
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "text": "He is the co-founder of Rossen and Vettese Limited and the former Executive Director of Uniform Final Examination (UFE) courses at Toronto's York University.",
+      "prediction": 0.2699103325605392,
+      "polarity": "Neutral",
+      "probabilities": [
+        0.09845524605778705,
+        0.6723102459698248,
+        0.22923450797238815
+      ],
+      "target_class": 1,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.2001084744930267,
+          "probabilities": [
+            0.08753515476824485,
+            0.7242894597136212,
+            0.18817538551813381
+          ]
+        },
+        "2": {
+          "intensity": 0.2916117310523987,
+          "probabilities": [
+            0.2719341900313955,
+            0.39117723421611533,
+            0.33688857575248904
+          ]
+        },
+        "3": {
+          "intensity": 0.17571353316307067,
+          "probabilities": [
+            0.09580126582345436,
+            0.7037617585714758,
+            0.20043697560506996
+          ]
+        },
+        "4": {
+          "intensity": 0.48824119567871094,
+          "probabilities": [
+            0.13708871042627546,
+            0.08630754499709208,
+            0.7766037445766325
+          ]
+        },
+        "5": {
+          "intensity": 0.30014908909797666,
+          "probabilities": [
+            0.09186113835213754,
+            0.670983486559893,
+            0.23715537508796936
+          ]
+        },
+        "6": {
+          "intensity": 0.9486048817634583,
+          "probabilities": [
+            0.17503404591247118,
+            0.20392599127560393,
+            0.6210399628119249
+          ]
+        },
+        "7": {
+          "intensity": 0.2699103325605392,
+          "probabilities": [
+            0.09845523825478135,
+            0.6723102562211535,
+            0.22923450552406519
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.5158804059028625,
+          "contribution": 0.04164513647556304,
+          "shapley": -0.2124964792902271,
+          "class_shapley": 0.44781943792980733,
+          "all_class_shapley": [
+            -0.16382874013638982,
+            0.44781943792980733,
+            -0.28399069779341746
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.3172840476036072,
+          "contribution": 0.06614531278610228,
+          "shapley": 0.15748304532219967,
+          "class_shapley": 0.04773457753890987,
+          "all_class_shapley": [
+            -0.030042768724647676,
+            0.04773457753890987,
+            -0.017691808814262168
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.16683557629585266,
+          "contribution": 0.03448120951652526,
+          "shapley": 0.3180155556028088,
+          "class_shapley": -0.12108940307639314,
+          "all_class_shapley": [
+            -0.09943557226286612,
+            -0.12108940307639314,
+            0.22052497533925927
+          ]
+        }
+      ],
+      "interaction": 0.0012351277284324167,
+      "expert_contribution": 0.12640354335308077,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 1,
+            "token": "he",
+            "word": "He",
+            "char_start": 0,
+            "char_end": 2,
+            "intensity_delta": -0.014305116719129152,
+            "class_probability_delta": 0.01569339927192348,
+            "timing_usable": true,
+            "time_start": 0.5025,
+            "time_end": 0.5625
+          },
+          {
+            "position": 35,
+            "token": ".",
+            "word": "University.",
+            "char_start": 156,
+            "char_end": 157,
+            "intensity_delta": -0.015009414646090347,
+            "class_probability_delta": 0.014348093552481345,
+            "timing_usable": true,
+            "time_start": 9.0625,
+            "time_end": 9.6025
+          },
+          {
+            "position": 27,
+            "token": ")",
+            "word": "(UFE)",
+            "char_start": 118,
+            "char_end": 119,
+            "intensity_delta": -0.01416964972992335,
+            "class_probability_delta": 0.01305830758730675,
+            "timing_usable": false,
+            "time_start": 6.6425,
+            "time_end": 6.8425
+          }
+        ],
+        "intensity": [
+          {
+            "position": 32,
+            "token": "s",
+            "word": "Toronto's",
+            "char_start": 139,
+            "char_end": 140,
+            "intensity_delta": -0.017766386443254956,
+            "class_probability_delta": 0.011642332336955774,
+            "timing_usable": true,
+            "time_start": 8.3825,
+            "time_end": 8.7625
+          },
+          {
+            "position": 24,
+            "token": "(",
+            "word": "(UFE)",
+            "char_start": 114,
+            "char_end": 115,
+            "intensity_delta": -0.016480138275088096,
+            "class_probability_delta": 0.012134902055126795,
+            "timing_usable": false,
+            "time_start": 6.6425,
+            "time_end": 6.8425
+          },
+          {
+            "position": 35,
+            "token": ".",
+            "word": "University.",
+            "char_start": 156,
+            "char_end": 157,
+            "intensity_delta": -0.015009414646090347,
+            "class_probability_delta": 0.014348093552481345,
+            "timing_usable": true,
+            "time_start": 9.0625,
+            "time_end": 9.6025
+          }
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "text": "However, despite their poverty, the family prioritize education because they believed in its power to transform lives",
+      "prediction": 0.6302779674530029,
+      "polarity": "Positive",
+      "probabilities": [
+        0.056173529138003886,
+        0.17010346424136255,
+        0.7737230066206336
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.5421850442886353,
+          "probabilities": [
+            0.052043009774108334,
+            0.16780435049383874,
+            0.780152639732053
+          ]
+        },
+        "2": {
+          "intensity": 0.3816825747489929,
+          "probabilities": [
+            0.22555904195405532,
+            0.22487810935756505,
+            0.5495628486883797
+          ]
+        },
+        "3": {
+          "intensity": 0.6810348987579347,
+          "probabilities": [
+            0.05324601704487669,
+            0.16251217823944697,
+            0.7842418047156763
+          ]
+        },
+        "4": {
+          "intensity": 0.23986825346946716,
+          "probabilities": [
+            0.22603205044608687,
+            0.31586206666862987,
+            0.4581058828852833
+          ]
+        },
+        "5": {
+          "intensity": 0.6082102179527282,
+          "probabilities": [
+            0.05347447644079448,
+            0.16799962471636348,
+            0.7785258988428421
+          ]
+        },
+        "6": {
+          "intensity": 0.4658065438270569,
+          "probabilities": [
+            0.1799195835234797,
+            0.26391641244363945,
+            0.5561640040328807
+          ]
+        },
+        "7": {
+          "intensity": 0.6302779674530029,
+          "probabilities": [
+            0.05617353012721295,
+            0.17010346146432592,
+            0.7737230084084611
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.44758376479148865,
+          "contribution": 0.055322706699371324,
+          "shapley": 0.3445318004116416,
+          "class_shapley": 0.3216230311025251,
+          "all_class_shapley": [
+            -0.21196688748602632,
+            -0.1096561436164988,
+            0.3216230311025251
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.2633088231086731,
+          "contribution": 0.07415648698806761,
+          "shapley": 0.19307872857898475,
+          "class_shapley": 0.0951471881757078,
+          "all_class_shapley": [
+            -0.0619863178547102,
+            -0.03316087032099767,
+            0.0951471881757078
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.28910738229751587,
+          "contribution": 0.0894542872905731,
+          "shapley": 0.08575922753661866,
+          "class_shapley": 0.04656075233774252,
+          "all_class_shapley": [
+            -0.06163558391073553,
+            0.015074831572993,
+            0.04656075233774252
+          ]
+        }
+      ],
+      "interaction": 0.0009610725566744803,
+      "expert_contribution": 0.41038341522216804,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "sample_WER_above_0.5;sample_CTC_below_0.5",
+      "evidence": {
+        "classification": [
+          {
+            "position": 20,
+            "token": "transform",
+            "word": "transform",
+            "char_start": 102,
+            "char_end": 111,
+            "intensity_delta": 0.044357021325299506,
+            "class_probability_delta": 0.020172407414881133,
+            "timing_usable": false,
+            "time_start": 6.7425,
+            "time_end": 6.9825
+          },
+          {
+            "position": 19,
+            "token": "to",
+            "word": "to",
+            "char_start": 99,
+            "char_end": 101,
+            "intensity_delta": 0.04129403026736511,
+            "class_probability_delta": 0.016080876093291563,
+            "timing_usable": false,
+            "time_start": 6.4225,
+            "time_end": 6.5025
+          },
+          {
+            "position": 18,
+            "token": "power",
+            "word": "power",
+            "char_start": 93,
+            "char_end": 98,
+            "intensity_delta": 0.03823955578057936,
+            "class_probability_delta": 0.014464729956418454,
+            "timing_usable": false,
+            "time_start": 6.0225,
+            "time_end": 6.3425
+          }
+        ],
+        "intensity": [
+          {
+            "position": 20,
+            "token": "transform",
+            "word": "transform",
+            "char_start": 102,
+            "char_end": 111,
+            "intensity_delta": 0.044357021325299506,
+            "class_probability_delta": 0.020172407414881133,
+            "timing_usable": false,
+            "time_start": 6.7425,
+            "time_end": 6.9825
+          },
+          {
+            "position": 19,
+            "token": "to",
+            "word": "to",
+            "char_start": 99,
+            "char_end": 101,
+            "intensity_delta": 0.04129403026736511,
+            "class_probability_delta": 0.016080876093291563,
+            "timing_usable": false,
+            "time_start": 6.4225,
+            "time_end": 6.5025
+          },
+          {
+            "position": 18,
+            "token": "power",
+            "word": "power",
+            "char_start": 93,
+            "char_end": 98,
+            "intensity_delta": 0.03823955578057936,
+            "class_probability_delta": 0.014464729956418454,
+            "timing_usable": false,
+            "time_start": 6.0225,
+            "time_end": 6.3425
+          }
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "text": "It's a terrible, this is a terrible movie",
+      "prediction": -2.367364740371704,
+      "polarity": "Negative",
+      "probabilities": [
+        0.9910307522372345,
+        0.0063975229675996,
+        0.002571724795165816
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -2.431290340423584,
+          "probabilities": [
+            0.9915517135123713,
+            0.006039625008922306,
+            0.002408661478706402
+          ]
+        },
+        "2": {
+          "intensity": 0.026940524578094482,
+          "probabilities": [
+            0.3432574876674546,
+            0.39320252937158856,
+            0.2635399829609568
+          ]
+        },
+        "3": {
+          "intensity": -2.407159996032715,
+          "probabilities": [
+            0.9913644174304724,
+            0.006162802888308929,
+            0.002472779681218818
+          ]
+        },
+        "4": {
+          "intensity": 0.07214365899562836,
+          "probabilities": [
+            0.3563270893373802,
+            0.3715028988997107,
+            0.2721700117629091
+          ]
+        },
+        "5": {
+          "intensity": -2.3990888595581055,
+          "probabilities": [
+            0.9913371945725172,
+            0.006203182040518483,
+            0.002459623386964441
+          ]
+        },
+        "6": {
+          "intensity": -0.018336692824959755,
+          "probabilities": [
+            0.3380164584604317,
+            0.3929990128111798,
+            0.26898452872838835
+          ]
+        },
+        "7": {
+          "intensity": -2.3673648834228516,
+          "probabilities": [
+            0.9910307526199451,
+            0.006397522502769656,
+            0.0025717248772853083
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.8643347024917603,
+          "contribution": -0.8288415908813475,
+          "shapley": -2.4132977538431684,
+          "class_shapley": 0.6314540685974257,
+          "all_class_shapley": [
+            0.6314540685974257,
+            -0.351525743599851,
+            -0.27992832499757453
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.06059573218226433,
+          "contribution": -0.03892979621887206,
+          "shapley": 0.0061937620242436715,
+          "class_shapley": -0.019353412381075387,
+          "all_class_shapley": [
+            -0.019353412381075387,
+            0.03545362396681274,
+            -0.016100211585737368
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.07506957650184631,
+          "contribution": -0.03610792160034179,
+          "shapley": 0.03283089747031538,
+          "class_shapley": -0.012832222975090188,
+          "all_class_shapley": [
+            -0.012832222975090188,
+            0.02462399830697859,
+            -0.011791775331888408
+          ]
+        }
+      ],
+      "interaction": -0.015367347002029415,
+      "expert_contribution": -1.44811806678772,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "sample_WER_above_0.5",
+      "evidence": {
+        "classification": [
+          {
+            "position": 10,
+            "token": "terrible",
+            "word": "terrible",
+            "char_start": 27,
+            "char_end": 35,
+            "intensity_delta": -0.042879365495414046,
+            "class_probability_delta": 0.00042448362034475107,
+            "timing_usable": false,
+            "time_start": 1.8225,
+            "time_end": 2.1625
+          },
+          {
+            "position": 5,
+            "token": "terrible",
+            "word": "terrible,",
+            "char_start": 7,
+            "char_end": 15,
+            "intensity_delta": -0.0377439081176254,
+            "class_probability_delta": 0.0001629318449467565,
+            "timing_usable": false,
+            "time_start": 0.8025,
+            "time_end": 1.1825
+          },
+          {
+            "position": 11,
+            "token": "movie",
+            "word": "movie",
+            "char_start": 36,
+            "char_end": 41,
+            "intensity_delta": -0.03116122237906982,
+            "class_probability_delta": -0.0005639390760490137,
+            "timing_usable": false,
+            "time_start": 2.2025,
+            "time_end": 2.5025
+          }
+        ],
+        "intensity": [
+          {
+            "position": 10,
+            "token": "terrible",
+            "word": "terrible",
+            "char_start": 27,
+            "char_end": 35,
+            "intensity_delta": -0.042879365495414046,
+            "class_probability_delta": 0.00042448362034475107,
+            "timing_usable": false,
+            "time_start": 1.8225,
+            "time_end": 2.1625
+          },
+          {
+            "position": 5,
+            "token": "terrible",
+            "word": "terrible,",
+            "char_start": 7,
+            "char_end": 15,
+            "intensity_delta": -0.0377439081176254,
+            "class_probability_delta": 0.0001629318449467565,
+            "timing_usable": false,
+            "time_start": 0.8025,
+            "time_end": 1.1825
+          },
+          {
+            "position": 11,
+            "token": "movie",
+            "word": "movie",
+            "char_start": 36,
+            "char_end": 41,
+            "intensity_delta": -0.03116122237906982,
+            "class_probability_delta": -0.0005639390760490137,
+            "timing_usable": false,
+            "time_start": 2.2025,
+            "time_end": 2.5025
+          }
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "text": "Applying these four design concepts to your presentations is simple, easy and will make people think you turned into a design guru.",
+      "prediction": 1.5786876916885375,
+      "polarity": "Positive",
+      "probabilities": [
+        0.008833903652600844,
+        0.040259947554466734,
+        0.9509061487929323
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 1.7350816011428833,
+          "probabilities": [
+            0.007481401800756676,
+            0.03318260398172264,
+            0.9593359942175208
+          ]
+        },
+        "2": {
+          "intensity": 0.0803944319486618,
+          "probabilities": [
+            0.35422448221677166,
+            0.4493874519380038,
+            0.19638806584522453
+          ]
+        },
+        "3": {
+          "intensity": 1.6270172834396361,
+          "probabilities": [
+            0.007981751612724429,
+            0.036761588704068426,
+            0.9552566596832072
+          ]
+        },
+        "4": {
+          "intensity": 0.21888117492198944,
+          "probabilities": [
+            0.2511621305810564,
+            0.30485000685691327,
+            0.4439878625620303
+          ]
+        },
+        "5": {
+          "intensity": 1.6814784765243531,
+          "probabilities": [
+            0.007833103999792063,
+            0.03535698973128239,
+            0.9568099062689255
+          ]
+        },
+        "6": {
+          "intensity": 0.25484156608581543,
+          "probabilities": [
+            0.25390438154307016,
+            0.4231509661642622,
+            0.3229446522926676
+          ]
+        },
+        "7": {
+          "intensity": 1.5786876440048219,
+          "probabilities": [
+            0.00883390272849369,
+            0.04025994759200283,
+            0.9509061496795035
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.6078643798828125,
+          "contribution": 0.4289708137512206,
+          "shapley": 1.518876514894267,
+          "class_shapley": 0.6375835911947699,
+          "all_class_shapley": [
+            -0.3080457583283869,
+            -0.32953783286638305,
+            0.6375835911947699
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.1876843273639679,
+          "contribution": 0.07585849761962889,
+          "shapley": -0.021785524922112644,
+          "class_shapley": -0.06082299997950708,
+          "all_class_shapley": [
+            -0.01163857934874032,
+            0.07246157932824739,
+            -0.06082299997950708
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.2044512927532196,
+          "contribution": 0.08198407888412473,
+          "shapley": 0.07468844310690967,
+          "class_shapley": 0.06375352167175498,
+          "all_class_shapley": [
+            -0.06324407897306412,
+            -0.000509442698690879,
+            0.06375352167175498
+          ]
+        }
+      ],
+      "interaction": 0.0031627617776393883,
+      "expert_contribution": 0.9887115240097047,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 14,
+            "token": "will",
+            "word": "will",
+            "char_start": 78,
+            "char_end": 82,
+            "intensity_delta": 0.03815660948554678,
+            "class_probability_delta": 0.00362115631973825,
+            "timing_usable": true,
+            "time_start": 6.8025,
+            "time_end": 6.9425
+          },
+          {
+            "position": 13,
+            "token": "and",
+            "word": "and",
+            "char_start": 74,
+            "char_end": 77,
+            "intensity_delta": 0.036653293917576324,
+            "class_probability_delta": 0.00309966644165538,
+            "timing_usable": true,
+            "time_start": 6.4225,
+            "time_end": 6.5425
+          },
+          {
+            "position": 11,
+            "token": ",",
+            "word": "simple,",
+            "char_start": 67,
+            "char_end": 68,
+            "intensity_delta": 0.03468518989781533,
+            "class_probability_delta": 0.0029617247064623875,
+            "timing_usable": true,
+            "time_start": 4.8025,
+            "time_end": 5.1025
+          }
+        ],
+        "intensity": [
+          {
+            "position": 14,
+            "token": "will",
+            "word": "will",
+            "char_start": 78,
+            "char_end": 82,
+            "intensity_delta": 0.03815660948554678,
+            "class_probability_delta": 0.00362115631973825,
+            "timing_usable": true,
+            "time_start": 6.8025,
+            "time_end": 6.9425
+          },
+          {
+            "position": 13,
+            "token": "and",
+            "word": "and",
+            "char_start": 74,
+            "char_end": 77,
+            "intensity_delta": 0.036653293917576324,
+            "class_probability_delta": 0.00309966644165538,
+            "timing_usable": true,
+            "time_start": 6.4225,
+            "time_end": 6.5425
+          },
+          {
+            "position": 11,
+            "token": ",",
+            "word": "simple,",
+            "char_start": 67,
+            "char_end": 68,
+            "intensity_delta": 0.03468518989781533,
+            "class_probability_delta": 0.0029617247064623875,
+            "timing_usable": true,
+            "time_start": 4.8025,
+            "time_end": 5.1025
+          }
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "text": "-And in Denmark - the first Baltic Cod fishery has been MSC – certified -Meanwhile, the Faeroese Mackerel Fishery has been denied MSC certification based on the fact that the fishery has failed to reach an agreement on mackerel quotas with Norway and the European Union.",
+      "prediction": -0.32399519681930544,
+      "polarity": "Neutral",
+      "probabilities": [
+        0.43726825216515897,
+        0.46755636352601887,
+        0.09517538430882237
+      ],
+      "target_class": 1,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -0.238678377866745,
+          "probabilities": [
+            0.45205208266442176,
+            0.46253983981362806,
+            0.08540807752195025
+          ]
+        },
+        "2": {
+          "intensity": -0.0008212029933929443,
+          "probabilities": [
+            0.3689409101695705,
+            0.25290996484874484,
+            0.3781491249816847
+          ]
+        },
+        "3": {
+          "intensity": -0.29569291472435,
+          "probabilities": [
+            0.44478742345541633,
+            0.4586650179238238,
+            0.09654755862075984
+          ]
+        },
+        "4": {
+          "intensity": -0.40104323625564575,
+          "probabilities": [
+            0.38004399745360484,
+            0.4437376556010393,
+            0.17621834694535587
+          ]
+        },
+        "5": {
+          "intensity": -0.303539901971817,
+          "probabilities": [
+            0.4346475910783575,
+            0.47824166509887794,
+            0.08711074382276456
+          ]
+        },
+        "6": {
+          "intensity": -0.51844722032547,
+          "probabilities": [
+            0.3953359340643938,
+            0.37752272550726124,
+            0.22714134042834494
+          ]
+        },
+        "7": {
+          "intensity": -0.32399520874023435,
+          "probabilities": [
+            0.4372682473500637,
+            0.46755635837739806,
+            0.09517539427253827
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.5213597416877747,
+          "contribution": -0.038876813650131216,
+          "shapley": -0.049939588643610464,
+          "class_shapley": 0.12495245338046478,
+          "all_class_shapley": [
+            0.05581571000890195,
+            0.12495245338046478,
+            -0.18076816338936672
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.22452040016651154,
+          "contribution": -0.07028129696846007,
+          "shapley": -0.038464660383760924,
+          "class_shapley": -0.030221953897785193,
+          "all_class_shapley": [
+            -0.00539570474550551,
+            -0.030221953897785193,
+            0.0356176586432907
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.254119873046875,
+          "contribution": -0.05286352038383483,
+          "shapley": -0.24249917063862084,
+          "class_shapley": 0.07498021506588909,
+          "all_class_shapley": [
+            -0.0049140772920177505,
+            0.07498021506588909,
+            -0.07006613777387134
+          ]
+        }
+      ],
+      "interaction": 0.0006692473776638506,
+      "expert_contribution": -0.1626428246498108,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "low_face_rate",
+      "evidence": {
+        "classification": [
+          {
+            "position": 7,
+            "token": "first",
+            "word": "first",
+            "char_start": 22,
+            "char_end": 27,
+            "intensity_delta": 0.021541588148102142,
+            "class_probability_delta": 0.01064269006731261,
+            "timing_usable": true,
+            "time_start": 1.7225,
+            "time_end": 1.9425
+          },
+          {
+            "position": 6,
+            "token": "the",
+            "word": "the",
+            "char_start": 18,
+            "char_end": 21,
+            "intensity_delta": 0.015342050371691562,
+            "class_probability_delta": 0.010533648413312446,
+            "timing_usable": true,
+            "time_start": 1.5825,
+            "time_end": 1.6625
+          },
+          {
+            "position": 20,
+            "token": "fae",
+            "word": "Faeroese",
+            "char_start": 88,
+            "char_end": 91,
+            "intensity_delta": 0.022841222025454022,
+            "class_probability_delta": 0.009834305237255037,
+            "timing_usable": true,
+            "time_start": 7.3025,
+            "time_end": 7.7425
+          }
+        ],
+        "intensity": [
+          {
+            "position": 29,
+            "token": "denied",
+            "word": "denied",
+            "char_start": 123,
+            "char_end": 129,
+            "intensity_delta": -0.027122188312932893,
+            "class_probability_delta": -0.007820283781147186,
+            "timing_usable": true,
+            "time_start": 9.0225,
+            "time_end": 9.4225
+          },
+          {
+            "position": 40,
+            "token": "failed",
+            "word": "failed",
+            "char_start": 187,
+            "char_end": 193,
+            "intensity_delta": -0.027114131689692567,
+            "class_probability_delta": -0.0106870999998393,
+            "timing_usable": true,
+            "time_start": 12.7825,
+            "time_end": 13.0825
+          },
+          {
+            "position": 20,
+            "token": "fae",
+            "word": "Faeroese",
+            "char_start": 88,
+            "char_end": 91,
+            "intensity_delta": 0.022841222025454022,
+            "class_probability_delta": 0.009834305237255037,
+            "timing_usable": true,
+            "time_start": 7.3025,
+            "time_end": 7.7425
+          }
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "text": "People are surprisingly forgiving brands when they own up to mistakes, and unfortunately some haters out there love to point fingers and jump all over imperfections, but for the most part, people understand",
+      "prediction": 0.033542203903198245,
+      "polarity": "Negative",
+      "probabilities": [
+        0.5637956074637891,
+        0.14285234699033755,
+        0.2933520455458733
+      ],
+      "target_class": 0,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": -0.12836428582668302,
+          "probabilities": [
+            0.5948665555659528,
+            0.13316194634106496,
+            0.27197149809298216
+          ]
+        },
+        "2": {
+          "intensity": -0.1528586447238922,
+          "probabilities": [
+            0.30198074284826193,
+            0.3159936805017097,
+            0.3820255766500285
+          ]
+        },
+        "3": {
+          "intensity": -0.054817977547645544,
+          "probabilities": [
+            0.5722810756958457,
+            0.14334012859134979,
+            0.2843787957128044
+          ]
+        },
+        "4": {
+          "intensity": 0.2781699299812317,
+          "probabilities": [
+            0.33529382833071547,
+            0.1961326437252706,
+            0.46857352794401386
+          ]
+        },
+        "5": {
+          "intensity": 0.005559015274047861,
+          "probabilities": [
+            0.5841762817851439,
+            0.13423580132747404,
+            0.28158791688738205
+          ]
+        },
+        "6": {
+          "intensity": 0.5818399786949158,
+          "probabilities": [
+            0.26466752717791187,
+            0.2177868812406793,
+            0.5175455915814088
+          ]
+        },
+        "7": {
+          "intensity": 0.03354220613837242,
+          "probabilities": [
+            0.5637956089223163,
+            0.14285234477291495,
+            0.2933520463047688
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.6096118092536926,
+          "contribution": -0.007011635601520537,
+          "shapley": -0.25695179769148424,
+          "class_shapley": 0.25394123702755944,
+          "all_class_shapley": [
+            0.25394123702755944,
+            -0.11896447703653566,
+            -0.1349767599910238
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.22268716990947723,
+          "contribution": 0.004059932753443717,
+          "shapley": 0.018941504570345078,
+          "class_shapley": -0.052256046634902006,
+          "all_class_shapley": [
+            -0.052256046634902006,
+            0.01422693000038932,
+            0.038029116634512736
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.16770105063915253,
+          "contribution": 0.008744015544652936,
+          "shapley": 0.26464428833375375,
+          "class_shapley": -0.02965190084902615,
+          "all_class_shapley": [
+            -0.02965190084902615,
+            -0.0502557520197681,
+            0.07990765286879424
+          ]
+        }
+      ],
+      "interaction": 0.0039419930428266515,
+      "expert_contribution": 0.023807895183563237,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 17,
+            "token": "hate",
+            "word": "haters",
+            "char_start": 94,
+            "char_end": 98,
+            "intensity_delta": -0.0642988512913386,
+            "class_probability_delta": 0.021915779635498067,
+            "timing_usable": true,
+            "time_start": 6.3825,
+            "time_end": 6.7425
+          },
+          {
+            "position": 12,
+            "token": "mistakes",
+            "word": "mistakes,",
+            "char_start": 61,
+            "char_end": 69,
+            "intensity_delta": -0.050371009681586906,
+            "class_probability_delta": 0.016947451693710924,
+            "timing_usable": true,
+            "time_start": 3.9025,
+            "time_end": 4.4025
+          },
+          {
+            "position": 29,
+            "token": "imperfect",
+            "word": "imperfections,",
+            "char_start": 151,
+            "char_end": 160,
+            "intensity_delta": -0.049452741088481564,
+            "class_probability_delta": 0.016825902344677512,
+            "timing_usable": true,
+            "time_start": 9.9825,
+            "time_end": 10.7025
+          }
+        ],
+        "intensity": [
+          {
+            "position": 3,
+            "token": "surprisingly",
+            "word": "surprisingly",
+            "char_start": 11,
+            "char_end": 23,
+            "intensity_delta": 0.08221638880273294,
+            "class_probability_delta": -0.02361652144328752,
+            "timing_usable": true,
+            "time_start": 0.9625,
+            "time_end": 1.7025
+          },
+          {
+            "position": 17,
+            "token": "hate",
+            "word": "haters",
+            "char_start": 94,
+            "char_end": 98,
+            "intensity_delta": -0.0642988512913386,
+            "class_probability_delta": 0.021915779635498067,
+            "timing_usable": true,
+            "time_start": 6.3825,
+            "time_end": 6.7425
+          },
+          {
+            "position": 35,
+            "token": "most",
+            "word": "most",
+            "char_start": 178,
+            "char_end": 182,
+            "intensity_delta": 0.05858142506735328,
+            "class_probability_delta": -0.01906650514429864,
+            "timing_usable": true,
+            "time_start": 11.5825,
+            "time_end": 11.7625
+          }
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "text": "And of course, click in the link of the description of this video for more, and we'll have more live updates and a stock market video (wrap-up) at the end of the day today.",
+      "prediction": 0.6996492862701416,
+      "polarity": "Positive",
+      "probabilities": [
+        0.02201921707598407,
+        0.26994541748856343,
+        0.7080353654354525
+      ],
+      "target_class": 2,
+      "subsets": {
+        "0": {
+          "intensity": 0.006908210925757885,
+          "probabilities": [
+            0.391762319378685,
+            0.2978456438288294,
+            0.3103920367924856
+          ]
+        },
+        "1": {
+          "intensity": 0.5761461019515991,
+          "probabilities": [
+            0.016764421395925596,
+            0.27743156699243543,
+            0.705804011611639
+          ]
+        },
+        "2": {
+          "intensity": -0.06370310485363007,
+          "probabilities": [
+            0.45649065936494987,
+            0.29021305957436117,
+            0.25329628106068897
+          ]
+        },
+        "3": {
+          "intensity": 0.6814165472984314,
+          "probabilities": [
+            0.019227959044668175,
+            0.2832472742597163,
+            0.6975247666956155
+          ]
+        },
+        "4": {
+          "intensity": 0.3066249489784241,
+          "probabilities": [
+            0.25224722323860105,
+            0.11794514765161698,
+            0.629807629109782
+          ]
+        },
+        "5": {
+          "intensity": 0.7118057370185852,
+          "probabilities": [
+            0.017772004577675703,
+            0.25572626802176573,
+            0.7265017274005586
+          ]
+        },
+        "6": {
+          "intensity": 0.38592642545700073,
+          "probabilities": [
+            0.35005699766402837,
+            0.18702706757686158,
+            0.46291593475911
+          ]
+        },
+        "7": {
+          "intensity": 0.6996492862701416,
+          "probabilities": [
+            0.022019218174887636,
+            0.26994539609132423,
+            0.708035385733788
+          ]
+        }
+      },
+      "modalities": [
+        {
+          "modality": "text",
+          "gate": 0.4918104112148285,
+          "contribution": 0.1068655967712402,
+          "shapley": 0.4860369906450311,
+          "class_shapley": 0.30366423925222763,
+          "all_class_shapley": [
+            -0.3463015456541679,
+            0.04263730640194021,
+            0.30366423925222763
+          ]
+        },
+        {
+          "modality": "audio",
+          "gate": 0.2798393666744232,
+          "contribution": 0.10940291881561277,
+          "shapley": 0.0031727314616242985,
+          "class_shapley": -0.05438252234397168,
+          "all_class_shapley": [
+            0.03970406987352058,
+            0.014678452470451001,
+            -0.05438252234397168
+          ]
+        },
+        {
+          "modality": "vision",
+          "gate": 0.2283501923084259,
+          "contribution": 0.07845454812049864,
+          "shapley": 0.20353135323772828,
+          "class_shapley": 0.14836163203304645,
+          "all_class_shapley": [
+            -0.06314562542315005,
+            -0.08521600660989637,
+            0.14836163203304645
+          ]
+        }
+      ],
+      "interaction": -0.004401545599102973,
+      "expert_contribution": 0.40932776927948006,
+      "classification_text_weight": 0.8,
+      "regression_text_weight": 0.6000000000000001,
+      "quality_flags": "",
+      "evidence": {
+        "classification": [
+          {
+            "position": 3,
+            "token": "course",
+            "word": "course,",
+            "char_start": 7,
+            "char_end": 13,
+            "intensity_delta": 0.011426599313272723,
+            "class_probability_delta": 0.006972606902486911,
+            "timing_usable": true,
+            "time_start": 0.8225,
+            "time_end": 1.0425
+          },
+          {
+            "position": 18,
+            "token": "and",
+            "word": "and",
+            "char_start": 76,
+            "char_end": 79,
+            "intensity_delta": 0.0068747270229766455,
+            "class_probability_delta": 0.0045929461127091065,
+            "timing_usable": true,
+            "time_start": 4.5625,
+            "time_end": 4.6425
+          },
+          {
+            "position": 17,
+            "token": ",",
+            "word": "more,",
+            "char_start": 74,
+            "char_end": 75,
+            "intensity_delta": 0.010059452147145986,
+            "class_probability_delta": 0.003916898149326831,
+            "timing_usable": true,
+            "time_start": 3.5425,
+            "time_end": 3.7825
+          }
+        ],
+        "intensity": [
+          {
+            "position": 20,
+            "token": "'",
+            "word": "we'll",
+            "char_start": 82,
+            "char_end": 83,
+            "intensity_delta": -0.020052572177383654,
+            "class_probability_delta": -0.007665596596410085,
+            "timing_usable": true,
+            "time_start": 4.7025,
+            "time_end": 4.8825
+          },
+          {
+            "position": 35,
+            "token": ")",
+            "word": "(wrap-up)",
+            "char_start": 142,
+            "char_end": 143,
+            "intensity_delta": -0.019866223706626607,
+            "class_probability_delta": -0.007850909525302763,
+            "timing_usable": false,
+            "time_start": 8.2425,
+            "time_end": 8.6425
+          },
+          {
+            "position": 43,
+            "token": ".",
+            "word": "today.",
+            "char_start": 171,
+            "char_end": 172,
+            "intensity_delta": -0.017981096755626647,
+            "class_probability_delta": -0.0084761626945552,
+            "timing_usable": true,
+            "time_start": 9.4625,
+            "time_end": 9.6825
+          }
+        ]
+      }
+    }
+  ],
+  "fidelity": {
+    "intensity": {
+      "delete": {
+        "selected": {
+          "mean": 0.22351119374820452,
+          "ci95": [
+            0.21085721504418167,
+            0.23779274242983875
+          ]
+        },
+        "random": {
+          "mean": 0.11356069886056952,
+          "ci95": [
+            0.10782698349513849,
+            0.11963064510924618
+          ]
+        },
+        "paired_difference": {
+          "mean": 0.10995049488763504,
+          "ci95": [
+            0.10099992416734414,
+            0.12010578197559885
+          ]
+        }
+      },
+      "retain": {
+        "selected": {
+          "mean": 0.1796097648968667,
+          "ci95": [
+            0.16874778005918148,
+            0.1925386060068476
+          ]
+        },
+        "random": {
+          "mean": 0.1659395623089941,
+          "ci95": [
+            0.1592837448313336,
+            0.17341567134826583
+          ]
+        },
+        "paired_difference": {
+          "mean": 0.013670202587872608,
+          "ci95": [
+            0.004432042191020168,
+            0.02380353352153865
+          ]
+        }
+      }
+    },
+    "classification": {
+      "delete": {
+        "selected": {
+          "mean": 0.13699276495214832,
+          "ci95": [
+            0.13039724369205546,
+            0.14446447975314794
+          ]
+        },
+        "random": {
+          "mean": 0.02439931117653606,
+          "ci95": [
+            0.019858073016914835,
+            0.02954986738511771
+          ]
+        },
+        "paired_difference": {
+          "mean": 0.11259345377561229,
+          "ci95": [
+            0.10814820848523282,
+            0.11743550318518212
+          ]
+        }
+      },
+      "retain": {
+        "selected": {
+          "mean": -0.06454980243221332,
+          "ci95": [
+            -0.0706037328388863,
+            -0.05787846667932316
+          ]
+        },
+        "random": {
+          "mean": 0.03648147795528371,
+          "ci95": [
+            0.030685290410580286,
+            0.042674802124876364
+          ]
+        },
+        "paired_difference": {
+          "mean": -0.10103128038749704,
+          "ci95": [
+            -0.10590471808079628,
+            -0.0963247815032486
+          ]
+        }
+      }
+    }
+  },
+  "real_word_deletion": {
+    "n_samples": 728,
+    "n_pairs": 728,
+    "words_per_sample": 1,
+    "tail_affected_pairs": 35,
+    "method": "Highest signed classification-occlusion text word per sample; delete the full raw word, re-encode core BERT and all five LoRA encoders; shift official AV rows and mark newly exposed tail rows unobserved.",
+    "limitation": "Contextual leakage, position shift, and reliability denominator changes are combined; descriptive sensitivity contrast only.",
+    "intensity": {
+      "spearman": 0.6680195402494042,
+      "absolute_spearman": 0.4748297649107675,
+      "mean_absolute_difference": 0.17073326892790844
+    },
+    "probability": {
+      "spearman": 0.29025759959582365,
+      "absolute_spearman": 0.35218143945027636,
+      "mean_absolute_difference": 0.07848925436347212
+    }
+  },
+  "app": {
+    "version": "2.2.1",
+    "bytes": 249308539,
+    "physical_android_test": false,
+    "github_release_published": false,
+    "shared_bert_count": 1
+  }
+}

@@ -1,0 +1,3 @@
+# Separate environment: its NumPy/Transformers versions differ from the predictor.
+# Install torch==2.6.0+cpu from https://download.pytorch.org/whl/cpu first.
+-r code/src/problem1/requirements-lock.txt
